@@ -7,7 +7,16 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>SpadeK</copyright>
-        <lastBuildDate>Sat, 27 Apr 2024 20:50:48 +0800</lastBuildDate><atom:link href="https://spadektlsg.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 27 Apr 2024 20:56:09 +0800</lastBuildDate><atom:link href="https://spadektlsg.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Test1</title>
+        <link>https://spadektlsg.github.io/p/test1/</link>
+        <pubDate>Sat, 27 Apr 2024 20:56:09 +0800</pubDate>
+        
+        <guid>https://spadektlsg.github.io/p/test1/</guid>
+        <description>&lt;p&gt;test add&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>README</title>
         <link>https://spadektlsg.github.io/p/readme/</link>
         <pubDate>Sat, 27 Apr 2024 20:50:48 +0800</pubDate>
