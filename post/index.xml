@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Blog4SpadeKTLSG</title>
-    <link>https://spadektlsg.github.io/post/</link>
-    <description>Recent content in Posts on Blog4SpadeKTLSG</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <copyright>SpadeK</copyright>
-    <lastBuildDate>Sat, 27 Apr 2024 12:33:48 +0800</lastBuildDate>
-    <atom:link href="https://spadektlsg.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>README</title>
-      <link>https://spadektlsg.github.io/p/readme/</link>
-      <pubDate>Sat, 27 Apr 2024 12:33:48 +0800</pubDate>
-      <guid>https://spadektlsg.github.io/p/readme/</guid>
-      <description>拷打!</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Posts on Blog4SpadeKTLSG</title>
+        <link>https://spadektlsg.github.io/post/</link>
+        <description>Recent content in Posts on Blog4SpadeKTLSG</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>SpadeK</copyright>
+        <lastBuildDate>Sat, 27 Apr 2024 12:33:48 +0800</lastBuildDate><atom:link href="https://spadektlsg.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>README</title>
+        <link>https://spadektlsg.github.io/p/readme/</link>
+        <pubDate>Sat, 27 Apr 2024 12:33:48 +0800</pubDate>
+        
+        <guid>https://spadektlsg.github.io/p/readme/</guid>
+        <description>&lt;p&gt;拷打!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
