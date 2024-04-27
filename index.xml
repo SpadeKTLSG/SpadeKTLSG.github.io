@@ -16,5 +16,12 @@
       <guid>https://spadektlsg.github.io/p/readme/</guid>
       <description>拷打!</description>
     </item>
+    <item>
+      <title>Search Results</title>
+      <link>https://spadektlsg.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://spadektlsg.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.&#xA;No content shown here is rendered, all content is based in the template layouts/page/search.html&#xA;Setting a very low sitemap priority will tell search engines this is not important content.&#xA;This implementation uses Fusejs, jquery and mark.js&#xA;Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
   </channel>
 </rss>
