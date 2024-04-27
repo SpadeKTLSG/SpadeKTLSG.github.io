@@ -7,28 +7,14 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Example Person</copyright>
-    <lastBuildDate>Sat, 27 Apr 2024 14:59:31 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2024 12:33:48 +0800</lastBuildDate>
     <atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test2</title>
-      <link>https://example.com/p/test2/</link>
-      <pubDate>Sat, 27 Apr 2024 14:59:31 +0800</pubDate>
-      <guid>https://example.com/p/test2/</guid>
-      <description>2 aaa</description>
-    </item>
-    <item>
-      <title>Test1</title>
-      <link>https://example.com/p/test1/</link>
-      <pubDate>Sat, 27 Apr 2024 14:59:28 +0800</pubDate>
-      <guid>https://example.com/p/test1/</guid>
-      <description>change</description>
-    </item>
     <item>
       <title>README</title>
       <link>https://example.com/p/readme/</link>
       <pubDate>Sat, 27 Apr 2024 12:33:48 +0800</pubDate>
       <guid>https://example.com/p/readme/</guid>
-      <description>没想好写什么</description>
+      <description>拷打!</description>
     </item>
   </channel>
 </rss>

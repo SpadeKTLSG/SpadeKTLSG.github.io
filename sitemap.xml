@@ -3,18 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/post/</loc>
-    <lastmod>2024-04-27T14:59:34+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/</loc>
-    <lastmod>2024-04-27T14:59:34+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/p/test2/</loc>
-    <lastmod>2024-04-27T14:59:31+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/p/test1/</loc>
-    <lastmod>2024-04-27T14:59:28+08:00</lastmod>
+    <lastmod>2024-04-27T12:33:48+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/readme/</loc>
+    <lastmod>2024-04-27T12:33:48+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/</loc>
     <lastmod>2024-04-27T12:33:48+08:00</lastmod>
   </url><url>
     <loc>https://example.com/categories/</loc>
