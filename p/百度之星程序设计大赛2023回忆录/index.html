@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\u200d &ndash;苦涩的失败者 PLUSPLUSPLUS, 但是这次是自己太飞舞 \u200d \u200d 打卡区 很多高端和刷过的都跳过了, 没思路的赶紧看一看, 一天干 10h, 看完晕过去, 晕过去再看 \u200d {">
+<title>百度之星程序设计大赛2023回忆录</title>
+
+<link rel='canonical' href='https://spadektlsg.github.io/p/%E7%99%BE%E5%BA%A6%E4%B9%8B%E6%98%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B2023%E5%9B%9E%E5%BF%86%E5%BD%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.67e1d55df895e92f972a3c6377b28d4465c25830c4976c898200217da8ea97f2.css"><meta property='og:title' content="百度之星程序设计大赛2023回忆录">
+<meta property='og:description' content="\u200d &ndash;苦涩的失败者 PLUSPLUSPLUS, 但是这次是自己太飞舞 \u200d \u200d 打卡区 很多高端和刷过的都跳过了, 没思路的赶紧看一看, 一天干 10h, 看完晕过去, 晕过去再看 \u200d {">
+<meta property='og:url' content='https://spadektlsg.github.io/p/%E7%99%BE%E5%BA%A6%E4%B9%8B%E6%98%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B2023%E5%9B%9E%E5%BF%86%E5%BD%95/'>
+<meta property='og:site_name' content='玄桃K的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-09-29T20:37:15&#43;08:00'/><meta property='article:modified_time' content='2023-09-29T20:38:15&#43;08:00'/><meta property='og:image' content='https://spadektlsg.github.io/study/003/astar.png' />
+<meta name="twitter:title" content="百度之星程序设计大赛2023回忆录">
+<meta name="twitter:description" content="\u200d &ndash;苦涩的失败者 PLUSPLUSPLUS, 但是这次是自己太飞舞 \u200d \u200d 打卡区 很多高端和刷过的都跳过了, 没思路的赶紧看一看, 一天干 10h, 看完晕过去, 晕过去再看 \u200d {"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://spadektlsg.github.io/study/003/astar.png' />
+    <link rel="shortcut icon" href="/sys/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="756"
+                            height="749" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😋</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">玄桃K的博客</a></h1>
+            <h2 class="site-description">还在打复活赛</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/SpadeKTLSG/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291872628" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M153.770667 517.558857l200.387047-197.241905L302.86019 268.190476 48.761905 518.290286l254.439619 243.614476 50.590476-52.833524-200.021333-191.512381zM658.285714 320.316952L709.583238 268.190476l254.098286 250.09981L709.241905 761.904762l-50.590476-52.833524 200.021333-191.512381L658.285714 320.316952z m-112.981333-86.186666L393.99619 785.554286l70.534096 19.358476 151.30819-551.399619-70.534095-19.358476z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:spadekxcwxtlsg@gmail.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291517604" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M926.47619 355.644952V780.190476a73.142857 73.142857 0 0 1-73.142857 73.142857H170.666667a73.142857 73.142857 0 0 1-73.142857-73.142857V355.644952l73.142857 62.000762V780.190476h682.666666V417.645714l73.142857-62.000762zM853.333333 170.666667a74.044952 74.044952 0 0 1 26.087619 4.778666 72.704 72.704 0 0 1 30.622477 22.186667 73.508571 73.508571 0 0 1 10.678857 17.67619c3.169524 7.509333 5.12 15.652571 5.607619 24.210286L926.47619 243.809524v24.380952L559.469714 581.241905a73.142857 73.142857 0 0 1-91.306666 2.901333l-3.632762-2.925714L97.52381 268.190476v-24.380952a72.899048 72.899048 0 0 1 40.155428-65.292191A72.97219 72.97219 0 0 1 170.666667 170.666667h682.666666z m-10.971428 73.142857H181.638095L512 525.58019 842.361905 243.809524z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/363101711'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291537293" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7801" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M772.437333 97.52381l51.712 51.712-126.342095 126.342095H828.952381a73.142857 73.142857 0 0 1 73.142857 73.142857v487.619048a73.142857 73.142857 0 0 1-73.142857 73.142857H195.047619a73.142857 73.142857 0 0 1-73.142857-73.142857v-487.619048a73.142857 73.142857 0 0 1 73.142857-73.142857h131.120762L199.850667 149.23581 251.562667 97.52381l178.054095 178.054095h164.742095L772.437333 97.52381zM828.952381 348.720762H195.047619v487.619048h633.904762v-487.619048z m-280.380952 73.142857v341.333333h-73.142858v-341.333333h73.142858z m-134.095239 73.142857v195.047619h-73.142857v-195.047619h73.142857z m268.190477 24.380953v146.285714h-73.142857v-146.285714h73.142857z" p-id="7802"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#时间线">时间线</a></li>
+        <li><a href="#小丑时刻精选">小丑时刻精选</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%99%BE%E5%BA%A6%E4%B9%8B%E6%98%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B2023%E5%9B%9E%E5%BF%86%E5%BD%95/">
+                
+                    <img src="/study/003/astar.png" loading="lazy" alt="Featured image of post 百度之星程序设计大赛2023回忆录" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+
+
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%99%BE%E5%BA%A6%E4%B9%8B%E6%98%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B2023%E5%9B%9E%E5%BF%86%E5%BD%95/">百度之星程序设计大赛2023回忆录</a>
+        </h2>
+
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2023-09-29</time>
+        </div>
+        
+
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 7 分钟
+            </time>
+        </div>
+        
+    </footer>
+    
+
+    
+
+    
+    
+
+
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>‍</p>
+<p>&ndash;苦涩的失败者 PLUSPLUSPLUS, 但是这次是自己太飞舞</p>
+<p>‍</p>
+<p>‍</p>
+<p><strong>打卡区</strong></p>
+<blockquote>
+<p>很多高端和刷过的都跳过了, 没思路的赶紧看一看, 一天干 10h, 看完晕过去, 晕过去再看</p>
+</blockquote>
+<p>‍</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tooltip</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">trigger</span><span class="p">:</span> <span class="s2">&#34;axis&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="n">legend</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">data</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;Leetcode Arrival&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="n">toolbox</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">show</span><span class="p">:</span> <span class="bp">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">feature</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mark</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">show</span><span class="p">:</span> <span class="bp">true</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dataView</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">show</span><span class="p">:</span> <span class="bp">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">readOnly</span><span class="p">:</span> <span class="bp">true</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="n">magicType</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">show</span><span class="p">:</span> <span class="bp">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">type</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;line&#34;</span><span class="p">,</span> <span class="s2">&#34;bar&#34;</span><span class="p">,</span> <span class="s2">&#34;stack&#34;</span><span class="p">,</span> <span class="s2">&#34;tiled&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="n">restore</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">show</span><span class="p">:</span> <span class="bp">true</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="n">saveAsImage</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">show</span><span class="p">:</span> <span class="bp">true</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="n">calculable</span><span class="p">:</span> <span class="bp">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xAxis</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">type</span><span class="p">:</span> <span class="s2">&#34;category&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">boundaryGap</span><span class="p">:</span> <span class="bp">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">data</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;9.10&#34;</span><span class="p">,</span> <span class="s2">&#34;9.11&#34;</span><span class="p">,</span> <span class="s2">&#34;9.12&#34;</span><span class="p">,</span> <span class="s2">&#34;9.13&#34;</span><span class="p">,</span> <span class="s2">&#34;9.14&#34;</span><span class="p">,</span> <span class="s2">&#34;9.15&#34;</span><span class="p">,</span> <span class="s2">&#34;9.16&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">yAxis</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">type</span><span class="p">:</span> <span class="s2">&#34;value&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">series</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">name</span><span class="p">:</span> <span class="s2">&#34;Leetcode Arrival&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">type</span><span class="p">:</span> <span class="s2">&#34;line&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">stack</span><span class="p">:</span> <span class="s2">&#34;总量&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">itemStyle</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">normal</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">areaStyle</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">type</span><span class="p">:</span> <span class="s2">&#34;default&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="n">data</span><span class="p">:</span> <span class="p">[</span><span class="mi">93</span><span class="p">,</span> <span class="mi">114</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">260</span><span class="p">,</span> <span class="mi">414</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h2 id="时间线">
+    <a href="#%e6%97%b6%e9%97%b4%e7%ba%bf" class="header-anchor">#</a>
+    时间线
+</h2><p>8.16 日 道听途说</p>
+<blockquote>
+<p>当时在家里很摆, 简单刷了一点题算了</p>
+</blockquote>
+<p>‍</p>
+<p>9.3 日 誓师出征, 剩余 20d</p>
+<p>‍</p>
+<p>‍</p>
+<p>Pycharm 整合插件进行刷题, 主要参考博主的思路. 以此之后 10 天整理个人算法笔记</p>
+<p>使用 Python3, 编写方法返回即可</p>
+<blockquote>
+<p>当时直接用刚刚拿下期末设计余威正盛的 Python 而不是 Java, 所以其实你可以说我也是 Python 程序员(API 选手)</p>
+</blockquote>
+<p>‍</p>
+<p>规划: 之后针对不同题库进行刷题; DP 等高难度的可以划划水, 基础题要求 100%</p>
+<p>规划: 做 50%以上的 AC</p>
+<p>最多刷到 17 号左右, 剩下时间 7 天整理笔记</p>
+<blockquote>
+<p>实际上杀红了眼, 杀到前一天还在杀, 没有怎么整理, 就是趁热打铁</p>
+</blockquote>
+<p>‍</p>
+<p>*发现 leetcode 竟然有付费题目, 怎么会是呢?</p>
+<p>‍</p>
+<p>简单刷题日志</p>
+<ul>
+<li>
+<p>8.16 开始探讨可行性</p>
+<blockquote>
+<p>其实当初我是很怀疑自己需不需要参加的, 虽然这个难度相较于那些蓝桥和 ACM 算是挺低的了, 但是奈何自己并不是那种反应快的聪明人, 之前就是数学苦手, 哪怕大学后觉悟了数学能力找回来了, 但是算法相关的解题能力实在是不算好, 只能说是平均水平, 智力没有在这里加持.</p>
+<p>获奖概率高, 有搞头, 同时前辈也推荐去试试, 就报名了. 现在马后炮一看确实是比较小丑的行为, 如果把一个月拿来处理技术栈的问题的话能处理很多了.</p>
+<p>当然, 其实自己很不喜欢这类竞赛, 认为是无意义的内卷, 算法能用就行, 不想去比拼. 这种心情在准备比赛的第一天就被主动屏蔽了, 但是比赛一结束, 混合着悲伤的气氛, 所谓的厌恶之情顿时喷薄而出</p>
+</blockquote>
+</li>
+<li>
+<p>8.18 确定报名, 开始整理算法本地资源</p>
+</li>
+<li>
+<p>8.22 规划学习路线</p>
+</li>
+<li>
+<p>8.28 Python 热手</p>
+<blockquote>
+<p>可以说 Python 才是我的主语言, 至少是那个时候. 我高考结束后一个月就下到了 Pycharm 来照着编程教程学习基础 Python 的语法和一些编程知识. 之后学了 Cpp 之后才算编程入门, 但是至少在大一没学 Java 之前我是完全对现在的主语言 Java 有许多掌握 (如果你说见过 Java 的话还真有, 我小学三年级时候玩我的世界要自己装 JRE, 就是 Java8 那个时候, 我影响深刻是说&quot;轻便化的可以运行在机顶盒, 收音机里的程序&quot;. 大一下就继续用 python 刷一些算法和了解 Python 语法糖, 成为一行代码大师&hellip;大二上才开始狠狠学 Java, 这时候我已经有了 Cpp 和 Python 两个语言的基础了, 于是掌握的很快.另外在这时候也用 Python 做了很多的小应用, 例如大数据分析, 例如爬虫, 例如 AI 相关, 还有游戏, 因此那个时候我还是决定用 python 上场.</p>
+</blockquote>
+</li>
+<li>
+<p>9.3 项目 STW 20days</p>
+</li>
+<li>
+<p>9.4 周一第一次上课, 打卡首冲!<br>
+首日战果: 1(丢人)</p>
+</li>
+<li>
+<p>9.5 黑色星期二: 上课</p>
+<blockquote>
+<p>黑色星期二指的是那天全是课, 烦死了</p>
+</blockquote>
+</li>
+<li>
+<p>9.6 战果: 10+3(自己 5 题, 且有多重解法)(晚上加班)</p>
+</li>
+<li>
+<p>9.7 到 39 题, 平均 4 天一日 10 题 赢!</p>
+</li>
+<li>
+<p>9.8 到 56 题, 增加到 17 题一日, 之前 14 题</p>
+</li>
+<li>
+<p>9.9 (周末) -&gt;74</p>
+</li>
+<li>
+<p>9.10(周末) -&gt;93 平均一日 16 题, 赢!</p>
+</li>
+<li>
+<p>9.11 -&gt;114 (21 题) 继续冲!</p>
+</li>
+<li>
+<p>9.12(BusyDay) 勉强 1 题 (哈哈)</p>
+</li>
+<li>
+<p>9.13 -&gt;123 (AM) -&gt;172(PM) =175(进位) 一日 60 题</p>
+</li>
+<li>
+<p>9.14 -&gt;213 (PM) -&gt;260 (NT) 一日 85 题 平均一日 25 题,<br>
+一天工作 8 小时来看. 一小时 3 题&hellip;<br>
+差不多是顶峰了, 接下来要开始针对性处理了</p>
+</li>
+<li>
+<p>9.15 -&gt;371(PM) -&gt; 414(NT) (实际上 24 道题)</p>
+</li>
+<li>
+<p>9.16(周末) (第一题 100%速度击破) -&gt; 开始准备转知识整理 (一日 86 题)<br>
+-&gt; 448(AM) -&gt; 500(half PM) -&gt; 结束; 12 天内完成 150 题, 平均一日 12 题, 各知识点均覆盖到. 从头到 500, AC60%以上的基本都尝试过去了</p>
+</li>
+<li>
+<p>9.16 晚 笔记整理: Python</p>
+</li>
+<li>
+<p>9.17 - 9.18: 数构 + 算法 初级整理</p>
+</li>
+<li>
+<p>9.19 : have classessss</p>
+</li>
+<li>
+<p>9.20 :前往编程秘籍网站练习 * 2</p>
+</li>
+<li>
+<p>9.21 : 拉拉题解 刷题 20 题, 5 日第一次</p>
+</li>
+<li>
+<p>9.22 : 拉拉题解 看不完了了了+ 刷题 12</p>
+</li>
+<li>
+<p>9.23 (周末) 再, 练算法热门题 (刷 10 题) + 准备 + 长线算法操练计划安排大成功 + 休息, 被拷打麻了</p>
+</li>
+<li>
+<p>9.24 (End) 要被拷打, 写出 2 题就收工(虽然肯定写不出, 但是我的目的已经达到了)</p>
+<blockquote>
+<p>真小丑啊, 赛前说&quot;写两题收工, <strong>会赢的</strong>&quot;, 赛后一题都没写出来</p>
+</blockquote>
+<p>占座什么的只能说凑合, 早上早 8 状态不是很好, 很困感觉. 也许是昨天的疲惫堆积到今日了吧.<br>
+一切完成后, 明天询问自习室的事情吧, 7 教实在是没什么生存空间了. 其他地方不知道 今天下雨</p>
+<p>自习室还好, 中途小状况是坚定了我校外学习的决心;;; 其他的准备非常充分, 确实是最佳水平. 但是, 真的刚开始草台(余下心得见手机笔记本) 被罚时太多了因为刚开始不熟悉流程(竟然是真的输入而不是 leetcode 的传参数模式), 然后不停提示人脸不符, 提交运行效率极慢(30s), 后面才发通知. 看了一遍大概能 3 题加上希儿那道, 结果真正能写出来也就两道&hellip; 动态排名 2700 名, 70% (哈哈, 一题都没有还有排名吗)</p>
+</li>
+<li>
+<p>竟然学校里还有人参加, 总共 AC1 道, 我一道没有&hellip;.</p>
+<blockquote>
+<p>甚至不如福州理工! 太耻辱了, 我变成自习室里一滩淤泥</p>
+</blockquote>
+</li>
+</ul>
+<p>‍</p>
+<p>9.25 结束任务, 开始物色自习室(下转 - 自习室回忆录 2023)</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="小丑时刻精选">
+    <a href="#%e5%b0%8f%e4%b8%91%e6%97%b6%e5%88%bb%e7%b2%be%e9%80%89" class="header-anchor">#</a>
+    小丑时刻精选
+</h2><blockquote>
+<p>大部分只有对应的索引, 具体在个人 Github 账号登录可以看到对应的提交记录</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">#</span><span class="w"> </span><span class="n">第6题新材料</span><span class="w"> </span><span class="n">简单模拟即可</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">#</span><span class="w"> </span><span class="n">2023</span><span class="p">.</span><span class="w"> </span><span class="n">9</span><span class="p">.</span><span class="na">24</span><span class="w"> </span><span class="n">绝唱</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">#</span><span class="w"> </span><span class="p">(</span><span class="n">下一题</span><span class="p">)</span><span class="n">希儿啊</span><span class="p">,</span><span class="w"> </span><span class="n">之前天天看你跳舞</span><span class="p">,</span><span class="w"> </span><span class="n">怎么今天我就这么不争气呢</span><span class="p">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="n">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">&#39;</span><span class="n">__main__</span><span class="err">&#39;</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">基础暴力解法</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">input</span><span class="p">(</span><span class="s">&#34;几个元素&#34;</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">input</span><span class="p">(</span><span class="s">&#34;反应区间&#34;</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">dummy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dummy</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="sc">&#39; &#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">K</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">A</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="n">input</span><span class="p">(</span><span class="s">&#34;元素i&#34;</span><span class="p">)))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">start</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">A</span><span class="p">)):</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="n">K</span><span class="o">+</span><span class="n">1</span><span class="p">):</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="n">K</span><span class="w"> </span><span class="o">&lt;</span><span class="n">len</span><span class="p">(</span><span class="n">A</span><span class="p">):</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">A</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="err">#</span><span class="w"> </span><span class="n">print</span><span class="p">(</span><span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">res</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">res</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">else</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">break</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="n">sum</span><span class="p">(</span><span class="n">set</span><span class="p">(</span><span class="n">res</span><span class="p">)))</span><span class="w">
+</span></span></span></code></pre></div><p>15 - 双数之和</p>
+<p>「双指针」，当我们需要枚举数组中的两个元素时，如果我们发现随着第一个元素的递增，第二个元素是递减的，那么就可以使用双指针的方法，将枚举的时间复杂度从 <strong>O</strong>(<strong>N</strong>2 <strong>)</strong> 减少至 <strong>O</strong>(<strong>N</strong>)。为什么是 <strong>O</strong>(<strong>N</strong>) 呢？这是因为在枚举的过程每一步中，「左指针」会向右移动一个位置（也就是题目中的 <strong>b</strong>），而「右指针」会向左移动若干个位置，这个与数组的元素有关，但我们知道它一共会移动的位置数为 <strong>O</strong>(<strong>N</strong>)，<strong>均摊下来</strong>，每次也向左移动一个位置，因此时间复杂度为 <strong>O</strong>(<strong>N</strong>)。</p>
+<p>19 - 快慢针</p>
+<p>39 - 剪枝操作</p>
+<p>122 动态规划大入门, 看我的提交</p>
+<p>148 链表排序 基础要练!</p>
+<p>204 质数计算</p>
+<p>不, 还不够快!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="k">def</span> <span class="nf">isPrime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>  <span class="c1"># 选用了一种加强的判断质数的方法; 输入: 一个正数</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># 这个直接排除了一半的数</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">current</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>  <span class="c1"># 这个直接排除了另一半的数</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="n">current</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
+</span></span></code></pre></div><p>厄拉多塞筛法. 比如说求 20 以内质数的个数,首先 0,1 不是质数.2 是第一个质数,然后把 20 以内所有 2 的倍数划去.2 后面紧跟的数即为下一个质数 3,然后把 3 所有的倍数划去.3 后面紧跟的数即为下一个质数 5,再把 5 所有的倍数划去.以此类推.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">countPrimes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 厄拉多塞筛法</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">output</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>  <span class="c1"># 首先生成了一个全部为1的列表,长度为n</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">output</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="c1"># 因为0和1不是质数,所以列表的前两个位置赋值为0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 此时从index = 2开始遍历,output[2]==1,即表明第一个质数为2,然后将2的倍数对应的索引</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 全部赋值为0. 此时output[3] == 1,即表明下一个质数为3,同样划去3的倍数.以此类推.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">output</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">output</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span><span class="p">:</span><span class="n">n</span><span class="p">:</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span><span class="p">:</span><span class="n">n</span><span class="p">:</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 最后output中的数字1表明该位置上的索引数为质数,然后求和即可.</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</span></span></code></pre></div><p>&hellip;</p>
+<p>这个嵌套复制要记住:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">        <span class="c1"># 从原数组复制一份到 copy_board 中</span>
+</span></span><span class="line"><span class="cl">        <span class="n">copy_board</span> <span class="o">=</span> <span class="p">[[</span><span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">)]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">)]</span>
+</span></span></code></pre></div><p>&hellip; 矩阵展平方法:</p>
+<p>sum(matrix, []), 返回展平的矩阵[]</p>
+<p>..随机数</p>
+<p><code>choice(self.arr)</code></p>
+<p><code>dic.get(i, 0)</code></p>
+<p>a method in Python that returns the value of the key i in the dictionary dic. If the key i does not exist in the dictionary, it returns 0 as the default value.</p>
+<p>&hellip;Counter</p>
+<p>统计[]中每个元素出现的次数</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2023-09-29 20:38 CST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="SpadeKTLSG/SpadeKTLSG.github.io"
+    data-repo-id="R_kgDOLz5uXQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOLz5uXc4Ce_BV"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="1"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('1');
+            } else {
+                setGiscusTheme('1');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+
+    <section class="copyright">
+        &copy;
+        
+        2024 SpadeK
+    </section>
+
+
+    
+    <section class="running-time">
+        本博客已稳定运行
+        <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        发表了10篇文章 ·
+        总计163.44k字
+    </section>
+
+
+    <section class="powerby">
+        
+            Powered by Blood, Sweat, and Tears
+        
+        <br/>使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script>
+    let s1 = '2024-4-27'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+    </body>
+</html>

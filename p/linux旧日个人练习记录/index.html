@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="&ndash;Linux 操作记录 \u200d # Header 这里将要记录 Linux 操作笔记, 包括感悟和体验, 以时间日志方式给出 \u200d 我是什么时候踏上这条道路的呢? 现在想起来, 应该是 8 月 10 日-202">
+<title>Linux旧日个人练习记录</title>
+
+<link rel='canonical' href='https://spadektlsg.github.io/p/linux%E6%97%A7%E6%97%A5%E4%B8%AA%E4%BA%BA%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.67e1d55df895e92f972a3c6377b28d4465c25830c4976c898200217da8ea97f2.css"><meta property='og:title' content="Linux旧日个人练习记录">
+<meta property='og:description' content="&ndash;Linux 操作记录 \u200d # Header 这里将要记录 Linux 操作笔记, 包括感悟和体验, 以时间日志方式给出 \u200d 我是什么时候踏上这条道路的呢? 现在想起来, 应该是 8 月 10 日-202">
+<meta property='og:url' content='https://spadektlsg.github.io/p/linux%E6%97%A7%E6%97%A5%E4%B8%AA%E4%BA%BA%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/'>
+<meta property='og:site_name' content='玄桃K的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-01-26T20:40:20&#43;08:00'/><meta property='article:modified_time' content='2024-03-26T10:32:10&#43;08:00'/><meta property='og:image' content='https://spadektlsg.github.io/tech/001/matrix.png' />
+<meta name="twitter:title" content="Linux旧日个人练习记录">
+<meta name="twitter:description" content="&ndash;Linux 操作记录 \u200d # Header 这里将要记录 Linux 操作笔记, 包括感悟和体验, 以时间日志方式给出 \u200d 我是什么时候踏上这条道路的呢? 现在想起来, 应该是 8 月 10 日-202"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://spadektlsg.github.io/tech/001/matrix.png' />
+    <link rel="shortcut icon" href="/sys/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="756"
+                            height="749" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😋</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">玄桃K的博客</a></h1>
+            <h2 class="site-description">还在打复活赛</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/SpadeKTLSG/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291872628" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M153.770667 517.558857l200.387047-197.241905L302.86019 268.190476 48.761905 518.290286l254.439619 243.614476 50.590476-52.833524-200.021333-191.512381zM658.285714 320.316952L709.583238 268.190476l254.098286 250.09981L709.241905 761.904762l-50.590476-52.833524 200.021333-191.512381L658.285714 320.316952z m-112.981333-86.186666L393.99619 785.554286l70.534096 19.358476 151.30819-551.399619-70.534095-19.358476z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:spadekxcwxtlsg@gmail.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291517604" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M926.47619 355.644952V780.190476a73.142857 73.142857 0 0 1-73.142857 73.142857H170.666667a73.142857 73.142857 0 0 1-73.142857-73.142857V355.644952l73.142857 62.000762V780.190476h682.666666V417.645714l73.142857-62.000762zM853.333333 170.666667a74.044952 74.044952 0 0 1 26.087619 4.778666 72.704 72.704 0 0 1 30.622477 22.186667 73.508571 73.508571 0 0 1 10.678857 17.67619c3.169524 7.509333 5.12 15.652571 5.607619 24.210286L926.47619 243.809524v24.380952L559.469714 581.241905a73.142857 73.142857 0 0 1-91.306666 2.901333l-3.632762-2.925714L97.52381 268.190476v-24.380952a72.899048 72.899048 0 0 1 40.155428-65.292191A72.97219 72.97219 0 0 1 170.666667 170.666667h682.666666z m-10.971428 73.142857H181.638095L512 525.58019 842.361905 243.809524z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/363101711'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291537293" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7801" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M772.437333 97.52381l51.712 51.712-126.342095 126.342095H828.952381a73.142857 73.142857 0 0 1 73.142857 73.142857v487.619048a73.142857 73.142857 0 0 1-73.142857 73.142857H195.047619a73.142857 73.142857 0 0 1-73.142857-73.142857v-487.619048a73.142857 73.142857 0 0 1 73.142857-73.142857h131.120762L199.850667 149.23581 251.562667 97.52381l178.054095 178.054095h164.742095L772.437333 97.52381zM828.952381 348.720762H195.047619v487.619048h633.904762v-487.619048z m-280.380952 73.142857v341.333333h-73.142858v-341.333333h73.142858z m-134.095239 73.142857v195.047619h-73.142857v-195.047619h73.142857z m268.190477 24.380953v146.285714h-73.142857v-146.285714h73.142857z" p-id="7802"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#header">Header</a></li>
+          </ol>
+        </li>
+        <li><a href="#8-月中本地虚拟机初体验">8 月中本地虚拟机初体验</a>
+          <ol>
+            <li><a href="#练习中-linux-装机记录">练习中 Linux 装机记录</a></li>
+          </ol>
+        </li>
+        <li><a href="#9-月菜鸟练习--被拷打">9 月菜鸟练习 + 被拷打</a>
+          <ol>
+            <li><a href="#927-装谷歌浏览器-失败">9.27 装谷歌浏览器-失败</a></li>
+          </ol>
+        </li>
+        <li><a href="#10-月集群整队">10 月集群整队</a>
+          <ol>
+            <li>
+              <ol>
+                <li><a href="#106idea-安装-hw-成功">10.6IDEA 安装 HW-成功</a></li>
+              </ol>
+            </li>
+            <li><a href="#一些安装-bug-记录">一些安装 bug 记录</a></li>
+          </ol>
+        </li>
+        <li><a href="#补充内容-分布式集群部署信息记录">补充内容: 分布式集群部署信息记录</a>
+          <ol>
+            <li><a href="#todo">TODO</a></li>
+            <li><a href="#机器名称">机器名称</a></li>
+            <li><a href="#ip">IP</a></li>
+            <li><a href="#软件包列表">软件包列表</a></li>
+            <li><a href="#软件位置">软件位置</a></li>
+            <li><a href="#热操作">热操作</a></li>
+            <li><a href="#bugfix">BugFix</a></li>
+          </ol>
+        </li>
+        <li><a href="#11-月进阶-shell-练习--服务器拓展">11 月进阶 Shell 练习 + 服务器拓展</a>
+          <ol>
+            <li><a href="#1112-云服务器选型计划">11.12 云服务器选型计划</a>
+              <ol>
+                <li><a href="#do">DO</a></li>
+                <li><a href="#azure">Azure</a></li>
+                <li><a href="#heroku">Heroku</a></li>
+                <li><a href="#new-relic-one">New Relic one</a></li>
+                <li><a href="#余下">余下</a></li>
+              </ol>
+            </li>
+            <li><a href="#1115-云服务器搭建初体验事件">1115 云服务器搭建初体验事件</a></li>
+            <li><a href="#1116-实操-finalshell-连接服务器-展示个人博客">11.16 实操-FinalShell 连接服务器, 展示个人博客</a>
+              <ol>
+                <li><a href="#信息显示"><strong>信息显示</strong></a></li>
+                <li><a href="#安装-yum">安装 yum</a></li>
+                <li><a href="#更换自带下载器-apt-的镜像">更换自带下载器 apt 的镜像</a></li>
+                <li><a href="#nginx-挂载静态页面">Nginx 挂载静态页面</a></li>
+                <li><a href="#配置防火墙---直接爆炸">配置防火墙 - 直接爆炸</a></li>
+                <li><a href="#防火墙把我墙了-重来">防火墙把我墙了, 重来!</a></li>
+                <li><a href="#nginx-配置文件">Nginx 配置文件</a></li>
+                <li><a href="#文件传输">文件传输</a></li>
+                <li><a href="#打包前端">打包前端</a></li>
+                <li><a href="#代理配置">代理配置</a></li>
+              </ol>
+            </li>
+            <li><a href="#1117azure-初体验文档">11.17Azure 初体验文档</a></li>
+            <li><a href="#1120-硬盘扩容---硬盘爆炸事件">11.20 硬盘扩容 - 硬盘爆炸事件</a></li>
+            <li><a href="#1125-外卖项目搭建大爆炸事件">11.25 外卖项目搭建大爆炸事件</a>
+              <ol>
+                <li><a href="#初见">初见</a></li>
+                <li><a href="#限界突破">限界突破</a>
+                  <ol>
+                    <li><a href="#mysql-老是有依赖问题---爆炸了">Mysql 老是有依赖问题 - 爆炸了</a></li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <li><a href="#1128-卷土重来事件">11.28 卷土重来事件</a>
+              <ol>
+                <li><a href="#一线生机--没有活路">一线生机 × 没有活路</a>
+                  <ol>
+                    <li><a href="#failed1">Failed1</a></li>
+                    <li><a href="#failed2">Failed2</a></li>
+                    <li><a href="#failed3">Failed3</a></li>
+                  </ol>
+                </li>
+                <li><a href="#帝王是我-spadek-哒-nooooo">帝王是我 SpadeK 哒? NOOOOO!</a></li>
+                <li><a href="#斩断因果">斩断因果</a></li>
+              </ol>
+            </li>
+            <li><a href="#1129-瑞吉斩杀">11.29 瑞吉斩杀</a>
+              <ol>
+                <li><a href="#打包运行测试">打包运行测试</a></li>
+                <li><a href="#redis-测试">Redis 测试</a></li>
+                <li><a href="#mysql-主从复制">MYSQL 主从复制</a>
+                  <ol>
+                    <li><a href="#密码不合规-failed"><strong>密码不合规 Failed</strong></a></li>
+                    <li><a href="#拍屁股">拍屁股</a></li>
+                    <li><a href="#阴差阳错">阴差阳错</a></li>
+                    <li><a href="#冀中寄">冀中寄</a></li>
+                    <li><a href="#主从配置总结">主从配置总结</a></li>
+                    <li><a href="#跑项目">跑项目</a></li>
+                    <li><a href="#日志综合">日志综合</a></li>
+                    <li><a href="#nginx-跳过">Nginx 跳过</a></li>
+                    <li><a href="#总结">总结</a></li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <li><a href="#1130-苍穹后续拯救">11.30 苍穹后续拯救</a></li>
+          </ol>
+        </li>
+        <li><a href="#12-月项目结合演练--拐棍计划">12 月项目结合演练 + 拐棍计划</a>
+          <ol>
+            <li><a href="#1205-newpublicip-课堂展示">12.05 NewPublicIP 课堂展示</a></li>
+            <li><a href="#1225-服务器拐棍-linux-装配-record">12.25 服务器拐棍 Linux 装配 Record</a>
+              <ol>
+                <li><a href="#连接">连接</a></li>
+                <li><a href="#jdk">JDK</a></li>
+                <li><a href="#docker">Docker</a></li>
+                <li><a href="#redis">Redis</a>
+                  <ol>
+                    <li><a href="#目录">目录</a></li>
+                    <li><a href="#搭载">搭载</a></li>
+                    <li><a href="#验证">验证</a></li>
+                    <li><a href="#测试">测试</a></li>
+                    <li><a href="#连接-1">连接</a></li>
+                  </ol>
+                </li>
+                <li><a href="#mysql">Mysql</a>
+                  <ol>
+                    <li><a href="#搭载-1">搭载</a></li>
+                    <li><a href="#测试-1">测试</a></li>
+                  </ol>
+                </li>
+                <li><a href="#维护">维护</a>
+                  <ol>
+                    <li><a href="#快捷调用">快捷调用</a>
+                      <ol>
+                        <li><a href="#地址">地址</a></li>
+                        <li><a href="#redis--default--2333">redis -default -2333</a></li>
+                        <li><a href="#mysql--root--2333">mysql -root -2333</a></li>
+                      </ol>
+                    </li>
+                    <li><a href="#docker-管理">Docker 管理</a></li>
+                  </ol>
+                </li>
+                <li><a href="#问题">问题</a></li>
+              </ol>
+            </li>
+            <li><a href="#1228-拐棍二号白嫖---败北">12.28 拐棍二号白嫖 - 败北</a>
+              <ol>
+                <li><a href="#ip-爆炸">IP 爆炸</a></li>
+              </ol>
+            </li>
+            <li><a href="#1229-拐棍三号">12.29 拐棍三号</a>
+              <ol>
+                <li><a href="#mysql-1">Mysql</a></li>
+                <li><a href="#redis-1">Redis</a></li>
+                <li><a href="#连接问题">连接问题</a></li>
+                <li><a href="#找不到远程问题">找不到远程问题</a></li>
+                <li><a href="#用户名被拒绝问题">用户名被拒绝问题</a></li>
+                <li><a href="#mysql-版本-8035-针对性处理">MYSQL 版本 8.0.35 针对性处理</a></li>
+                <li><a href="#连接不上数据库">连接不上数据库?</a></li>
+              </ol>
+            </li>
+            <li><a href="#1230-新机子小水管拐棍三号-改---运转中">12.30 新机子小水管拐棍三号-改 - 运转中</a>
+              <ol>
+                <li><a href="#连接参数">连接参数</a>
+                  <ol>
+                    <li><a href="#redis-2"><strong>Redis</strong></a></li>
+                    <li><a href="#mysql-2"><strong>Mysql</strong></a></li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li><a href="#3-月复健">3 月复健</a>
+          <ol>
+            <li><a href="#326linuxvmware-教程配置">3.26LinuxVMware 教程配置</a>
+              <ol>
+                <li><a href="#安装-vmware">安装 VMware</a>
+                  <ol>
+                    <li><a href="#卸载旧版-vmware可选">卸载旧版 VMware（可选）</a></li>
+                  </ol>
+                </li>
+                <li><a href="#安装-linux-发行版">安装 Linux 发行版</a></li>
+                <li><a href="#组装">组装</a></li>
+                <li><a href="#设置虚拟机快照">设置虚拟机快照</a></li>
+                <li><a href="#网络模式">网络模式</a>
+                  <ol>
+                    <li><a href="#桥接">桥接</a></li>
+                    <li><a href="#host-only">Host-only</a></li>
+                    <li><a href="#nat">NAT</a></li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <li><a href="#328-完全复健后云资源服务器等下一步计划">3.28 完全复健后云资源(服务器等)下一步计划</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/linux%E6%97%A7%E6%97%A5%E4%B8%AA%E4%BA%BA%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+                
+                    <img src="/tech/001/matrix.png" loading="lazy" alt="Featured image of post Linux旧日个人练习记录" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+
+
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/linux%E6%97%A7%E6%97%A5%E4%B8%AA%E4%BA%BA%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/">Linux旧日个人练习记录</a>
+        </h2>
+
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2024-01-26</time>
+        </div>
+        
+
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 35 分钟
+            </time>
+        </div>
+        
+    </footer>
+    
+
+    
+
+    
+    
+
+
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>&ndash;Linux 操作记录</p>
+<p>‍</p>
+<h3 id="header">
+    <a href="#header" class="header-anchor">#</a>
+    Header
+</h3><p>这里将要记录 Linux 操作笔记, 包括感悟和体验, 以时间日志方式给出</p>
+<p>‍</p>
+<blockquote>
+<p>我是什么时候踏上这条道路的呢?</p>
+<p>现在想起来, 应该是 8 月 10 日-2023. 那一日我第一次装好了自己的 Linux 虚拟机, 虽然对这个世界全无了解, 然而却感到无比的雀跃.</p>
+<p>这份心境, 也将伴随着我度过接下来布满荆棘的旅途.</p>
+</blockquote>
+<hr>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="8-月中本地虚拟机初体验">
+    <a href="#8-%e6%9c%88%e4%b8%ad%e6%9c%ac%e5%9c%b0%e8%99%9a%e6%8b%9f%e6%9c%ba%e5%88%9d%e4%bd%93%e9%aa%8c" class="header-anchor">#</a>
+    8 月中本地虚拟机初体验
+</h2><blockquote>
+<p>8.15 2023</p>
+</blockquote>
+<p>‍</p>
+<h3 id="练习中-linux-装机记录">
+    <a href="#%e7%bb%83%e4%b9%a0%e4%b8%ad-linux-%e8%a3%85%e6%9c%ba%e8%ae%b0%e5%bd%95" class="header-anchor">#</a>
+    练习中 Linux 装机记录
+</h3><ol>
+<li>
+<p><strong><del>真-初号机</del></strong></p>
+<p>8.15 日, 假期预演, 去微信号手把手以及 CSDN 看教程, 在 3 分钟内利用快速安装装了第一台虚拟机(选择最小安装, 导入镜像 iso 文件即可 run)</p>
+<p>8.16 日删除, 准备正式配置, 参考了更详细的教程</p>
+</li>
+<li>
+<p><strong><del>正式零号机-03</del></strong></p>
+<p>由 3 次尝试后生成</p>
+<p>创建了多个账户, 设置了 root 账户密码</p>
+<p>8.22 日因系统重装被摧毁</p>
+</li>
+<li>
+<p><strong><del>正式二号机</del></strong></p>
+<p>9.4 日重建, 与一号机基本相同</p>
+<p>9.5 上机处理问题:</p>
+<p>· [X] 学习 CV 方法</p>
+<p>· [ ] 处理鼠标闪烁(失败)</p>
+<p>· [ ] 设置共享文件夹(后面成功)</p>
+<p>早上 11 点, Settings 打不开, 无法解决, 遂从硬盘摧毁</p>
+</li>
+<li>
+<p><strong><del>正式三号机</del></strong></p>
+<p>在处理共享文件过程中, 反应很慢, 逐渐演变为<strong>全程卡死</strong>. 遂被抹除</p>
+</li>
+<li>
+<p><strong><del>正式四号机</del></strong></p>
+<p>设置文件共享: 安装 VMTool</p>
+<p>过程中发现无法下载. 原来是网络问题; 结果重启发现网络设置被吃了, 然后不停尝试修改 IP 和 DNS, 设置桥接模式以外的连接方式等 -&gt; 全部失败</p>
+<p>‍</p>
+<p>最后按教程重启了网络设置, 勉强可以了</p>
+<p>晚上去教室自习发现我的主机 Windows 的网络也出问题, 连上一会儿就断联, 两天使用诊断服务处理了几次, 最后发现是系统服务出问题.</p>
+<p>现在已经平稳运行(大概)</p>
+<p>因祸得福, 现在挂完代理也不用重启网络了, 虚拟机的设备配置也没问题了.(你确定?来自 12 月)</p>
+</li>
+<li>
+<p><strong><del>初号机 Family</del></strong></p>
+<p>目前使用的机器, 9.8 更新了一次全应用, 登录了谷歌准备同步内容</p>
+<p>存在问题; 光标闪烁( 主机芯片问题, 可以接受 ); 共享文件夹不稳定(可以接受)</p>
+<p>克隆生成了 Hadoop + Spark 集群</p>
+</li>
+<li>
+<p>初号机 - Copy</p>
+<p>9.6 -&gt; 12.1 课堂使用主力机, 拥有全套最新开发工具, 交互界面和经久耐用的性能</p>
+<p>‍</p>
+</li>
+<li>
+<p>==&quot;终端&quot;机 Family==</p>
+<p>(成员: 3)</p>
+<p>初始配置后发现难以交互, 无法 CV, 也无法传文件, 立刻在装好之后卸载了</p>
+<p>但是后面发现必须这样, 用 FinalShell 连接克服困难, 现在已经用的很习惯了</p>
+</li>
+<li>
+<p>网络云服务器 - 死伤不计其数, 约配了 5 到 6 次, 销毁重装了好几次</p>
+</li>
+<li>
+<p>终末 + 清算 -&gt;12.24 彻底清理</p>
+</li>
+<li>
+<p>以上统计到 2023 年, 2024 后由于熟练了不再记录</p>
+</li>
+<li>
+<p>复盘, 发现 VMware 很可能是导致电脑问题的元凶</p>
+</li>
+</ol>
+<p>‍</p>
+<p>当时很兴奋, 看到第一天黑窗体的出现, 哪知道这是噩梦的开始</p>
+<p>‍</p>
+<h2 id="9-月菜鸟练习--被拷打">
+    <a href="#9-%e6%9c%88%e8%8f%9c%e9%b8%9f%e7%bb%83%e4%b9%a0--%e8%a2%ab%e6%8b%b7%e6%89%93" class="header-anchor">#</a>
+    9 月菜鸟练习 + 被拷打
+</h2><p>‍</p>
+<p>笔记整理完毕, 开始长线练习</p>
+<p>下午艰难安装 Scala 和 VScode 完成另一门课的练习</p>
+<p>直接采用归档安装会失败, 不知道是不是只有我会这样, 需要 rpm 命令安装.</p>
+<p>很生气. VScode 安装 Scala 有点难顶, 一直下不完, 又懒得去配镜像, 只好一直等咯</p>
+<p>总共整理了差不多一个月, 菊花宝典整理完了, 将知识保存到了本地.</p>
+<p>可恶, 把我流量下完了 X _ X</p>
+<p>安装 IDEA 和 VSCode, 测试 Java 和生产环境</p>
+<p>在失败了十次甚至九次之后, 终于完成了生产环境的搭建了.</p>
+<p>下了 Vscode, IDEA, Scala, JDK , 改了 Host , 同步 Github Settings … 晕倒了</p>
+<p>‍</p>
+<p>好像一换到校园网就不能再在虚拟机里联网了</p>
+<p>也罢也罢… 就用自己流量把</p>
+<p>第二天也在主机上测试了一下, 发现除了 UI 不同之外速度都差不多, 那还是用主机的 IDEA 跑吧</p>
+<blockquote>
+<p>这个时候还不懂什么网卡配置, 计算机网络真的要赶紧个上啊魂淡</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<h3 id="927-装谷歌浏览器-失败">
+    <a href="#927-%e8%a3%85%e8%b0%b7%e6%ad%8c%e6%b5%8f%e8%a7%88%e5%99%a8-%e5%a4%b1%e8%b4%a5" class="header-anchor">#</a>
+    9.27 装谷歌浏览器-失败
+</h3><p>软件安装<strong>绕过商店</strong>方法尝试:</p>
+<blockquote>
+<p>事实上这个商店(图形化), 几乎是烂了的样子, 什么都没有</p>
+</blockquote>
+<p>Linux centos 安装 chromium</p>
+<p><a class="link" href="https://pkgs.org/download/chromium"  title="https://pkgs.org/download/chromium"
+     target="_blank" rel="noopener"
+    >https://pkgs.org/download/chromium</a></p>
+<p>选择 centos7 版本，进入详情页，找到【Download 】下的 binary package，直接下载 rpm 包. 速度很快</p>
+<p>还需要在【Requires 】下载依赖包<a class="link" href="https://so.csdn.net/so/search?q=chromium&amp;spm=1001.2101.3001.7020"  target="_blank" rel="noopener"
+    >chromium</a>-common-103.0.5060.114-1.el7.x86_64.rpm 和 nss-mdns-0.14.1-9.el7.x86_64.rpm</p>
+<p>‍</p>
+<p>最后一直报安装失败 放弃</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="10-月集群整队">
+    <a href="#10-%e6%9c%88%e9%9b%86%e7%be%a4%e6%95%b4%e9%98%9f" class="header-anchor">#</a>
+    10 月集群整队
+</h2><p>‍</p>
+<h4 id="106idea-安装-hw-成功">
+    <a href="#106idea-%e5%ae%89%e8%a3%85-hw-%e6%88%90%e5%8a%9f" class="header-anchor">#</a>
+    10.6IDEA 安装 HW-成功
+</h4><p>‍</p>
+<p>压缩包或可执行文件安装</p>
+<p>例如安装压缩包: <code>idea.tar.gz</code>​ 时候的操作</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">idea</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">zxvf</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">idea</span><span class="p">.</span><span class="na">tar</span><span class="p">.</span><span class="na">gz</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">idea</span><span class="w">
+</span></span></span></code></pre></div><p>到/opt/idea 启动!</p>
+<p>​<code>./idea.sh</code>​</p>
+<p>‍</p>
+<p>‍</p>
+<p>==配置 IDEA 环境变量==</p>
+<p>目的是无论终端在哪个工作目录，都可以通过./idea.sh 指令启动 IDEA，不用进入到 IDEA 的环境目录了。</p>
+<p>我们先假设我们解压后的目录为 idea-IC-213.6777.52（这个文件名与你下载的 IDEA 版本有关系，可能跟我的不一致，自行替换为自己的目录），查看这个解压目录名称的指令为：</p>
+<p>​<code>ls /opt/idea</code>​</p>
+<p>‍</p>
+<p>idea-IU-232.9921.47</p>
+<p>记录下这个文件名，然后将其添加至环境变量中：</p>
+<p>我们通过 vim 指令对环境变量文件进行编辑：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">vim</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="na">bashrc</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>然后将如下的内容添加至<code>~/.bashrc</code>​ 文件的最后一行（ <strong>！！！注意替换掉对应的目录名！！！</strong> ）。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">export</span><span class="w"> </span><span class="n">IDEA_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">idea</span><span class="o">/</span><span class="n">idea</span><span class="o">-</span><span class="n">IU</span><span class="o">-</span><span class="n">232</span><span class="p">.</span><span class="na">9921</span><span class="p">.</span><span class="na">47</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">PATH</span><span class="o">=</span><span class="p">:</span><span class="n">$PATH</span><span class="p">:</span><span class="n">$</span><span class="p">{</span><span class="n">IDEA_HOME</span><span class="p">}</span><span class="o">/</span><span class="n">bin</span><span class="w">
+</span></span></span></code></pre></div><p>通过<code>:wq</code>​ 进行保存即可</p>
+<p>接着我们让系统重新加载我们修改好的环境变量：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">source</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="na">bashrc</span><span class="w">
+</span></span></span></code></pre></div><p>在任意目录下输入<code>idea.sh</code>​ 启动 IDEA 图形化界面了</p>
+<p>‍</p>
+<p>我配出来的这个 Idea 需要跟随终端进行</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="一些安装-bug-记录">
+    <a href="#%e4%b8%80%e4%ba%9b%e5%ae%89%e8%a3%85-bug-%e8%ae%b0%e5%bd%95" class="header-anchor">#</a>
+    一些安装 bug 记录
+</h3><p>‍</p>
+<p>安装报 ：installing not available<br>
+可以先执行: wget -O /etc/yum.repos.d/epel.repo <a class="link" href="http://mirrors.aliyun.com/repo/epel-7.repo"  target="_blank" rel="noopener"
+    >http://mirrors.aliyun.com/repo/epel-7.repo</a><br>
+再完全更新一下 : yum update</p>
+<p>‍</p>
+<p>安装发现:</p>
+<p>获取秘钥失败</p>
+<p>‍</p>
+<p>我能行的方法:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">第一步安装指令</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="n">yum</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">wget</span><span class="w"> </span><span class="o">--</span><span class="n">nogpgcheck</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">第二步联网获取秘钥</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pki</span><span class="o">/</span><span class="n">rpm</span><span class="o">-</span><span class="n">gpg</span><span class="o">/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">wget</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<hr>
+<p>‍</p>
+<p>10.6.2023 国庆假期完成笔记本的整理</p>
+<p>10.9 更新笔记本结构, 优化查找速度, 分为索引笔记本(TLB 原理)和完整笔记本(分页存储原理)</p>
+<p>并且针对上课内容开辟新 space.</p>
+<p>‍</p>
+<p>10.17</p>
+<p>在完成 Hadoop 集群配置时候为了保证两门课的隔离性, 同时也是拯救本就捉襟见肘的 C 盘容量</p>
+<p><strong>在 D 盘创建了 3 个新虚拟机</strong>, 克隆自 C 盘</p>
+<p>而后又克隆了一个 Linux 课虚拟机, 专门处理 Linux</p>
+<p>剩下三个装配全套分布式实验环境</p>
+<p>总大小预计 45+12 = 60GB</p>
+<p>实验了 Hadoop + Spark 集群配置, 实验报告另附(合并)</p>
+<p>‍</p>
+<p>发现了 VMware 不能实现虚拟机搬家(之后我的容量焦虑症因为这个时不时发作)</p>
+<p>‍</p>
+<p>10 月下</p>
+<p>今日大概是测试,下午打算一波带走 Hadoop 集群配置, 带不走就摆烂了</p>
+<p>课前简单复习了下除了管道以外的其他内容, 做了细化目录整理</p>
+<p><strong>Oh My God! 竟然真的考管道</strong></p>
+<p>==“我不理解为什么大家都揪着最难的抽” &ndash;老师原话==</p>
+<p>‍</p>
+<p>完全重构了 Linux 菊花宝典, 查阅笔记命令更加方便了, 性能提升 114.514%倍</p>
+<p>‍</p>
+<p>讲授 IP 地址, 网关, 主机名等内容, 计算机网络的知识我基本自学了(你确定? 你确定? 你确定??? 学了, 但是实际用起来啥都不会那个时候)</p>
+<p>网络配置什么的, 暑假就玩过了, 但是始终配不好, 后来发现是我网卡什么的有 bug, 需要重装解决</p>
+<p>然后我重装不了了(保存的设置太多, 只能明年 1 月考虑)</p>
+<blockquote>
+<p>后来也确实是 1 月才开干, 被拷打惨了, 具体参阅另一篇</p>
+</blockquote>
+<p>‍</p>
+<h2 id="补充内容-分布式集群部署信息记录">
+    <a href="#%e8%a1%a5%e5%85%85%e5%86%85%e5%ae%b9-%e5%88%86%e5%b8%83%e5%bc%8f%e9%9b%86%e7%be%a4%e9%83%a8%e7%bd%b2%e4%bf%a1%e6%81%af%e8%ae%b0%e5%bd%95" class="header-anchor">#</a>
+    补充内容: 分布式集群部署信息记录
+</h2><p>‍&ndash;大数据的, 赛博牛马不搞这个</p>
+<p>‍</p>
+<p>2023-11-21 晚 惨淡退场 三人幸终</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="todo">
+    <a href="#todo" class="header-anchor">#</a>
+    TODO
+</h3><p>‍</p>
+<ul>
+<li><input disabled="" type="checkbox"> 询问老师最后一个 Spark 问题 -&gt;JDK 配置?</li>
+<li><input disabled="" type="checkbox"> 验证 SSH 传输问题</li>
+<li><input disabled="" type="checkbox"> 修改软件包等信息名称</li>
+<li><input checked="" disabled="" type="checkbox"> 不, 已经, 不用奋斗了&hellip;</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<h3 id="机器名称">
+    <a href="#%e6%9c%ba%e5%99%a8%e5%90%8d%e7%a7%b0" class="header-anchor">#</a>
+    机器名称
+</h3><p>‍</p>
+<p>DS_SK spadek</p>
+<p>DSslave1 spadekfake1</p>
+<p>DSslave2 spadekfake2</p>
+<p>均以 Root 账号登录, 用户界面为 cwx 账号</p>
+<p>‍</p>
+<h3 id="ip">
+    <a href="#ip" class="header-anchor">#</a>
+    IP
+</h3><p>‍</p>
+<p>DS_SK spadek</p>
+<p>192.168.0.134</p>
+<p>‍</p>
+<p>DSslave1 spadekfake1</p>
+<p>192.168.0.102</p>
+<p>‍</p>
+<p>DSslave2 spadekfake2</p>
+<p>192.168.0.163</p>
+<p>‍</p>
+<hr>
+<h3 id="软件包列表">
+    <a href="#%e8%bd%af%e4%bb%b6%e5%8c%85%e5%88%97%e8%a1%a8" class="header-anchor">#</a>
+    软件包列表
+</h3><p>jdk1.8.0_60 -&gt;<del>Installed OpenJDK 1.8.0_382 -&gt;</del> ​ jdk-8u202-linux-x64.tar.gz<br>
+hadoop-3.2.2 &ndash;&gt; hadoop-3.2.4.tar.gz<br>
+scala-2.12.14 -&gt; Installed 2.11.8<br>
+spark-3.1.2 &ndash;&gt; spark-3.2.2-bin-hadoop3.2.tgz</p>
+<p>‍</p>
+<p>变量位置</p>
+<p>vim /etc/profile</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">hadoop</span><span class="o">-</span><span class="n">3</span><span class="p">.</span><span class="na">2</span><span class="p">.</span><span class="na">4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">spark</span><span class="o">-</span><span class="n">3</span><span class="p">.</span><span class="na">2</span><span class="p">.</span><span class="na">2</span><span class="o">-</span><span class="n">bin</span><span class="o">-</span><span class="n">hadoop3</span><span class="p">.</span><span class="na">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">jdk1</span><span class="p">.</span><span class="na">8</span><span class="p">.</span><span class="na">0_202</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">scala</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">在</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">profile文件中添加下列内容</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">JAVA_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cx</span><span class="o">/</span><span class="n">jdk1</span><span class="p">.</span><span class="na">8</span><span class="p">.</span><span class="na">0_202</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">SCALA_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">scala</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">SPARK_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cx</span><span class="o">/</span><span class="n">spark</span><span class="o">-</span><span class="n">3</span><span class="p">.</span><span class="na">2</span><span class="p">.</span><span class="na">2</span><span class="o">-</span><span class="n">bin</span><span class="o">-</span><span class="n">hadoop3</span><span class="p">.</span><span class="na">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">HADOOP_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cx</span><span class="o">/</span><span class="n">hadoop</span><span class="o">-</span><span class="n">3</span><span class="p">.</span><span class="na">2</span><span class="p">.</span><span class="na">4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">PATH</span><span class="o">=</span><span class="n">$PATH</span><span class="p">:</span><span class="n">$JAVA_HOME</span><span class="o">/</span><span class="n">bin</span><span class="p">:</span><span class="n">$SPARK_HOME</span><span class="o">/</span><span class="n">bin</span><span class="p">:</span><span class="n">$SCALA_HOME</span><span class="o">/</span><span class="n">bin</span><span class="p">:</span><span class="n">$HADOOP_HOME</span><span class="o">/</span><span class="n">bin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">CLASSPATH</span><span class="o">=</span><span class="p">.:</span><span class="n">$JAVA_HOME</span><span class="o">/</span><span class="n">lib</span><span class="p">.</span><span class="na">dt</span><span class="p">.</span><span class="na">jar</span><span class="p">:</span><span class="n">$JAVA_HOME</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">tools</span><span class="p">.</span><span class="na">jar</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h3 id="软件位置">
+    <a href="#%e8%bd%af%e4%bb%b6%e4%bd%8d%e7%bd%ae" class="header-anchor">#</a>
+    软件位置
+</h3><p>‍</p>
+<p>除了 scala 放在/usr/local, 其余软件都放在</p>
+<p>/usr/local/cx</p>
+<p>后期调整&hellip;</p>
+<p>‍</p>
+<p>‍</p>
+<p>与讲义上区别:</p>
+<ul>
+<li>hadoop 没有次级 hadoop 目录, 只有 hadoop-..版本号 3.2.4</li>
+<li>usr/local/cx, 而不是 usr/cx</li>
+<li>spark 名称是 spark-3.2.2-bin-hadoop3.2 没有次级目录</li>
+<li>Java 名称为 jdk1.8.0_202</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<h3 id="热操作">
+    <a href="#%e7%83%ad%e6%93%8d%e4%bd%9c" class="header-anchor">#</a>
+    热操作
+</h3><p>‍</p>
+<p>在实验室不能用校园网, 虚拟机连不上</p>
+<p>‍</p>
+<p>配 Hosts</p>
+<p>vi /etc/hosts</p>
+<p>‍</p>
+<p>环境变量配置生效</p>
+<p>source /etc/profile</p>
+<p>‍</p>
+<p>变量位置</p>
+<p>vi /etc/profile</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<p>格式化 hadoop 集群</p>
+<p>/usr/local/cx/hadoop-3.2.4/bin/hdfs namenode -format</p>
+<p>‍</p>
+<p>启动 hadoop 集群</p>
+<p>/usr/local/cx/hadoop-3.2.4/sbin/start-all.sh</p>
+<p>关闭</p>
+<p>/usr/local/cx/hadoop-3.2.4/sbin/stop-all.sh</p>
+<p>‍</p>
+<p>启动 spark 集群</p>
+<p>/usr/local/cx/spark-3.2.2-bin-hadoop3.2/sbin/start-all.sh</p>
+<p>关闭</p>
+<p>/usr/local/cx/spark-3.2.2-bin-hadoop3.2/sbin/stop-all.sh</p>
+<p>‍</p>
+<p>‍</p>
+<p>流程</p>
+<ol>
+<li>格式化 hadoop</li>
+<li>启动 hadoop</li>
+<li>启动 spark</li>
+</ol>
+<p>‍</p>
+<hr>
+<p>复制实验报告内容</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="bugfix">
+    <a href="#bugfix" class="header-anchor">#</a>
+    BugFix
+</h3><p>‍</p>
+<p>记录问题:</p>
+<p>‍</p>
+<ol>
+<li>
+<p>本机的 IP 地址由于有代理-宿主机打开 VPN - JP1, 每天发生跳变, 每次都需要修改原来的配置(取消!用手机流量来大致保证没有 IP 跳变, 根本原因是自己机子的 IP 设置问题)</p>
+</li>
+<li>
+<p>改完环境变量配置记得重启!!! 不然很可能失败</p>
+</li>
+<li>
+<p>不能在图形化界面把东西放到自己的家目录, 除非图形化界面的用户是 root, 否则 root 不能直接拿到其它私有用户的内容(改权限?不会)</p>
+</li>
+<li>
+<p>刚开始因为屏幕识图出现非法字符导致配置文件爆炸&hellip;低级错误低级错误</p>
+</li>
+<li>
+<p>普通用户不用导入, 但是使用 root 用户的时候回回都要导入, 解决方法:</p>
+<p><a class="link" href="https://www.cnblogs.com/liglacier/p/16385463.html"  target="_blank" rel="noopener"
+    >博客</a></p>
+<p>/root/.bashrc 文件尾部添加：source /etc/profile<br>
+但是二号奴隶机还是不行</p>
+</li>
+</ol>
+<p>‍</p>
+<h2 id="11-月进阶-shell-练习--服务器拓展">
+    <a href="#11-%e6%9c%88%e8%bf%9b%e9%98%b6-shell-%e7%bb%83%e4%b9%a0--%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%8b%93%e5%b1%95" class="header-anchor">#</a>
+    11 月进阶 Shell 练习 + 服务器拓展
+</h2><p>最近在学服务器端的 Linux 配置, 看到网友的帖子说去实习公司配的 Mac 什么的 Linux 系统很难用, 看来这节课真的是学到位了,,,,吧?</p>
+<p>其实我觉得这些东西自学就好了, 没必要老师来教. Python 一样, Java 也是这样, 都是讲一些 API, 扒一下源码就结束了. 这些内容网上多的是.</p>
+<p>‍</p>
+<h3 id="1112-云服务器选型计划">
+    <a href="#1112-%e4%ba%91%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%80%89%e5%9e%8b%e8%ae%a1%e5%88%92" class="header-anchor">#</a>
+    11.12 云服务器选型计划
+</h3><p>‍</p>
+<h4 id="do">
+    <a href="#do" class="header-anchor">#</a>
+    DO
+</h4><p>首先是学生包白嫖的 <a class="link" href="https://cloud.digitalocean.com"  target="_blank" rel="noopener"
+    >赛博之海 DigitalOcean</a></p>
+<p>鉴定为会员制</p>
+<blockquote>
+<p><strong>实际额度已经降到了 50 美元，且仅有一年有效期</strong></p>
+</blockquote>
+<p>‍</p>
+<p>需要有 Paypal 账号; 实际花费最小为 5dollar, 赚 45dollar</p>
+<p>‍</p>
+<h4 id="azure">
+    <a href="#azure" class="header-anchor">#</a>
+    Azure
+</h4><p>已经有的微软的各种认证</p>
+<p>注册 Azure</p>
+<p>日本手机号根本没用, 乱写的</p>
+<p>地址是野兽宅</p>
+<p>‍</p>
+<blockquote>
+<p>开了, 主账号微软, 一年有效期, 100Dollar 额度</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<h4 id="heroku">
+    <a href="#heroku" class="header-anchor">#</a>
+    Heroku
+</h4><p><a class="link" href="https://www.miknio.com/1737.html"  target="_blank" rel="noopener"
+    >教程</a></p>
+<p>注册账号, 日本, 谷歌邮箱</p>
+<p>但是一直报错, 坏了</p>
+<p>‍</p>
+<blockquote>
+<p>但是这个不是具体的服务器, 是容器之类的</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<h4 id="new-relic-one">
+    <a href="#new-relic-one" class="header-anchor">#</a>
+    New Relic one
+</h4><p><a class="link" href="one.newrelic.com" >链接</a></p>
+<p>‍</p>
+<p>用 Github 注册了, 之后需要安装应用, 卡在这一步安装不了</p>
+<blockquote>
+<p>不懂配置代理! 选择的梯子是基础的, 无法手动装配代理</p>
+</blockquote>
+<p>找到系统- 设置里面的代理配置, 找到网址黏贴进去</p>
+<p>好好, 终于出现应用了- 只有一个应用而已, 失败了根本连不上, 大概需要更高级的 VPN, 等我手头的 2024.9 到期了再装新的</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="余下">
+    <a href="#%e4%bd%99%e4%b8%8b" class="header-anchor">#</a>
+    余下
+</h4><p>‍</p>
+<p>双 11,618 国内这类活动挺多</p>
+<p>‍</p>
+<p>后续: 解救大兵服务器计划</p>
+<p>使用自定义代理私网访问服务器免除公网 IP 配置</p>
+<p>‍</p>
+<p>‍</p>
+<p>记录结束. 使用了 Azure-白嫖开始</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1115-云服务器搭建初体验事件">
+    <a href="#1115-%e4%ba%91%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%90%ad%e5%bb%ba%e5%88%9d%e4%bd%93%e9%aa%8c%e4%ba%8b%e4%bb%b6" class="header-anchor">#</a>
+    1115 云服务器搭建初体验事件
+</h3><p><strong>Finalshell 连接 Azure</strong></p>
+<p>‍</p>
+<p>在观望了多时之后决定入手云服务器</p>
+<p>最后还是从白嫖开始, 因为有 GIthub 学生包, Azure 和 DigitalOcean 分别有 100 和 300(需要赔进去 5$)可以白嫖</p>
+<p>域名本来用 Namecheap 的, 然后竟然说不识别河北大学的学生邮箱?! 这下河砖输麻了</p>
+<p>冷静下来想想暂时不搞域名了, 怕出事.</p>
+<p>目前主要是对付网课开着</p>
+<p>真是杂鱼, 这点能耐就不行了(指虚拟机 CPU 被干满)</p>
+<p>详细搭建见 11.17 文档</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1116-实操-finalshell-连接服务器-展示个人博客">
+    <a href="#1116-%e5%ae%9e%e6%93%8d-finalshell-%e8%bf%9e%e6%8e%a5%e6%9c%8d%e5%8a%a1%e5%99%a8-%e5%b1%95%e7%a4%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" class="header-anchor">#</a>
+    11.16 实操-FinalShell 连接服务器, 展示个人博客
+</h3><p>‍</p>
+<p>在进行连接时候一直出问题, 不停的找文档, 结果就发生了锁链式的整体构想领悟</p>
+<blockquote>
+<p>这是一个锁链式的整体构想, 需要 A, 就需要先把 B 做了, -&gt;C-&gt;D ,,,等等等一层层往深处 diveinto, 最后往上一层层抛出</p>
+</blockquote>
+<p>‍</p>
+<h4 id="信息显示">
+    <a href="#%e4%bf%a1%e6%81%af%e6%98%be%e7%a4%ba" class="header-anchor">#</a>
+    <strong>信息显示</strong>
+</h4><p>‍</p>
+<p>版本 20.04Version</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Linux</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">5</span><span class="p">.</span><span class="na">15</span><span class="p">.</span><span class="na">0</span><span class="o">-</span><span class="n">1050</span><span class="o">-</span><span class="n">azure</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">(</span><span class="n">buildd</span><span class="nd">@lcy02</span><span class="o">-</span><span class="n">amd64</span><span class="o">-</span><span class="n">032</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">(</span><span class="n">gcc</span><span class="w"> </span><span class="p">(</span><span class="n">Ubuntu</span><span class="w"> </span><span class="n">9</span><span class="p">.</span><span class="na">4</span><span class="p">.</span><span class="na">0</span><span class="o">-</span><span class="n">1ubuntu1</span><span class="o">~</span><span class="n">20</span><span class="p">.</span><span class="na">04</span><span class="p">.</span><span class="na">2</span><span class="p">)</span><span class="w"> </span><span class="n">9</span><span class="p">.</span><span class="na">4</span><span class="p">.</span><span class="na">0</span><span class="p">,</span><span class="w"> </span><span class="n">GNU</span><span class="w"> </span><span class="nf">ld</span><span class="w"> </span><span class="p">(</span><span class="n">GNU</span><span class="w"> </span><span class="n">Binutils</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Ubuntu</span><span class="p">)</span><span class="w"> </span><span class="n">2</span><span class="p">.</span><span class="na">34</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="err">#</span><span class="n">57</span><span class="o">~</span><span class="n">20</span><span class="p">.</span><span class="na">04</span><span class="p">.</span><span class="na">1</span><span class="o">-</span><span class="n">Ubuntu</span><span class="w"> </span><span class="n">SMP</span><span class="w"> </span><span class="n">Wed</span><span class="w"> </span><span class="n">Oct</span><span class="w"> </span><span class="n">4</span><span class="w"> </span><span class="n">17</span><span class="p">:</span><span class="n">09</span><span class="p">:</span><span class="n">16</span><span class="w"> </span><span class="n">UTC</span><span class="w"> </span><span class="n">2023</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>初始化的机子 root 无密码, 直接 sudosuroot</p>
+<p>展示的静态地址</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w">  </span><span class="n">inet</span><span class="w"> </span><span class="n">10</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">5</span><span class="w">  </span><span class="n">netmask</span><span class="w"> </span><span class="n">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">0</span><span class="w">  </span><span class="n">broadcast</span><span class="w"> </span><span class="n">10</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">255</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h4 id="安装-yum">
+    <a href="#%e5%ae%89%e8%a3%85-yum" class="header-anchor">#</a>
+    安装 yum
+</h4><p>apitude 去装 yum</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">aptitude</span><span class="w">
+</span></span></span></code></pre></div><p>aptitude 与 apt-get 都可以进行安装</p>
+<p><strong>aptitude 在处理包依赖问题上更好(不然就会陷入 python 依赖地狱!)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">aptitude</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">yum</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h4 id="更换自带下载器-apt-的镜像">
+    <a href="#%e6%9b%b4%e6%8d%a2%e8%87%aa%e5%b8%a6%e4%b8%8b%e8%bd%bd%e5%99%a8-apt-%e7%9a%84%e9%95%9c%e5%83%8f" class="header-anchor">#</a>
+    更换自带下载器 apt 的镜像
+</h4><p>备份默认的源地址</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">sudo</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="p">.</span><span class="na">list</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="p">.</span><span class="na">list</span><span class="p">.</span><span class="na">backup</span><span class="w">
+</span></span></span></code></pre></div><p>打开修改源地址, 最后更新一下</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">update</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h4 id="nginx-挂载静态页面">
+    <a href="#nginx-%e6%8c%82%e8%bd%bd%e9%9d%99%e6%80%81%e9%a1%b5%e9%9d%a2" class="header-anchor">#</a>
+    Nginx 挂载静态页面
+</h4><p>‍</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">nginx</span><span class="w">
+</span></span></span></code></pre></div><p>安装完毕之后查看 nginx 状态</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">systemctl</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="n">nginx</span><span class="w">
+</span></span></span></code></pre></div><p>查看 80 端口是否被 nginx 占用，然后在浏览器地址栏直接访问你的公网 ip 地址:80</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">anpt</span><span class="w"> </span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">ssh</span><span class="w">
+</span></span></span></code></pre></div><p>访问公网 IP:80 成功!</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="配置防火墙---直接爆炸">
+    <a href="#%e9%85%8d%e7%bd%ae%e9%98%b2%e7%81%ab%e5%a2%99---%e7%9b%b4%e6%8e%a5%e7%88%86%e7%82%b8" class="header-anchor">#</a>
+    配置防火墙 - 直接爆炸
+</h4><p>‍</p>
+<p>允许流量通过 HTTP（<code>80</code>​）和 HTTPS（<code>443</code>​）端口。</p>
+<p>假设你正在使用<code>UFW</code>​​ 启用 ‘Nginx Full’ profile</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">ufw</span><span class="w"> </span><span class="n">allow</span><span class="w"> </span><span class="err">&#39;</span><span class="n">Nginx</span><span class="w"> </span><span class="n">Full</span><span class="err">&#39;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>验证状态</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ufw status
+</span></span></code></pre></div><p>打开</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">ufw</span><span class="w"> </span><span class="n">enable</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>哦原来防火墙关闭了,打开</p>
+<p>打开了, 查看状态</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Firewall</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">active</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">enabled</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="n">startup</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Nginx</span><span class="w"> </span><span class="n">Full</span><span class="w">                 </span><span class="n">ALLOW</span><span class="w">       </span><span class="n">Anywhere</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Nginx</span><span class="w"> </span><span class="nf">Full</span><span class="w"> </span><span class="p">(</span><span class="n">v6</span><span class="p">)</span><span class="w">            </span><span class="n">ALLOW</span><span class="w">       </span><span class="nf">Anywhere</span><span class="w"> </span><span class="p">(</span><span class="n">v6</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<h4 id="防火墙把我墙了-重来">
+    <a href="#%e9%98%b2%e7%81%ab%e5%a2%99%e6%8a%8a%e6%88%91%e5%a2%99%e4%ba%86-%e9%87%8d%e6%9d%a5" class="header-anchor">#</a>
+    防火墙把我墙了, 重来!
+</h4><blockquote>
+<p>(这里巨坑!不能随便开防火墙否则会把自己关在外面)</p>
+<p>‍</p>
+<p>虚拟机:</p>
+<p>&ldquo;啊!? 你要和我分手?!&rdquo;</p>
+<p>&ldquo;好, 那么好&rdquo;</p>
+<p>&ldquo;&ndash;禁止访问, 因为打开了防火墙&rdquo;</p>
+<p>我: &ldquo;啊!&rdquo;</p>
+<p>‍</p>
+<p><strong>找不到方法, 寄了, 重装咯</strong></p>
+<p><strong>重新来过</strong></p>
+<p>实际上只要直接去创建虚拟机就可以了, 不需要预先配接口</p>
+<p>设置静态专有 IP 和公共 IP 地址 SKLinux-ip</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="nginx-配置文件">
+    <a href="#nginx-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="header-anchor">#</a>
+    Nginx 配置文件
+</h4><p>nginx.conf</p>
+<p>‍</p>
+<p><strong>重点</strong></p>
+<p>root 配置根目录，index 配置入口文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">location</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">root</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">front_page</span><span class="o">/</span><span class="n">dist</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">index</span><span class="w"> </span><span class="n">index</span><span class="p">.</span><span class="na">html</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<p>/etc/nginx 目录将目录下原有的 nginx.conf 拷贝一份, 自定义上传;</p>
+<p>加载配置文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nginx</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">reload</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<h4 id="文件传输">
+    <a href="#%e6%96%87%e4%bb%b6%e4%bc%a0%e8%be%93" class="header-anchor">#</a>
+    文件传输
+</h4><p>刚开始一直用不好, 总是穿不上还以为坏了呢</p>
+<blockquote>
+<p>大佬建议 <a class="link" href="https://juejin.cn/post/7242502779469692984"  target="_blank" rel="noopener"
+    >全文链接</a></p>
+<p>建立 SSH 连接时，就必须使用 root 用户</p>
+<p>若使用普通用户，即使在其中切换至 root 用户，也无法上传。</p>
+</blockquote>
+<p>所以重新建立一个 root 用户的连接即可</p>
+<p>大无语, 复制当前已经到了 root 的标签页然后在这个新的标签页上传&hellip;</p>
+<p>‍</p>
+<p>哦哦, 还不能传递到没有权限的地方, 害得放到个人用户目录手动复制过去</p>
+<blockquote>
+<p>其实最后发现可能和 FinalShell 也有关系, 自己的另一个 MobaShell 就没有毛病&hellip;(也许吧</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<h4 id="打包前端">
+    <a href="#%e6%89%93%e5%8c%85%e5%89%8d%e7%ab%af" class="header-anchor">#</a>
+    打包前端
+</h4><p>‍</p>
+<p>测试<strong>将前端文件打包并放到服务器</strong></p>
+<p><strong>npm run build 打包生成 dist 文件。</strong></p>
+<p>这里我只有一个文件, 于是直接把 HTML 文件丢进去就好了</p>
+<p>‍</p>
+<h4 id="代理配置">
+    <a href="#%e4%bb%a3%e7%90%86%e9%85%8d%e7%bd%ae" class="header-anchor">#</a>
+    代理配置
+</h4><p>‍</p>
+<p>自己电脑 ping 不到 &ndash; 设在日本服务器当然, 需要设置控制台的代理, 我自己的全局代理不行</p>
+<p>使用<strong>好的全局代理</strong>访问较快, 反应卡顿大概是<strong>线路问题 &ndash;&gt; 很可能不是</strong></p>
+<blockquote>
+<p>事实上这里我忽略了一个逻辑不能自洽的问题: 为什么通过静态页面能访问(这意味着我直接访问了一台国外的服务器 而没有收到 GFW 的影响, 那么我走 22 端口的 SSH 就没有理由说出问题了</p>
+</blockquote>
+<blockquote>
+<p>现在 2024-03-27 通过更换 Clash 配置 VPN 发现, 真正的问题可能出在所谓 TUN 模式(也就是全局模式之上的代理全局应用的玩意), 当时没开, 或者坏了, 导致一直是用裸连, 使得连接延迟很厉害. 当然现在我还是选择香港服务器了, 一方面是国内, 同时也是墙外.</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1117azure-初体验文档">
+    <a href="#1117azure-%e5%88%9d%e4%bd%93%e9%aa%8c%e6%96%87%e6%a1%a3" class="header-anchor">#</a>
+    11.17Azure 初体验文档
+</h3><blockquote>
+<p>11.17 2023</p>
+</blockquote>
+<p>‍</p>
+<p>搭建文档 <a class="link" href="https://blog.csdn.net/Airarret_Z/article/details/133269725?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170003545416800222826235%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=170003545416800222826235&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-4-133269725-null-null.142%5ev96%5epc_search_result_base4&amp;utm_term=Azure%E5%AD%A6%E7%94%9F%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8&amp;spm=1018.2226.3001.4187"  target="_blank" rel="noopener"
+    >全套开发环境创建</a></p>
+<p>资费管理 微软 Azure 一年免费 VPS<a class="link" href="https://www.xiaocaicai.com/2023/04/%e5%be%ae%e8%bd%afazure%e4%b8%80%e5%b9%b4%e5%85%8d%e8%b4%b9vps%e9%81%bf%e5%9d%91%e6%8c%87%e5%8d%97/"  target="_blank" rel="noopener"
+    >避坑指南</a></p>
+<p>‍</p>
+<p>无需独立部署各个网络附属资源, 虚拟机会自动创建对应资源(IP, 磁盘, 网络组&hellip;)</p>
+<p>订阅资源（Azure for Students）</p>
+<p>1-1 型号+64GB 乞丐白嫖版, 后续可升级为 2-4 型号</p>
+<p>关闭监视中的诊断服务，以及静态 ip<strong>改为动态 ip</strong>等降低额度消耗</p>
+<p>‍</p>
+<hr>
+<p>设置项</p>
+<p>‍</p>
+<p><strong>重点</strong></p>
+<p>名称 sklinux</p>
+<p>‍</p>
+<p>使用 SSH 公钥</p>
+<p>‍</p>
+<p>公钥</p>
+<p>用户名 SpadeKXRMP</p>
+<p>秘钥对名称 SpadeKey</p>
+<p>‍</p>
+<p>入站端口增加 80 来服务器访问</p>
+<p>‍</p>
+<p><strong>简单</strong></p>
+<p>无需基础结构冗余</p>
+<p>资源组：自定义名称。</p>
+<p>虚拟机名称：自定义名称。</p>
+<p>区域：可以选择东亚，服务器在香港。</p>
+<p>安全类型：可以选择标准。</p>
+<p>映像：这里选择了 ubuntu</p>
+<p>大小：选择经济型的 B1s 简单使用。</p>
+<p>管理员账户：可使用 SSH 身份验证，那么也需要创建一个自定义的密钥对名称。</p>
+<p>入站端口：默认只开放 22，还可开放 80 用于浏览器访问。</p>
+<p>虚拟网络配置为刚才上面的</p>
+<p>‍</p>
+<hr>
+<p>公共 IP 20.222.38.120 端口 22 FinalShell 连接并使用 Nginx 展示静态页面, 在公网显示</p>
+<p>私有 IP 10.0.0.4 端口 22 使用本机 Powershell 连接(操作不便), 只可双方连接</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">ssh</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">C</span><span class="p">:</span><span class="err">\</span><span class="n">SpadeKey</span><span class="p">.</span><span class="na">pem</span><span class="w"> </span><span class="n">SpadeKXRMP</span><span class="nd">@10.0.0.4</span><span class="w">
+</span></span></span></code></pre></div><p>但是<strong>连接不上因为是海外服务器, 尝试用代理? 结果不会用</strong></p>
+<p>但是我没有这样的代理, 虽然自己服务器里面显示允许访问了, 但是自己 WindowsPowershell 还是显示连接超时</p>
+<p>这就是肉身撞墙了, 活该!</p>
+<p>因此还是保留这个公网 IP 罢, 2 天花 0.4 美元, 10 天花 4 美元, 250 天 100$用完.</p>
+<p>那么赶紧把网课看了然后把资源释放掉罢.</p>
+<p>‍</p>
+<p>要申请域名, 然后赶紧关闭了, 否则给干爆了等下</p>
+<p><a class="link" href="https://nc.me/landing/github"  target="_blank" rel="noopener"
+    >域名一年免费</a> Namecheap</p>
+<p>spadektlsg.me</p>
+<p>‍</p>
+<p>可恶不让用. 因为不认识这个大专?!</p>
+<p>‍</p>
+<p><a class="link" href="https://zhuanlan.zhihu.com/p/422851915"  target="_blank" rel="noopener"
+    >再查看完整链接找找</a></p>
+<p>‍</p>
+<p>Tech 域名</p>
+<p><a class="link" href="https://get.tech/"  target="_blank" rel="noopener"
+    >https://get.tech/</a></p>
+<p>‍</p>
+<p>Name 域名</p>
+<p><a class="link" href="https://www.name.com/zh-cn/"  target="_blank" rel="noopener"
+    >https://www.name.com/zh-cn/</a></p>
+<p>‍</p>
+<p>算了算了之后准备好让人看了再来</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1120-硬盘扩容---硬盘爆炸事件">
+    <a href="#1120-%e7%a1%ac%e7%9b%98%e6%89%a9%e5%ae%b9---%e7%a1%ac%e7%9b%98%e7%88%86%e7%82%b8%e4%ba%8b%e4%bb%b6" class="header-anchor">#</a>
+    11.20 硬盘扩容 - 硬盘爆炸事件
+</h3><p>打算使用挂载功能完成扩容</p>
+<p>这不是机会来了嘛, 大数据的数据分析课需要更大的空间了, 分配了新的 20GB, 现在尝试挂载到上面去这边真是十万猴急(汗)</p>
+<p>挂载了, 但是格式化一直失败; 败北!</p>
+<p>‍</p>
+<p>错力, 有反转!!</p>
+<p>尝试命令行但是最后报错了, 挂载到机子上然后用图形化界面解决 &ndash; 使用图形化 CentOS7 的磁盘管理器应用</p>
+<p>‍</p>
+<p>最后的结局是, 在实验报告最后附上了这样的战败宣言:</p>
+<p>(我从来没有在大学的实验报告中发出如此败犬的言论&hellip;现在看来还是感到汗流浃背)</p>
+<blockquote>
+<p>实验在进行了约 2.5h 后彻底失败, 因为本人电脑收到了物理损害; 由于环境都挂载在本地个人电脑, 而环境一直有问题, 实验宣告结束</p>
+</blockquote>
+<p>‍</p>
+<blockquote>
+<p>主要原因: 本实验环境是采用 8 月份[配置的]最新驱动和应用依赖的 CentOS7, 而有些软件因为版本依赖问题导致无法启用; 并且当初划分硬盘空间时没有考虑到大小问题, ==只划了 20GB==, 事实上现在已经使用到了差不多 24GB 的空间, 这导致不可避免的硬盘搭载问题以及安全稳定性问题.</p>
+<p>在多方求援无果后决定放弃实验, 也希望老师能够理解. 鞠躬</p>
+</blockquote>
+<p>‍</p>
+<p>遗憾离场, 硬盘和所有内容都将释放.(60GB 空间)</p>
+<p>挂载完硬盘我的桌面竟然不能动了? 打字都不行了</p>
+<p>我是再也不敢这么搞了…Soorry. 所幸 Linux 课的这台还没被鼓捣坏了</p>
+<p>‍</p>
+<p><strong>三天后 BE LIKE</strong></p>
+<p>‍</p>
+<p><strong>抓到你了! IDEA MAVEN 硬盘爆炸事件的元凶</strong></p>
+<p>你是敌人吧?</p>
+<p><strong>全部揍一顿, 全部给我滚到回收站!</strong></p>
+<p><strong>MADE IN HAVEN&hellip;</strong></p>
+<p>世 界 清 净 了</p>
+<p>大刀阔斧, 砍回到只剩下 4.5GB 空间的样子, 感觉好 HIGH 哟!</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1125-外卖项目搭建大爆炸事件">
+    <a href="#1125-%e5%a4%96%e5%8d%96%e9%a1%b9%e7%9b%ae%e6%90%ad%e5%bb%ba%e5%a4%a7%e7%88%86%e7%82%b8%e4%ba%8b%e4%bb%b6" class="header-anchor">#</a>
+    11.25 外卖项目搭建大爆炸事件
+</h3><p>‍</p>
+<p>11.25, 完成一个网课的服务端(本地虚拟机)配置主从数据库实现前后端页面挂载, 同时搭配缓存 Redis 组件功能单体项目.</p>
+<p>(采用本地 Linux 服务器, 等待时机成熟了再用远程服务器, 因为服务器在日本不好翻)</p>
+<p>‍</p>
+<p>(新的受害者出现了 -&gt; <strong>黑窗口一号</strong>)</p>
+<blockquote>
+<p>当时我也想在本地尝试一下远程服务器的感觉. 于是创了一个 VMWARE 中完全没有图形化界面的玩意, 结果被所谓响铃搞崩溃了, 太不人性化了, 找什么都要自己配.</p>
+</blockquote>
+<blockquote>
+<p>1 小时后:</p>
+<p>寄了, 基础的面板完全划不来: 根本就是一整个烂摊子, 字体稀烂, 补全音效炸裂, 体验下得了.</p>
+<p>还是用我自己的自己测试罢, 克隆两台来作, 不影响上课的机子</p>
+<p>反正在我的辣手摧花下, 容量已经由 17GB -&gt; 4GB 了, 电脑里面基本是空的还有 270GB, 虽然我有很严重的容量焦虑症, 但是这点余裕还是有的</p>
+</blockquote>
+<p>‍</p>
+<p>磕磕绊绊又回来了, 用 FinalShell 来解决这问题</p>
+<p>Day+3 日早上完成初期环境搭建, 准备完成 MySQL 主从复制.(主从最后没报错但是也没有同步实现, 大概是网络问题)</p>
+<p>‍</p>
+<p>确认 SSH 打开了之后,ifconfig 地址</p>
+<p>Finalshell 直接默认端口 22 即可</p>
+<p>用户使用 root, 密码验证要使用对应 root 用户的账户密码而不是 root 登录密码(旧的图形化 Linux 机子测试)</p>
+<p>‍</p>
+<p>‍</p>
+<blockquote>
+<p>11.25 在 Mysql 密码验证完全败北</p>
+<p>11.28 卷土重来</p>
+<p>我从地狱回来了,老师!</p>
+</blockquote>
+<p>‍</p>
+<h4 id="初见">
+    <a href="#%e5%88%9d%e8%a7%81" class="header-anchor">#</a>
+    初见
+</h4><p>瑞吉外卖 - 曼哈顿之试炼</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="限界突破">
+    <a href="#%e9%99%90%e7%95%8c%e7%aa%81%e7%a0%b4" class="header-anchor">#</a>
+    限界突破
+</h4><p>新的 linux 生产工具-适用于生产端已经完全胜过了老式的教学环境机器</p>
+<p>她于旧的躯体中浴火重生 -&gt; 克隆自 2 天前<strong>完成大清洗的 SK 图形化机子</strong>, 拥有最舒适的体验</p>
+<p>现在, 是时候将课堂所学应用于项目配置了</p>
+<blockquote>
+<p>因为我, 不再是那个可怜的花京院</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<p>很好, 经过大量的翻阅测试, 找到了适合作为生产环境的空目录:</p>
+<blockquote>
+<p>cd /usr/etc/</p>
+</blockquote>
+<p>‍</p>
+<p>之后要在这里创建生产 WorkShop, 将 Win 的生产环境应用过来</p>
+<p>(可恶, 目录要全大写啊混淡,我的 Win 电脑怎么成了这个样子?)(由于暂时没有使用对应功能, 有些层级没有显示)</p>
+<p>目录层级:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w">    </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="o">|-</span><span class="w"> </span><span class="n">WORKSHOP</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="o">|-</span><span class="w"> </span><span class="n">CODE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                             </span><span class="p">...(</span><span class="n">coding</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="o">|-</span><span class="w"> </span><span class="n">DATA</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                             </span><span class="p">...(</span><span class="n">files</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="o">|-</span><span class="w"> </span><span class="n">TOOL</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                             </span><span class="p">...(</span><span class="n">software</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>之后的生产环境都在此进行, 不得在所谓个人文件夹运行</p>
+<p>这次是第一次测试, 也是简单的网课部署需求, 因此不要求一步到位.</p>
+<p>之后将使用到确确实实的云服务器上..</p>
+<p>‍</p>
+<p>然后装好了就准备安装, 直接提取装到对应地方, 不要再像之前一样还要拉到对应位置了; 现在要求一步到位</p>
+<p>‍</p>
+<p>采用大佬推荐 echo 指令进行快速末尾添加元素</p>
+<p>echo &rsquo; XXX &rsquo; &raquo; /etc/profile</p>
+<p>经典打 java -version 还是 OPENJDK, 当初没做好, 但是在 Hadoop 那边的经验是能定位到 JAVAHOME 是 1.8 就没问题</p>
+<p>特别注意：环境变量值的结尾没有任何符号，不同值之间用:隔开（windows 中用;）</p>
+<p>‍</p>
+<p>注意, rpm 操作中后面的具体版本号不用打出来</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">rpm</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="o">--</span><span class="n">nodeps</span><span class="w"> </span><span class="n">mariadb</span><span class="o">-</span><span class="n">libs</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h5 id="mysql-老是有依赖问题---爆炸了">
+    <a href="#mysql-%e8%80%81%e6%98%af%e6%9c%89%e4%be%9d%e8%b5%96%e9%97%ae%e9%a2%98---%e7%88%86%e7%82%b8%e4%ba%86" class="header-anchor">#</a>
+    Mysql 老是有依赖问题 - 爆炸了
+</h5><p>‍</p>
+<p>还是试试自己的安装方法吗?</p>
+<p>或者是上次的那个清理缓存给我清理坏了?</p>
+<p>不理解了 yum 也没有反应, 镜像问题</p>
+<p>‍</p>
+<p><a class="link" href="https://www.cnblogs.com/rwxwsblog/p/5765886.html"  target="_blank" rel="noopener"
+    >解决链接尝试</a></p>
+<p>‍</p>
+<p>1、将<code>/etc/yum.repos.d/epel.repo</code>​ 中的<code>mirrorlist</code>​ 改为<code>baseurl</code>​</p>
+<p>2/<code>/etc/resolv.conf</code>​ 文件中增加<code>nameserver 144.144.144.144</code>​</p>
+<p>依然失败</p>
+<p>‍</p>
+<p><a class="link" href="https://www.cnblogs.com/asker009/p/15072354.html"  target="_blank" rel="noopener"
+    >博主链接</a></p>
+<p>‍</p>
+<p>使用 yum 源信息安装</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># repo的安装，执行完成后会在/etc/yum.repos.d/目录下生成两个repo文件mysql-community.repo mysql-community-source.repo</span>
+</span></span><span class="line"><span class="cl">rpm -ivh mysql80-community-release-el7-1.noarch.rpm
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /etc/yum.repos.d/
+</span></span><span class="line"><span class="cl"><span class="c1"># 注意：必须进入到/etc/yum.repos.d/目录后再使用yum命令进行安装</span>
+</span></span><span class="line"><span class="cl">yum -y install mysql-server
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果报错误Header V3 DSA/SHA1 Signature, key ID 5072e1f5: NOKEY，加上force和nodeps参数即可</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 例如：</span>
+</span></span><span class="line"><span class="cl">rpm -ivh mysql-community-server-8.0.25-1.el8.x86_64.rpm --force --nodeps
+</span></span></code></pre></div><p>‍</p>
+<p>大概 yum 是坏了罢</p>
+<p>‍</p>
+<p>那么跳过数据库罢, Nginx 也跳过, 保存文档之后使用即可</p>
+<p>‍</p>
+<p>任务失败一半(NE)</p>
+<p>‍</p>
+<p>新环境存活时间: 11.25 15:30 -&gt;17:00, 其兴也勃乎.</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1128-卷土重来事件">
+    <a href="#1128-%e5%8d%b7%e5%9c%9f%e9%87%8d%e6%9d%a5%e4%ba%8b%e4%bb%b6" class="header-anchor">#</a>
+    11.28 卷土重来事件
+</h3><p>‍</p>
+<p>2023-11-28 16:56:11</p>
+<p>记录, 主机没有网(指的是我这种特殊的没有网时间)的时候 ens33 网卡会完全找不到,只剩下一个 lo</p>
+<p>‍</p>
+<p>好了, 开始安装内容吧, 按照上面的内容进行操作</p>
+<p>‍</p>
+<p>使用 route 命令查看网关是否设置成功，若下面的显示项出现刚才配置的网关已经出现则说明成功，负责则执行 route add default gw 192.168.91.2 命令重新设置。</p>
+<p>‍</p>
+<h4 id="一线生机--没有活路">
+    <a href="#%e4%b8%80%e7%ba%bf%e7%94%9f%e6%9c%ba--%e6%b2%a1%e6%9c%89%e6%b4%bb%e8%b7%af" class="header-anchor">#</a>
+    一线生机 × 没有活路
+</h4><p>‍</p>
+<h5 id="failed1">
+    <a href="#failed1" class="header-anchor">#</a>
+    Failed1
+</h5><p>我又有鬼点子了</p>
+<p>反正是虚拟机, 本地的也可以被 FinalShell 连接, 那么我就算不去安装 VMTOOL, 直接用 FinalShell 来完成文件和复制黏贴同步不就行了吗?</p>
+<p>这样还能规避 Java(指一个报错)风险, 还能继续用黑框体验</p>
+<p><strong>我真是个</strong>​~~<strong>天才</strong>~~​<strong>大蠢蛋! 怎么没想到呢</strong></p>
+<p>‍</p>
+<hr>
+<p>2023-11-27 18:46:20</p>
+<p>装配又一台虚拟机, 准备初步测试</p>
+<p>‍</p>
+<p>首先卸载 JDK!</p>
+<p>然后安装环境</p>
+<p>‍</p>
+<p>什么都没有的情况下, 想要 idconfig 都不行, 只能使用 ip addr, 查看 ens33</p>
+<p>结果连网卡都没有, 哦哦, 看了建议是<strong>最小安装也要把最小安装右边的几个选项打勾啊, 不然真的什么都没有</strong></p>
+<blockquote>
+<p>真的被拷打这里, 真的不能脱离前人优秀的建议自己走, 不然真的翻哪个沟里都不知道</p>
+</blockquote>
+<p>好吧, 受害者++</p>
+<p>‍</p>
+<h5 id="failed2">
+    <a href="#failed2" class="header-anchor">#</a>
+    Failed2
+</h5><p>好吧, 这次要一并把静态 IP 配好, 不然确实没有静态太麻烦了</p>
+<p>‍</p>
+<p>开整: 最小安装, 并且删除声卡 USB 打印机等东西, 尽可能无害化安装</p>
+<p>选择了 ens32, 因为是 NAT 模式</p>
+<p>‍</p>
+<p>很好, 找到感觉了, 机子删除, <strong>好像不小心把内存崩溃检测开了(艹)</strong></p>
+<p>明天再来测试(没电了)</p>
+<p>‍</p>
+<h5 id="failed3">
+    <a href="#failed3" class="header-anchor">#</a>
+    Failed3
+</h5><p>虽然病了, 但是战斗还在继续</p>
+<p>‍</p>
+<p>终于发现了一切问题的根源: <strong>本机网络不能使用 NAT 模式, 只能用桥接连接本地 WLAN -&gt; 这是因为我的 Intel 网卡坏了</strong></p>
+<p>大概原因是 Windows 更新异常问题-8.27 日</p>
+<p>‍</p>
+<p>没想到啊,竟然会这样</p>
+<p>‍</p>
+<p>本地的桥接的话, IP 地址是</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nl">硬件地址oo</span><span class="p">:</span><span class="n">0C</span><span class="p">:</span><span class="n">29</span><span class="p">:</span><span class="n">2E</span><span class="p">:</span><span class="n">C4</span><span class="p">:</span><span class="n">DO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPv4地址192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">117</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nl">IPv6地址2409</span><span class="p">:</span><span class="n">8a04</span><span class="p">:</span><span class="n">5381</span><span class="p">:</span><span class="n">b384</span><span class="p">:</span><span class="n">2a3c</span><span class="p">:</span><span class="n">3996</span><span class="p">:</span><span class="n">4038</span><span class="p">:</span><span class="n">9e6d</span><span class="o">/</span><span class="n">64</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">子网掩码</span><span class="w"> </span><span class="n">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">默认路由192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DNS</span><span class="w"> </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">1</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<hr>
+<p><strong>在安装选项中可以看到 IPv4 设置 - 自动 DHCP 等, 可以在这里选择静态</strong></p>
+<p>那么我试试罢</p>
+<p>‍</p>
+<p>好, ping 通了 baidu, 接下来来处理万恶的静态 IP 问题</p>
+<p>‍</p>
+<p>万恶淫为首(这是什么?), 我不要伤亡数字, 我只要静态 IP</p>
+<p><a class="link" href="https://zhuanlan.zhihu.com/p/577557574"  target="_blank" rel="noopener"
+    >参考</a></p>
+<p>‍</p>
+<p>首先改一下我的主机名好看些</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">hostnamectl</span><span class="w"> </span><span class="n">set</span><span class="o">-</span><span class="n">hostname</span><span class="w"> </span><span class="n">SKSlave</span><span class="w">
+</span></span></span></code></pre></div><p>由于是在 skmaster 操作,因此改为 master</p>
+<p>‍</p>
+<p>找网卡配置文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">vim</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">network</span><span class="o">-</span><span class="n">scripts</span><span class="o">/</span><span class="n">ifcfg</span><span class="o">-</span><span class="n">ens32</span><span class="w">
+</span></span></span></code></pre></div><p>查找 ifcfg 开头的文件：<code>ll ifcfg*</code>​ 两个文件 ifcfg-lo 为本地网卡的配置文件，127.0.0.1</p>
+<p><em>vim 编辑器编辑 ifcfg-ens33</em>，命令：<code>vim ifcfg-ens33</code>​</p>
+<p>‍</p>
+<p>我把网关放为 2</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">BOOTPROTO</span><span class="o">=</span><span class="err">“</span><span class="kd">static</span><span class="err">”</span><span class="w"> </span><span class="err">#</span><span class="n">dhcp改为static</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ONBOOT</span><span class="o">=</span><span class="err">“</span><span class="n">yes</span><span class="err">”</span><span class="w"> </span><span class="err">#</span><span class="n">开机启用本配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">#</span><span class="n">配置IP地址信息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPADDR</span><span class="o">=</span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">117</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">NETMASK</span><span class="o">=</span><span class="n">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">GATEWAY</span><span class="o">=</span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DNS1</span><span class="o">=</span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">2</span><span class="err">#</span><span class="n">DNS</span><span class="w"> </span><span class="n">配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DNS2</span><span class="o">=</span><span class="n">114</span><span class="p">.</span><span class="na">114</span><span class="p">.</span><span class="na">114</span><span class="p">.</span><span class="na">114</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">HWADDR</span><span class="o">=</span><span class="n">00</span><span class="p">:</span><span class="n">0C</span><span class="p">:</span><span class="n">29</span><span class="p">:</span><span class="n">2E</span><span class="p">:</span><span class="n">C4</span><span class="p">:</span><span class="n">D0</span><span class="w"> </span><span class="err">#</span><span class="n">MAC地址</span><span class="w"> </span><span class="n">从虚拟机管理面板获取</span><span class="w">
+</span></span></span></code></pre></div><p>重启网络，命令行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">service</span><span class="w"> </span><span class="n">network</span><span class="w"> </span><span class="n">restart</span><span class="w">
+</span></span></span></code></pre></div><p>114 DNS</p>
+<p>114 DNS 源自南京信风 2010 年为中国电信及中国联通两个大省约 2000 万宽带用户提供备份服务的超大型 DNS 系统，同时提供公众 DNS 解析服务及权威 DNS 解析备份服务，114DNS 将为中国的互联网及电子商务提供可靠的基础安全保障。114DNS 为国内云安全 DNS 服务先行者，114DNS 平台由多个基础电信运营商与南京信风共建共享，但由南京信风提供技术支持以确保服务的优质高效。</p>
+<p>IPv4 DNS 地址：114.114.114.114 / 114.114.115.115</p>
+<p>‍</p>
+<p>学习 DNS 服务 <a class="link" href="https://zhuanlan.zhihu.com/p/518141267"  target="_blank" rel="noopener"
+    >链接</a></p>
+<p>‍</p>
+<p>Google 公共 DNS IP 地址</p>
+<p>Google 公共 DNS IP 地址 (IPv4) 如下所示：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">8.8.8.8
+</span></span><span class="line"><span class="cl">8.8.4.4
+</span></span></code></pre></div><p>但是这些都不顶用呢, 不是 VPN</p>
+<p>‍</p>
+<p>重启 NetworkManager</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">systemctl restart NetworkManager
+</span></span></code></pre></div><p>‍</p>
+<p>嗯, 怎么不行呢</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">From</span><span class="w"> </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">117</span><span class="w"> </span><span class="n">icmp_seq</span><span class="o">=</span><span class="n">8</span><span class="w"> </span><span class="n">Destination</span><span class="w"> </span><span class="n">Host</span><span class="w"> </span><span class="n">Unreachable</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<p><a class="link" href="https://www.cnblogs.com/chy18883701161/p/12396035.html"  target="_blank" rel="noopener"
+    >大神救场</a></p>
+<p><strong>如果是在 VMware 中使用 Linux，并且使用的是桥接网络，还需要进行一些设置：</strong></p>
+<p>VMWARE-编辑-虚拟网络配置器</p>
+<p>‍</p>
+<p>(我的电脑不能用 NAT?)</p>
+<p>之后试试 NAT 罢</p>
+<p>默认只开启了仅主机、NAT，点击“更改设置”，把桥接加进去。</p>
+<p>使用动态 ip 不需要在这里面添加，使用静态 ip 才需要添加。</p>
+<p>‍</p>
+<p>一下子给我跳出了 VMnet0, 自动桥接</p>
+<p>‍</p>
+<p>‍</p>
+<blockquote>
+<p>如果机器（主要是笔记本）一会儿连公司的网、一会连家里的网、一会儿连学校的网，一会儿连自己的手机热点，一会儿连这个网，一会儿连那个网，连接的网络变了，需要重新配置上面那些地址，否则连不上网。</p>
+</blockquote>
+<p>那么我还是寄了</p>
+<p>静态 ip 适合<strong>一直使用某个网络的情况</strong>，比如服务器，一直使用机房的网。</p>
+<p>‍</p>
+<p>我的建议是使用自习室先; (太傻了, 关机就变了啊喂) 调整了一下自己网络的配置, 好</p>
+<p>‍</p>
+<hr>
+<p>‍</p>
+<p>那么再来试试 NAT 模式罢, 不然针的就做不好了</p>
+<p>来, NAT 模式!启动</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">子网IP</span><span class="w">     </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IP</span><span class="w">        </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">128</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">掩码</span><span class="w">      </span><span class="n">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">广播</span><span class="w">      </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">255</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">网关</span><span class="w">    </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">端口</span><span class="w">    </span><span class="n">22</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">位置MAC</span><span class="w">    </span><span class="n">00</span><span class="p">:</span><span class="n">50</span><span class="p">:</span><span class="n">56</span><span class="p">:</span><span class="n">24</span><span class="p">:</span><span class="n">51</span><span class="p">:</span><span class="n">95</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<p>ens32</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">BOOTPROTO</span><span class="o">=</span><span class="err">“</span><span class="kd">static</span><span class="err">”</span><span class="w"> </span><span class="err">#</span><span class="n">dhcp改为static</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ONBOOT</span><span class="o">=</span><span class="err">“</span><span class="n">yes</span><span class="err">”</span><span class="w"> </span><span class="err">#</span><span class="n">开机启用本配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">#</span><span class="n">配置IP地址信息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPADDR</span><span class="o">=</span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">128</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">NETMASK</span><span class="o">=</span><span class="n">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">GATEWAY</span><span class="o">=</span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DNS1</span><span class="o">=</span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">2</span><span class="w"> </span><span class="err">#</span><span class="n">DNS</span><span class="w"> </span><span class="n">配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DNS2</span><span class="o">=</span><span class="n">114</span><span class="p">.</span><span class="na">114</span><span class="p">.</span><span class="na">114</span><span class="p">.</span><span class="na">114</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">HWADDR</span><span class="o">=</span><span class="n">00</span><span class="p">:</span><span class="n">50</span><span class="p">:</span><span class="n">56</span><span class="p">:</span><span class="n">25</span><span class="p">:</span><span class="n">A8</span><span class="p">:</span><span class="n">EB</span><span class="w"> </span><span class="err">#</span><span class="n">MAC地址</span><span class="w"> </span><span class="n">从虚拟机管理面板获取</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">service</span><span class="w"> </span><span class="n">network</span><span class="w"> </span><span class="n">restart</span><span class="w">
+</span></span></span></code></pre></div><p>很好, 接下来没问题了, 还是 NAT 好!</p>
+<p>话说回来, NAT 到底是什么啊?? 憨憨挠头</p>
+<p>‍</p>
+<p>‍</p>
+<hr>
+<p>‍</p>
+<p>接下来压力测试: 是否会在关机以及切换网络情况下导致 IP 变化!</p>
+<ol>
+<li>关机重开</li>
+<li>换手机流量</li>
+</ol>
+<p>‍</p>
+<p>‍</p>
+<p>?为什么连接不上了</p>
+<p>NAT 配置静态 IP 后 FinalShell 连接不上</p>
+<p>而且还 ping 不了了?</p>
+<p>全部报废?</p>
+<p>那么看来要改一下了, 应该是桥接换成 NAT 的文件问题</p>
+<p>‍</p>
+<p>‍</p>
+<blockquote>
+<p>之后修改 IPADDR 的值为上面查到的子网 ip 到 255 的子网（即 192.168.64.0~192.168.64.255,不要选 0 和 255，选择中间的任意一个值，0 和 255 有专门的用途）,GATEWAY 查到的对应的网关,DNS 与网关的值一致。</p>
+</blockquote>
+<p>‍</p>
+<p>这里坏了</p>
+<p>‍</p>
+<p>感觉还是 SSH 的问题?</p>
+<p><a class="link" href="https://blog.csdn.net/m0_63678560/article/details/133523920#:~:text=%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%3A%20%E6%B7%BB%E5%8A%A0ssh.service%20systemctl%20enable%20ssh.service%20%E6%A3%80%E6%9F%A5%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E5%90%AF%E5%8A%A8%3A,ps%20-ef%7Cgrep%20ssh%20netstat%20-anp%7Cgrep%20%E4%B8%8A%E9%9D%A2%E6%9F%A5%E5%88%B0%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%8F%B7%20%E7%84%B6%E5%90%8E%E6%88%91%E4%BB%AC%E5%86%8D%E7%94%A8finalshell%E8%BF%9E%E6%8E%A5%EF%BC%8C%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E6%98%AF22"  target="_blank" rel="noopener"
+    >要开启 sshd</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">service</span><span class="w"> </span><span class="n">sshd</span><span class="w"> </span><span class="n">start</span><span class="w">
+</span></span></span></code></pre></div><p>然后又报错</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">java</span><span class="p">.</span><span class="na">net</span><span class="p">.</span><span class="na">NoRouteToHostException</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">route</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">host</span><span class="p">:</span><span class="w"> </span><span class="n">connect</span><span class="w">
+</span></span></span></code></pre></div><p>哦哦自己电脑网络掉了, 看来还是自己电脑问题</p>
+<p>‍</p>
+<hr>
+<p>我又彻底明白了,必须<strong>要安装时候</strong>就选择好 NAT 模式, 大概可以这样</p>
+<p>既然知道了路线, 那么就重新开始罢</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="帝王是我-spadek-哒-nooooo">
+    <a href="#%e5%b8%9d%e7%8e%8b%e6%98%af%e6%88%91-spadek-%e5%93%92-nooooo" class="header-anchor">#</a>
+    帝王是我 SpadeK 哒? NOOOOO!
+</h4><p>‍</p>
+<p>‍</p>
+<p>NAT 模式!启动</p>
+<p>‍</p>
+<p>ens33 网卡</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">子网IP</span><span class="w">     </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IP</span><span class="w">        </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">129</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">掩码</span><span class="w">      </span><span class="n">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">广播</span><span class="w">      </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">255</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">网关</span><span class="w">    </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">端口</span><span class="w">    </span><span class="n">22</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">位置MAC</span><span class="w">   </span><span class="n">00</span><span class="p">:</span><span class="n">50</span><span class="p">:</span><span class="n">56</span><span class="p">:</span><span class="n">25</span><span class="p">:</span><span class="n">17</span><span class="p">:</span><span class="n">A0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">默认路由</span><span class="o">/</span><span class="n">DNS</span><span class="p">:</span><span class="w"> </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">2</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>这下是从图形界面配置了,输入三项然后保存 NAT 配置, 加上虚拟网络配置器</p>
+<p>好,连接上了</p>
+<p>‍</p>
+<p>最后自己的效果(和网上的文件样子不太一样,自动生成的能测试静态通过就不改了)</p>
+<p>能 ping,能连接 91.129</p>
+<p>‍</p>
+<p>(配置选项好像不用加上 255 那个了)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">inet</span><span class="w"> </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">129</span><span class="w">  </span><span class="n">netmask</span><span class="w"> </span><span class="n">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">0</span><span class="w">  </span><span class="n">broadcast</span><span class="w"> </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">255</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ONBOOT</span><span class="o">=</span><span class="s">&#34;yes&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPADDR</span><span class="o">=</span><span class="s">&#34;192.168.91.129&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">PREFIX</span><span class="o">=</span><span class="s">&#34;24&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">GATEWAY</span><span class="o">=</span><span class="s">&#34;192.168.91.2&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DNS1</span><span class="o">=</span><span class="s">&#34;192.168.91.2&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DNS2</span><span class="o">=</span><span class="s">&#34;114.114.114.114&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>测试*2</p>
+<p>关机后又连不上了</p>
+<p>‍</p>
+<p>尝试回退所谓 static 设置, 重新加载网络 -&gt; 木大木大木大木大木大木大木大木大</p>
+<p>‍</p>
+<h4 id="斩断因果">
+    <a href="#%e6%96%a9%e6%96%ad%e5%9b%a0%e6%9e%9c" class="header-anchor">#</a>
+    斩断因果
+</h4><p>终于找到了, 是自己禁用了服务!</p>
+<blockquote>
+<p>就是这个关机上不了网问题!</p>
+<p>就是服务不能在开机后就启动!</p>
+<p>在服务设置开启了, 但是拒绝访问</p>
+<p>网络连接窗口总是崩溃, 该死的问题原来真的在 Win10 这里啊!</p>
+<p>原来是 8 月 25 日被自动禁用了服务项的启动, 本来应该是开机延迟启动的.</p>
+<p>原来之前 9 月使用 NAT 连不上网都是这样, 因为内置的 NAT 没法获得网络</p>
+<p><strong>我真想回去给 8.25 的自己抽几个大嘴巴子</strong></p>
+</blockquote>
+<p>‍</p>
+<p>好,现在可以准备冲击 MYSQL 了, 主要问题就是依赖和安装包的问题</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1129-瑞吉斩杀">
+    <a href="#1129-%e7%91%9e%e5%90%89%e6%96%a9%e6%9d%80" class="header-anchor">#</a>
+    11.29 瑞吉斩杀
+</h3><p>‍</p>
+<p>从和当前黑窗子 Linux 正式交互以来的笔记</p>
+<p>‍</p>
+<h4 id="打包运行测试">
+    <a href="#%e6%89%93%e5%8c%85%e8%bf%90%e8%a1%8c%e6%b5%8b%e8%af%95" class="header-anchor">#</a>
+    打包运行测试
+</h4><p>打一个 HelloworldServer 基础 Jar 包给 linux</p>
+<p>‍</p>
+<p>Server.java (by - newbing)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 导入必要的类和包</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.net.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// 定义一个类，实现Runnable接口，用于处理客户端的请求</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">class</span> <span class="nc">ServerHandler</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Runnable</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 定义一个Socket对象，用于和客户端通信</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Socket</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 定义一个构造方法，接收一个Socket对象作为参数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ServerHandler</span><span class="p">(</span><span class="n">Socket</span><span class="w"> </span><span class="n">socket</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 重写run方法，实现业务逻辑</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 获取输入流，用于读取客户端发送的数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">socket</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">()));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 获取输出流，用于向客户端发送数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="n">socket</span><span class="p">.</span><span class="na">getOutputStream</span><span class="p">(),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 读取客户端发送的一行数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 打印客户端发送的数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Received from client: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">line</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 向客户端发送HelloWorld</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;HelloWorld&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 关闭输入流、输出流和Socket对象</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">in</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">out</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 处理异常</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// 定义一个主类，用于启动服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Server</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 定义一个常量，表示服务器端口号</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">8080</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 定义一个主方法，用于启动服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 创建一个ServerSocket对象，监听指定的端口号</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">ServerSocket</span><span class="w"> </span><span class="n">serverSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ServerSocket</span><span class="p">(</span><span class="n">PORT</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 打印服务器启动信息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Server started at port &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">PORT</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 无限循环，等待客户端的连接</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="c1">// 接受客户端的连接，返回一个Socket对象</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">Socket</span><span class="w"> </span><span class="n">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serverSocket</span><span class="p">.</span><span class="na">accept</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="c1">// 打印客户端的地址和端口号</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Connected to client: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">socket</span><span class="p">.</span><span class="na">getInetAddress</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;:&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">socket</span><span class="p">.</span><span class="na">getPort</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="c1">// 创建一个ServerHandler对象，传入Socket对象</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">ServerHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ServerHandler</span><span class="p">(</span><span class="n">socket</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="c1">// 创建一个线程，执行ServerHandler对象的run方法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">Thread</span><span class="w"> </span><span class="n">thread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Thread</span><span class="p">(</span><span class="n">handler</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="c1">// 启动线程</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">thread</span><span class="p">.</span><span class="na">start</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 处理异常</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>然后传到 CODE-TEMP 目录下 执行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">javac</span><span class="w"> </span><span class="n">Server</span><span class="p">.</span><span class="na">java</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>生成 class 文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="p">.</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">1332</span><span class="w"> </span><span class="n">11月</span><span class="w"> </span><span class="n">29</span><span class="w"> </span><span class="n">15</span><span class="p">:</span><span class="n">11</span><span class="w"> </span><span class="n">Server</span><span class="p">.</span><span class="na">class</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="p">.</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">1278</span><span class="w"> </span><span class="n">11月</span><span class="w"> </span><span class="n">29</span><span class="w"> </span><span class="n">15</span><span class="p">:</span><span class="n">11</span><span class="w"> </span><span class="n">ServerHandler</span><span class="p">.</span><span class="na">class</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="p">.</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">2780</span><span class="w"> </span><span class="n">11月</span><span class="w"> </span><span class="n">29</span><span class="w"> </span><span class="n">15</span><span class="p">:</span><span class="n">03</span><span class="w"> </span><span class="n">Server</span><span class="p">.</span><span class="na">java</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>然后运行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">jar</span><span class="w"> </span><span class="n">cvf</span><span class="w"> </span><span class="n">Server</span><span class="p">.</span><span class="na">jar</span><span class="w"> </span><span class="n">Server</span><span class="p">.</span><span class="na">class</span><span class="w">
+</span></span></span></code></pre></div><p>生成了 jar 包</p>
+<p>将 jar 包运行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">java</span><span class="w"> </span><span class="o">-</span><span class="n">jar</span><span class="w"> </span><span class="n">Server</span><span class="p">.</span><span class="na">jar</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p><strong>报错</strong></p>
+<p>​<code>java -jar Server.jar</code>​ Server.jar 中没有主清单属性</p>
+<p>要解决这个错误，您有两种方法：</p>
+<p>‍</p>
+<p>方法一：您可以手动创建或修改 MANIFEST.MF 文件，添加或修改 Main-Class 属性，指定您的主类的全限定名，例如 Main-Class: com.example.Server。然后，您可以使用压缩工具将这个文件替换或添加到您的 Server.jar 文件中。这样，您就可以使用 java -jar Server.jar 命令来运行您的程序了。</p>
+<p>方法二：您可以使用 Maven 或其他的构建工具来自动创建或修改 MANIFEST.MF 文件，添加或修改 Main-Class 属性，指定您的主类的全限定名，例如 Main-Class: com.example.Server。然后，您可以使用 Maven 或其他的构建工具来重新打包您的 Server.jar 文件。这样，您就可以使用 java -jar Server.jar 命令来运行您的程序了。</p>
+<p>‍</p>
+<p>‍</p>
+<p>其他就是设置后台了, 不能独占屏幕 no hang up</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">nohup</span><span class="w"> </span><span class="n">java</span><span class="w"> </span><span class="o">-</span><span class="n">jar</span><span class="w"> </span><span class="n">boot工程</span><span class="p">.</span><span class="na">jar</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="na">log</span><span class="w"> </span><span class="o">&amp;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">后台运行java</span><span class="w"> </span><span class="o">-</span><span class="n">jar命令</span><span class="p">,</span><span class="n">并将日志输出到hello</span><span class="p">.</span><span class="na">log文件</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">查找进程 ps -ef|grep XXX
+</span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h4 id="redis-测试">
+    <a href="#redis-%e6%b5%8b%e8%af%95" class="header-anchor">#</a>
+    Redis 测试
+</h4><p>‍</p>
+<p>Redis 启动两个连接, 第一个开启 Redis</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w"> </span><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>第二个启用客户端进行连接</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w"> </span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>连接到了本地</p>
+<p>‍</p>
+<p>测试</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">keys</span><span class="w"> </span><span class="err">\</span><span class="o">*</span><span class="w">
+</span></span></span></code></pre></div><p>查看当前存储的 keyvalue 对</p>
+<p>成功</p>
+<p>‍</p>
+<h4 id="mysql-主从复制">
+    <a href="#mysql-%e4%b8%bb%e4%bb%8e%e5%a4%8d%e5%88%b6" class="header-anchor">#</a>
+    MYSQL 主从复制
+</h4><p>‍</p>
+<p>当前装好的 Master 复制</p>
+<p>‍</p>
+<p>新的 IP 怎么和旧的一样? 哦,是一块连接卡片啊, 那么就要手动控制分配了</p>
+<p>主机固定一个 IP, 从机从 129 开始分配比较好吗, 要测试一下</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">vim</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">network</span><span class="o">-</span><span class="n">scripts</span><span class="o">/</span><span class="n">ifcfg</span><span class="o">-</span><span class="n">ens33</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>主网卡配置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">TYPE</span><span class="o">=</span><span class="s">&#34;Ethernet&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">PROXY_METHOD</span><span class="o">=</span><span class="s">&#34;none&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">BROWSER_ONLY</span><span class="o">=</span><span class="s">&#34;no&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">BOOTPROTO</span><span class="o">=</span><span class="s">&#34;static&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DEFROUTE</span><span class="o">=</span><span class="s">&#34;yes&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPV4_FAILURE_FATAL</span><span class="o">=</span><span class="s">&#34;no&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPV6INIT</span><span class="o">=</span><span class="s">&#34;no&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPV6_AUTOCONF</span><span class="o">=</span><span class="s">&#34;yes&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPV6_DEFROUTE</span><span class="o">=</span><span class="s">&#34;yes&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPV6_FAILURE_FATAL</span><span class="o">=</span><span class="s">&#34;no&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPV6_ADDR_GEN_MODE</span><span class="o">=</span><span class="s">&#34;stable-privacy&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">NAME</span><span class="o">=</span><span class="s">&#34;ens33&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">UUID</span><span class="o">=</span><span class="s">&#34;0d6610c3-9310-4ab0-bd2d-e4a3a50f6e34&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DEVICE</span><span class="o">=</span><span class="s">&#34;ens33&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ONBOOT</span><span class="o">=</span><span class="s">&#34;yes&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">IPADDR</span><span class="o">=</span><span class="s">&#34;192.168.91.129&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">PREFIX</span><span class="o">=</span><span class="s">&#34;24&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">GATEWAY</span><span class="o">=</span><span class="s">&#34;192.168.91.2&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DNS1</span><span class="o">=</span><span class="s">&#34;192.168.91.2&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DNS2</span><span class="o">=</span><span class="s">&#34;114.114.114.114&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ZONE</span><span class="o">=</span><span class="kd">public</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>Slave 网卡配置同上, 就是 MAC 地址不同</p>
+<p>IP 改为 130</p>
+<p>好的,连接上了两者</p>
+<p>‍</p>
+<p>修改主库</p>
+<p>修改 MySQL 数据库的配置文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">my</span><span class="p">.</span><span class="na">cnf</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>主机</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">log_bin</span><span class="o">=</span><span class="n">mysql</span><span class="o">-</span><span class="n">bin</span><span class="w"> </span><span class="err">#</span><span class="o">[</span><span class="n">必须</span><span class="o">]</span><span class="n">启用二进制日志</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">server</span><span class="o">-</span><span class="n">id</span><span class="o">=</span><span class="n">128</span><span class="w"> </span><span class="err">#</span><span class="o">[</span><span class="n">必须</span><span class="o">]</span><span class="n">服务器唯一ID</span><span class="p">,</span><span class="n">只需要确保其id是唯一的就好</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h5 id="密码不合规-failed">
+    <a href="#%e5%af%86%e7%a0%81%e4%b8%8d%e5%90%88%e8%a7%84-failed" class="header-anchor">#</a>
+    <strong>密码不合规 Failed</strong>
+</h5><p>‍</p>
+<p>查看需要的规定</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span><span class="w"> </span><span class="n">LIKE</span><span class="w"> </span><span class="err">&#39;</span><span class="n">validate_password</span><span class="o">%</span><span class="err">&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>修改</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">set</span><span class="w"> </span><span class="n">global</span><span class="w"> </span><span class="n">validate_password_policy</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">set</span><span class="w"> </span><span class="n">global</span><span class="w"> </span><span class="n">validate_password_length</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>不行啊, 这里主库没有显示自己是主库, 还是按照黑马的自己教程来吧</p>
+<p>‍</p>
+<p>‍</p>
+<p>2023-11-29 16:55:35 工作暂停</p>
+<p>‍</p>
+<p>‍</p>
+<p>先把主机的状态保存了, 之后项目可以用到</p>
+<p>这样又到了三台机子共存的状态了, 可恶</p>
+<p>‍</p>
+<p><a class="link" href="https://www.cnblogs.com/imdeveloper/p/13673004.html"  target="_blank" rel="noopener"
+    >大佬教程</a></p>
+<p>‍</p>
+<p>网上介绍的方法大都是使用 grant 权限列表 on 数据库 to ‘用户名’@’访问主机’ identified by ‘密码’;这种方式，但实测会出现……near &lsquo;identified by 密码&rsquo; at line 1 这个错误！<br>
+经分析，出错的原因是新版的的 mysql 版本已经将创建账户和赋予权限的方式分开了，所以应该使用上面的方法</p>
+<p>‍</p>
+<p>确实是这样</p>
+<p>那么试试这种配置方式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">create</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="err">&#39;</span><span class="n">slave</span><span class="sc">&#39;@&#39;</span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">130</span><span class="err">&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="err">&#39;</span><span class="n">2333</span><span class="err">&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">#</span><span class="w"> </span><span class="n">赋予replication</span><span class="w"> </span><span class="n">slave权限</span><span class="err">，</span><span class="n">但在使用从库的数据时</span><span class="err">，</span><span class="n">还是要使用有read权限的账号</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">grant</span><span class="w"> </span><span class="n">replication</span><span class="w"> </span><span class="n">slave</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">&#39;</span><span class="n">slave</span><span class="sc">&#39;@&#39;</span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">130</span><span class="err">&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">flush</span><span class="w"> </span><span class="n">privileges</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>又来!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Your</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">satisfy</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">policy</span><span class="w"> </span><span class="n">requirements</span><span class="w">
+</span></span></span></code></pre></div><p>看老子怎么拷打你</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span><span class="w"> </span><span class="n">LIKE</span><span class="w"> </span><span class="err">&#39;</span><span class="n">validate_password</span><span class="o">%</span><span class="err">&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>然后调整我们的设置项</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">set</span><span class="w"> </span><span class="n">global</span><span class="w">  </span><span class="n">validate_password_policy</span><span class="o">=</span><span class="n">LOW</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">set</span><span class="w"> </span><span class="n">global</span><span class="w">  </span><span class="n">validate_password_length</span><span class="o">=</span><span class="n">3</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">set</span><span class="w"> </span><span class="n">global</span><span class="w">  </span><span class="n">validate_password_mixed_case_count</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">set</span><span class="w"> </span><span class="n">global</span><span class="w">   </span><span class="n">validate_password_special_char_count</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>这下允许访问了</p>
+<p>‍</p>
+<p>当前可用测试账号</p>
+<p>Kyle root</p>
+<p>Slave 2333</p>
+<p>‍</p>
+<p>然后就没有权限了, 两个都需要给与而外的权限给予操作</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">grant</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">数据库用户名</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>刷新权限</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">flush</span><span class="w"> </span><span class="n">privileges</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>查看权限列表</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">show</span><span class="w"> </span><span class="n">processlist</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>重启服务</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">systemctl</span><span class="w"> </span><span class="n">restart</span><span class="w"> </span><span class="n">mysqld</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<hr>
+<p>还是不行, 看来是授权问题</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">grant</span><span class="w"> </span><span class="n">replication</span><span class="w"> </span><span class="n">slave</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">&#39;</span><span class="n">xiaoming</span><span class="sc">&#39;@&#39;</span><span class="o">%</span><span class="err">&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="err">&#39;</span><span class="n">root</span><span class="nd">@2333</span><span class="err">&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>validate_password_policy 取值</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">0 or LOW     只验证长度
+</span></span><span class="line"><span class="cl">1 or MEDIUM  验证长度、数字、大小写、特殊字符
+</span></span><span class="line"><span class="cl">2 or STRONG  验证长度、数字、大小写、特殊字符、字典文件
+</span></span></code></pre></div><p>再次执行修改密码语句</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;2333&#39;;
+</span></span></code></pre></div><p>‍</p>
+<p>ok 最后没有实现的原因是把修改内容修改到 Slave 机子上了</p>
+<p>‍</p>
+<p>结果竟然 mysql 打不开了</p>
+<p><strong>好, mysql 崩溃, 实验结束</strong></p>
+<p>‍</p>
+<p>‍</p>
+<h5 id="拍屁股">
+    <a href="#%e6%8b%8d%e5%b1%81%e8%82%a1" class="header-anchor">#</a>
+    拍屁股
+</h5><p>此次完全完成了两台机子的搭配, 但是最后 mysql 又发电做不了了</p>
+<p>‍</p>
+<p>OK, 那么保存第一台机子主从配置前的状态, 走人了&hellip;后面的等到苍穹结束了有一样的训练过程</p>
+<p>‍</p>
+<p>‍</p>
+<p>查看所有用户</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">SELECT</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">mysql</span><span class="p">.</span><span class="na">user</span><span class="w">
+</span></span></span></code></pre></div><p>删除中间用户</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">delete</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">User</span><span class="o">=</span><span class="err">&#39;</span><span class="n">test</span><span class="err">&#39;</span><span class="w">
+</span></span></span></code></pre></div><p>保存走人了之后, 溜了溜了</p>
+<p>‍</p>
+<p>‍</p>
+<h5 id="阴差阳错">
+    <a href="#%e9%98%b4%e5%b7%ae%e9%98%b3%e9%94%99" class="header-anchor">#</a>
+    阴差阳错
+</h5><p>‍</p>
+<p>绝对的阴差阳错, 上面的绝对的最神奇的报错</p>
+<p>‍</p>
+<p>又来了, 照着黑马打</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">grant</span><span class="w"> </span><span class="n">replication</span><span class="w"> </span><span class="n">slave</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">&#39;</span><span class="n">xiaoming</span><span class="sc">&#39;@&#39;</span><span class="o">%</span><span class="err">&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="err">&#39;</span><span class="n">root</span><span class="nd">@2333</span><span class="err">&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>结果是用了<strong>删除克隆虚拟机来解决了</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="o">------------------+----------+--------------+------------------+-------------------+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="n">File</span><span class="w">             </span><span class="o">|</span><span class="w"> </span><span class="n">Position</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Binlog</span><span class="err">\</span><span class="n">_Do</span><span class="err">\</span><span class="n">_DB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Binlog</span><span class="err">\</span><span class="n">_Ignore</span><span class="err">\</span><span class="n">_DB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Executed</span><span class="err">\</span><span class="n">_Gtid</span><span class="err">\</span><span class="n">_Set</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+------------------+----------+--------------+------------------+-------------------+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="n">mysql</span><span class="o">-</span><span class="n">bin</span><span class="p">.</span><span class="na">000002</span><span class="w"> </span><span class="o">|</span><span class="w">      </span><span class="n">441</span><span class="w"> </span><span class="o">|</span><span class="w">              </span><span class="o">|</span><span class="w">                  </span><span class="o">|</span><span class="w">                   </span><span class="o">|</span><span class="w">
+</span></span></span></code></pre></div><blockquote>
+<p>虽然最后也没能完全复现, 就是没报错也没有最后一样的结果, 还是那里错了.</p>
+</blockquote>
+<p>位置是 441</p>
+<p>必须保证这个时候是开着的</p>
+<p>‍</p>
+<p>‍</p>
+<p>现在去从库, 仍然是修改 etc/my.文件</p>
+<p>然后 mysqld 下面</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">server</span><span class="o">-</span><span class="n">id</span><span class="o">=</span><span class="n">101</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">systemctl</span><span class="w"> </span><span class="n">restart</span><span class="w"> </span><span class="n">mysqld</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>发一条语句, 改两个地方 : 日志位置 和 Position</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">change</span><span class="w"> </span><span class="n">master</span><span class="w"> </span><span class="n">to</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">master_host</span><span class="o">=</span><span class="w"> </span><span class="err">&#39;</span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">129</span><span class="err">&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">master_user</span><span class="o">=</span><span class="w"> </span><span class="err">&#39;</span><span class="n">xiaoming</span><span class="err">&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">master_password</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Root</span><span class="nd">@123456</span><span class="err">&#39;</span><span class="p">,</span><span class="n">master_log_file</span><span class="o">=</span><span class="w"> </span><span class="err">&#39;</span><span class="n">mysql</span><span class="o">-</span><span class="n">bin</span><span class="p">.</span><span class="na">000002</span><span class="err">&#39;</span><span class="w"> </span><span class="p">,</span><span class="n">master_log_pos</span><span class="o">=</span><span class="n">441</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">start</span><span class="w"> </span><span class="n">slave</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">show</span><span class="w"> </span><span class="n">slave</span><span class="w"> </span><span class="n">status</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>效果</p>
+<p>‍</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Slave_IO_State</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="n">Master_Host</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="n">Master_User</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Master_Port</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Connect_Retry</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Master_Log_File</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="n">Read_Master_Log_Pos</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Relay_Log_File</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Connecting</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">master</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">192</span><span class="p">.</span><span class="na">168</span><span class="p">.</span><span class="na">91</span><span class="p">.</span><span class="na">129</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">xiaoming</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="n">3306</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="n">60</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">mysql</span><span class="o">-</span><span class="n">bin</span><span class="p">.</span><span class="na">000002</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">441</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">SKMaster</span><span class="o">-</span><span class="n">relay</span><span class="o">-</span><span class="n">bin</span><span class="p">.</span><span class="na">000001</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<p>完成了! 没有报错, 一切正常(?</p>
+<p>‍</p>
+<p>‍</p>
+<h5 id="冀中寄">
+    <a href="#%e5%86%80%e4%b8%ad%e5%af%84" class="header-anchor">#</a>
+    冀中寄
+</h5><p>‍</p>
+<p>现在导入数据库到服务器主库</p>
+<p>嗯? 无法配置, 明明没有报错了啊</p>
+<p>‍</p>
+<p>网上教程说要手动同步, 这不是没意义了嘛</p>
+<p><a class="link" href="https://www.cnblogs.com/ryxiong-blog/p/12513383.html"  target="_blank" rel="noopener"
+    >同步主库已有数据到从库</a></p>
+<p>‍</p>
+<p>‍</p>
+<h5 id="主从配置总结">
+    <a href="#%e4%b8%bb%e4%bb%8e%e9%85%8d%e7%bd%ae%e6%80%bb%e7%bb%93" class="header-anchor">#</a>
+    主从配置总结
+</h5><p>‍</p>
+<p><strong>主库配置</strong></p>
+<ol>
+<li>进入配置文件<br>
+vim /etc/my.cnf</li>
+<li>添加两行<br>
+log-bin=mysql-bin #开启二进制日志<br>
+server-id=201 #设置 server-id,唯一值，标识主机</li>
+<li>重启服务<br>
+service mysql restart</li>
+<li>创建账号密码<br>
+进入 mysql<br>
+mysql -u root -p<br>
+创建用户（IP 为可访问该 master 的 IP，任意 IP 就写&rsquo;%&rsquo;）<br>
+CREATE USER &lsquo;slave*userid&rsquo;@&rsquo;%&rsquo; IDENTIFIED BY &lsquo;slave_pwd&rsquo;;<br>
+查看用户是否创建成功<br>
+select user,host from mysql.user;<br>
+分配权限（IP 为可访问该 master 的 IP，任意 IP 就写&rsquo;%&rsquo;）<br>
+GRANT REPLICATION SLAVE ON *._ TO &lsquo;slave_userid&rsquo;@&rsquo;%&rsquo;;</li>
+<li>刷新权限<br>
+flush privileges;</li>
+<li>查看 master 状态，记录二进制文件名 File 和位置 Position,后面配从库要用<br>
+show master status;</li>
+</ol>
+<p>‍</p>
+<p><strong>从库配置</strong></p>
+<ol>
+<li>进入配置文件<br>
+vim /etc/my.cnf</li>
+<li>添加一行<br>
+server-id=202 #设置 server-id,唯一值，标识主机</li>
+<li>重启服务<br>
+service mysql restart</li>
+<li>登录进入 mysql，执行同步 sql 语句（主服务器名，用于主从的用户名，密码，二进制文件名，位置）<br>
+mysql -u root -p</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl"><span class="err">CHANGE</span> <span class="err">MASTER</span> <span class="err">TO</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MASTER_HOST</span><span class="o">=</span><span class="s1">&#39;192.168.0.201&#39;</span>,
+</span></span><span class="line"><span class="cl"><span class="nv">MASTER_USER</span><span class="o">=</span><span class="s1">&#39;slave_userid&#39;</span>,
+</span></span><span class="line"><span class="cl"><span class="nv">MASTER_PASSWORD</span><span class="o">=</span><span class="s1">&#39;slave_pwd&#39;</span>,
+</span></span><span class="line"><span class="cl"><span class="nv">MASTER_LOG_FILE</span><span class="o">=</span><span class="s1">&#39;mysql-bin.000001&#39;</span>,
+</span></span><span class="line"><span class="cl"><span class="nv">MASTER_LOG_POS</span><span class="o">=</span>755<span class="p">;</span>
+</span></span></code></pre></div><ol>
+<li>启动 slave 同步进程<br>
+start slave;</li>
+<li>查看 slave 状态，当 Slave_IO_Running 和 Slave_SQL_Running 都为 YES 的时候就表示主从同步设置成功了<br>
+show slave status\G</li>
+<li>可以改数据验证同步，可以 stop slave;执行看看效果</li>
+<li>其他<br>
+不同步哪些数据库<br>
+binlog-ignore-db = mysql<br>
+binlog-ignore-db = test<br>
+binlog-ignore-db = information_schema<br>
+只同步哪些数据库，除此之外，其他不同步<br>
+binlog-do-db = game</li>
+</ol>
+<p>‍</p>
+<p>‍</p>
+<h5 id="跑项目">
+    <a href="#%e8%b7%91%e9%a1%b9%e7%9b%ae" class="header-anchor">#</a>
+    跑项目
+</h5><p>‍</p>
+<p>确实是可以了, 那么就跳过这一步, 手动同步一下</p>
+<p>‍</p>
+<p>项目跑起来了, 但是找不到 redis, 哦每次都要手动开</p>
+<p>‍</p>
+<p>Redis 启动</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">WORKSHOP</span><span class="o">/</span><span class="n">TOOL</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">4</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">0</span><span class="o">/</span><span class="n">redis</span><span class="p">.</span><span class="na">conf</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h5 id="日志综合">
+    <a href="#%e6%97%a5%e5%bf%97%e7%bb%bc%e5%90%88" class="header-anchor">#</a>
+    日志综合
+</h5><p>‍</p>
+<p>我又回来了, 虽然发烧了但是工作仍要继续<br>
+我找到问题的根源了, 我的一个 VMware 服务项被自己禁用掉了(8 月份误操作)<br>
+导致连接出问题</p>
+<p>于是又把打包好的工程拆开, 然后建立 Master 机环境</p>
+<p>‍</p>
+<p>调试 Redis 完毕, 主从同步没有问题配好了但是同步不起来, 手动同步(嘿咻)</p>
+<p>‍</p>
+<p><strong>登录页面</strong></p>
+<p>管理端 + 手机应用端</p>
+<p>http://localhost:8080/backend/page/login/login.html</p>
+<p>http://localhost:8080/front/page/login.html</p>
+<p>接下来将项目部署到服务器测试</p>
+<p>‍</p>
+<p>14 号整理文件等, 然后 22 号开始跟着做, 22,23,24 三天打完并且记录了(因为有 Linux 和 Git 基础,中间的很快)<br>
+25 今天下午本来能全部都解决的, 结果还是被自己机子的问题给搞麻了.<br>
+虚拟机有问题, 只能等着 1 月份回去了重装后解决了</p>
+<p>或许就就这样鸽了罢<br>
+&hellip;</p>
+<p>3 天,差不多总共 24 小时的工时就可以了.<br>
+余下的记录在笔记本之后参考部署</p>
+<blockquote>
+<p>Pause reason : VMware Fail! MYSQL kept screaming!<br>
+I can&rsquo;t stand it any more&hellip;<br>
+So I push the delete button to sentence its death&hellip;</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<h5 id="nginx-跳过">
+    <a href="#nginx-%e8%b7%b3%e8%bf%87" class="header-anchor">#</a>
+    Nginx 跳过
+</h5><p>接下来是 Nginx</p>
+<p>不用看了, 后面一起来</p>
+<p>‍</p>
+<h5 id="总结">
+    <a href="#%e6%80%bb%e7%bb%93" class="header-anchor">#</a>
+    总结
+</h5><p>总结环节了</p>
+<p>‍</p>
+<p>真的是, 今天一打开, IP 没问题, 但是 Finalshell 又连不上了</p>
+<p>就是自己电脑垃圾网卡的问题, 网络太差了&hellip;</p>
+<p><strong>每次都要手动开启一下 redis, 连开机自启都不想去配的混蛋!</strong></p>
+<blockquote>
+<p>没错, 就是这家伙</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1130-苍穹后续拯救">
+    <a href="#1130-%e8%8b%8d%e7%a9%b9%e5%90%8e%e7%bb%ad%e6%8b%af%e6%95%91" class="header-anchor">#</a>
+    11.30 苍穹后续拯救
+</h3><p>最后想想还是不救了, 后面用云服务器+Docker 自己配</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="12-月项目结合演练--拐棍计划">
+    <a href="#12-%e6%9c%88%e9%a1%b9%e7%9b%ae%e7%bb%93%e5%90%88%e6%bc%94%e7%bb%83--%e6%8b%90%e6%a3%8d%e8%ae%a1%e5%88%92" class="header-anchor">#</a>
+    12 月项目结合演练 + 拐棍计划
+</h2><p>‍</p>
+<h3 id="1205-newpublicip-课堂展示">
+    <a href="#1205-newpublicip-%e8%af%be%e5%a0%82%e5%b1%95%e7%a4%ba" class="header-anchor">#</a>
+    12.05 NewPublicIP 课堂展示
+</h3><p>‍</p>
+<p>开 IP 用来课程展示</p>
+<p>IP - 动态</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">20</span><span class="p">.</span><span class="na">43</span><span class="p">.</span><span class="na">78</span><span class="p">.</span><span class="na">101</span><span class="w">
+</span></span></span></code></pre></div><p>希望不要扣钱</p>
+<p>‍</p>
+<p>使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">whereis</span><span class="w"> </span><span class="n">nginx</span><span class="w">
+</span></span></span></code></pre></div><p>查找忘记了地方的 nginx 目录</p>
+<p>找到配置文件, 然后定位目录</p>
+<p>转移新的文件过去</p>
+<p>这里层级配置的有问题</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w"> </span><span class="n">root</span><span class="w">         </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">html</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">location</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">root</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">front_page</span><span class="o">/</span><span class="n">dist</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">index</span><span class="w"> </span><span class="n">index</span><span class="p">.</span><span class="na">html</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>只是一个小插曲, 不要在意</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1225-服务器拐棍-linux-装配-record">
+    <a href="#1225-%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%8b%90%e6%a3%8d-linux-%e8%a3%85%e9%85%8d-record" class="header-anchor">#</a>
+    12.25 服务器拐棍 Linux 装配 Record
+</h3><blockquote>
+<p>12.25(2023) 开始的拐棍计划</p>
+</blockquote>
+<p>‍</p>
+<p>由于苦恼于本地 VMware 太流氓, 而且 Mysql 又吃资源, 并且后面需要&hellip; redis 也能用 IDEA 访问了</p>
+<p>接下来是暂时在大陆安装一台能访问的虚拟机, 位置选东亚, 准备执行拐棍计划.</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="连接">
+    <a href="#%e8%bf%9e%e6%8e%a5" class="header-anchor">#</a>
+    连接
+</h4><p>从我本地 ping 这台机子还是 ping 不上吗, 尝试解决: 哦, 是微软本身为了安全而关闭的</p>
+<p>‍</p>
+<p>既然是拐棍机子, 需要安装两个数据库(redis 和 Mysql), 于是用新学的 Docker 去找合适镜像安装基础生产环境</p>
+<p><a class="link" href="https://www.cnblogs.com/yang-yz/p/17120253.html#:~:text=Linux%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC%EF%BC%9AUbuntu%2022.04%20Server%20x64%20Docker%E7%89%88%E6%9C%AC%EF%BC%9ACommunity%2020.10.15%20%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%20%E6%96%B9%E6%B3%951%EF%BC%9A%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85,gnupg%20-%20agent%20software%20-%20properties%20-%20common"  target="_blank" rel="noopener"
+    >博客园</a>参考</p>
+<p>‍</p>
+<p><strong>加入普通用户</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">sudo</span><span class="w"> </span><span class="n">usermod</span><span class="w"> </span><span class="o">-</span><span class="n">aG</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">$USER</span><span class="w">
+</span></span></span></code></pre></div><p>记得设置 root 密码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">sudo</span><span class="w"> </span><span class="n">passwd</span><span class="w"> </span><span class="n">root</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<h4 id="jdk">
+    <a href="#jdk" class="header-anchor">#</a>
+    JDK
+</h4><p><a class="link" href="https://linuxstory.org/steps-to-install-openjdk-17-ubuntu-linux-such-as-22-04-or-20-04/"  target="_blank" rel="noopener"
+    >ubantu 配 JDK 环境</a></p>
+<p>‍</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install openjdk-17-jdk
+</span></span></code></pre></div><p>‍</p>
+<p>找到 OpenJDK 17 的安装路径。</p>
+<p>使用 update-alternatives 命令来查找</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo update-alternatives --list java
+</span></span></code></pre></div><p>复制对应于 OpenJDK 17 的路径。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim ~/.bashrc
+</span></span></code></pre></div><p>在文件末尾添加以下行，但不要忘记将 <strong>/path/to/your/openjdk-17</strong> 替换为实际的路径。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>/path/to/your/openjdk-17
+</span></span></code></pre></div><p>‍</p>
+<h4 id="docker">
+    <a href="#docker" class="header-anchor">#</a>
+    Docker
+</h4><p>映像 image 装配</p>
+<p>先装 mysql 与 redis</p>
+<p>‍</p>
+<h4 id="redis">
+    <a href="#redis" class="header-anchor">#</a>
+    Redis
+</h4><p>个人手册+<a class="link" href="https://www.cnblogs.com/LEPENGYANG/p/15998909.html"  target="_blank" rel="noopener"
+    >博客 Link</a></p>
+<p>‍</p>
+<p>暂时不使用数据券</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">docker</span><span class="w"> </span><span class="n">pull</span><span class="w"> </span><span class="n">redis</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<h5 id="目录">
+    <a href="#%e7%9b%ae%e5%bd%95" class="header-anchor">#</a>
+    目录
+</h5><p>创建 redis 管理目录，方便后期管理</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">WORKSHOP</span><span class="o">/</span><span class="n">TOOL</span><span class="o">/</span><span class="n">redis</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">WORKSHOP</span><span class="o">/</span><span class="n">TOOL</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">data</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<h5 id="搭载">
+    <a href="#%e6%90%ad%e8%bd%bd" class="header-anchor">#</a>
+    搭载
+</h5><p>注：解析-p 6379:6379，-p 端口：映射端口；为了好看所以做了换行，执行的时候还是需要改成一行，每行一个空格隔开就可以了;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">docker run -p 6379:6379 --name redis<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>-v /usr/etc/WORKSHOP/TOOL/redis/redis.conf:/etc/redis/redis.conf<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>-v /usr/etc/WORKSHOP/TOOL/redis/data:/data<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>-d redis redis-server /etc/redis/redis.conf --appendonly yes<span class="err">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">docker run -p 6379:6379 --name redis -v /usr/etc/WORKSHOP/TOOL/redis/redis.conf:/etc/redis/redis.conf -v /usr/etc/WORKSHOP/TOOL/redis/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<p>参数解释</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">-p 6379:6379 <span class="c1">#把容器内的6379端口映射到宿主机6379端口</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>-v /data/redis/redis.conf:/etc/redis/redis.conf#把宿主机配置好的redis.conf放到容器内的这个位置中<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>-v /data/redis/data:/data#把redis持久化的数据在宿主机内显示，做数据备份<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>redis-server /etc/redis/redis.conf#这个是关键配置，让redis不是无配置启动，而是按照这个redis.conf的配置启动<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>–appendonly yes <span class="c1">#redis启动后数据持久化</span><span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<h5 id="验证">
+    <a href="#%e9%aa%8c%e8%af%81" class="header-anchor">#</a>
+    验证
+</h5><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">命令</span><span class="err">：</span><span class="n">docker</span> <span class="nb">ps
+</span></span></span></code></pre></div><p>‍</p>
+<h5 id="测试">
+    <a href="#%e6%b5%8b%e8%af%95" class="header-anchor">#</a>
+    测试
+</h5><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 进入的时候可以写容器名或者容器ID，redis是我的容器名</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">redis</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span> <span class="c"># 进入redis 容器</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">redis-cli</span> <span class="c"># 执行客户端命令</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mf">127.0</span><span class="p">.</span><span class="py">0</span><span class="p">.</span><span class="mf">1</span><span class="err">:</span><span class="mf">6379</span><span class="p">&gt;</span> <span class="nb">set </span><span class="n">test</span> <span class="mf">1</span> <span class="c"># 存数据测试</span>
+</span></span><span class="line"><span class="cl"><span class="n">OK</span>
+</span></span><span class="line"><span class="cl"><span class="mf">127.0</span><span class="p">.</span><span class="py">0</span><span class="p">.</span><span class="mf">1</span><span class="err">:</span><span class="mf">6379</span><span class="p">&gt;</span> <span class="n">get</span> <span class="n">test</span> <span class="c"># 取数据测试</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;1&#34;</span>
+</span></span></code></pre></div><p>‍</p>
+<h5 id="连接-1">
+    <a href="#%e8%bf%9e%e6%8e%a5-1" class="header-anchor">#</a>
+    连接
+</h5><p>‍</p>
+<p>修改密码</p>
+<p>设置密码：config set requirepass 2333</p>
+<p>连接 redis，认证：auth 2333</p>
+<p>‍</p>
+<p>本地使用 IDEA 内置插件连接</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="mysql">
+    <a href="#mysql" class="header-anchor">#</a>
+    Mysql
+</h4><p>‍</p>
+<p>创建并运行新 mysql 容器，挂载本地目录</p>
+<p>这里作了简化, 无需手动创建目录, cd 到对应目录之后即可进行创建</p>
+<p>‍</p>
+<h5 id="搭载-1">
+    <a href="#%e6%90%ad%e8%bd%bd-1" class="header-anchor">#</a>
+    搭载
+</h5><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">docker run -d <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --name mysql <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -p 3306:3306 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -e <span class="nv">TZ</span><span class="o">=</span>Asia/Shanghai <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="m">2333</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -v ./mysql/data:/var/lib/mysql <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -v ./mysql/conf:/etc/mysql/conf.d <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -v ./mysql/init:/docker-entrypoint-initdb.d <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  mysql<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<h5 id="测试-1">
+    <a href="#%e6%b5%8b%e8%af%95-1" class="header-anchor">#</a>
+    测试
+</h5><p>‍</p>
+<p>进入容器，并通过账号 root 查看 MySQL 服务能否正常连接</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">docker</span> <span class="nb">ps
+</span></span></span><span class="line"><span class="cl"><span class="nb"></span><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">mysql</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span>
+</span></span><span class="line"><span class="cl"><span class="n">mysql</span> <span class="n">-h</span> <span class="n">localhost</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">-p</span>
+</span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="维护">
+    <a href="#%e7%bb%b4%e6%8a%a4" class="header-anchor">#</a>
+    维护
+</h4><p>‍</p>
+<p>需要在 Azure 管理界面开放入站和出站端口 3306</p>
+<blockquote>
+<p>内存快要吃饱了, 因此只能到此为止: 看来真的是太逊了, 两个开起来就把内存 CPU 吃爆炸了无法响应(还要加上 Docker 的配置), 看来要换 2GB 内存的家伙咯</p>
+</blockquote>
+<p>‍</p>
+<h5 id="快捷调用">
+    <a href="#%e5%bf%ab%e6%8d%b7%e8%b0%83%e7%94%a8" class="header-anchor">#</a>
+    快捷调用
+</h5><p>‍</p>
+<h6 id="地址">
+    <a href="#%e5%9c%b0%e5%9d%80" class="header-anchor">#</a>
+    地址
+</h6><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">20</span><span class="p">.</span><span class="na">255</span><span class="p">.</span><span class="na">94</span><span class="p">.</span><span class="na">176</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<h6 id="redis--default--2333">
+    <a href="#redis--default--2333" class="header-anchor">#</a>
+    redis -default -2333
+</h6><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it redis /bin/bash<span class="err">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">jdbc:redis://20.255.94.176:6379/12<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h6 id="mysql--root--2333">
+    <a href="#mysql--root--2333" class="header-anchor">#</a>
+    mysql -root -2333
+</h6><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it mysql /bin/bash<span class="err">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">jdbc:mysql://20.255.94.176:3306/<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<h5 id="docker-管理">
+    <a href="#docker-%e7%ae%a1%e7%90%86" class="header-anchor">#</a>
+    Docker 管理
+</h5><p>‍</p>
+<p>查看当前状态</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">docker ps<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<p>重启镜像</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">停止全部容器<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>docker stop <span class="k">$(</span>docker ps -aq<span class="k">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>启动所有容器<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>docker start <span class="k">$(</span>docker ps -aq<span class="k">)</span><span class="err">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">docker restart mysql<span class="err">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">docker restart redis<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<h4 id="问题">
+    <a href="#%e9%97%ae%e9%a2%98" class="header-anchor">#</a>
+    问题
+</h4><p>目前内存占用过大, 需要后面调整内存分配. 要不还是自己配试试内存大小罢</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1228-拐棍二号白嫖---败北">
+    <a href="#1228-%e6%8b%90%e6%a3%8d%e4%ba%8c%e5%8f%b7%e7%99%bd%e5%ab%96---%e8%b4%a5%e5%8c%97" class="header-anchor">#</a>
+    12.28 拐棍二号白嫖 - 败北
+</h3><p>‍</p>
+<p><a class="link" href="https://portal.azure.com/#@2429366986qq.onmicrosoft.com/resource/subscriptions/42346c88-668d-4ca1-ac20-2c0e42696e6f/resourceGroups/templinux/providers/Microsoft.Compute/virtualMachines/linuxhelper/size"  target="_blank" rel="noopener"
+    >升级链接</a>, 单核的也不行, 经常跑满, 2GB 也可能吃到一半, 还是直接扩充到 2 核 4GB 为好</p>
+<p>5,500 日元 = 38.567057 美元 , 一个月直接吃 40 刀乐, 两个月半直接用光额度, 不行不行, 白嫖失败咯</p>
+<p>还是用免费的然后自己配罢. 就用基础的装配方法, 从头来一遍看看内存占用. 肯定是比 Docker 少的罢</p>
+<p>好像可以设置吃的资源? 等验证不行了再来试试</p>
+<p>使用了扩展功能, 重启一下就能重置大小了, 现在是 2 核 4GB</p>
+<p>没用了之后再转换回来</p>
+<p>‍</p>
+<hr>
+<p>那么接下来重装之后最小手动安装 Mysql 和 Redis 尝试, 降低内存占用</p>
+<p>手动装 Redis 先跑跑, 这个不能装在本地因此必须要装在虚拟机, 看看效果</p>
+<p>版本选择黑马推荐的老版本</p>
+<p>‍</p>
+<h4 id="ip-爆炸">
+    <a href="#ip-%e7%88%86%e7%82%b8" class="header-anchor">#</a>
+    IP 爆炸
+</h4><p>感觉有问题了</p>
+<p>一直连不上, 使用故障排除?</p>
+<p>啊这, 这稳定性也太差了罢. 香港应该没有什么墙的事情罢</p>
+<p>又得全部删了重来, 大概是公有 IP 必须是自己创建的罢</p>
+<p>对, 必须把原来的公有 IP 删除后立刻填入自己新建的, 让它来不及反应才行</p>
+<p>‍</p>
+<h3 id="1229-拐棍三号">
+    <a href="#1229-%e6%8b%90%e6%a3%8d%e4%b8%89%e5%8f%b7" class="header-anchor">#</a>
+    12.29 拐棍三号
+</h3><p>‍</p>
+<h4 id="mysql-1">
+    <a href="#mysql-1" class="header-anchor">#</a>
+    Mysql
+</h4><p>Ubantu 装这个 Mysql</p>
+<p>‍</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">apt install mysql-server<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h4 id="redis-1">
+    <a href="#redis-1" class="header-anchor">#</a>
+    Redis
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">sudo apt update<span class="err">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">sudo apt install redis<span class="err">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">service redis start<span class="err">
+</span></span></span></code></pre></div><p>自启动</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"> systemctl <span class="nb">enable</span> redis-server.service<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<p>进入控制台设置密码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"> redis-cli<span class="err">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">config <span class="nb">set</span> requirepass <span class="m">2333</span><span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<p>查看自己的用户名</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">redis-cli CLIENT LIST<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<h4 id="连接问题">
+    <a href="#%e8%bf%9e%e6%8e%a5%e9%97%ae%e9%a2%98" class="header-anchor">#</a>
+    连接问题
+</h4><p>天内怎么又连接不上了, 是什么毛病?</p>
+<p>大概是我的梯子问题, 这两天网络和 VPN 问题太大了??</p>
+<p>哦哦, 原来是刚才为了开服务, <strong>打开了网络管理器, 然后它就把基础的 SSH 22 端口 和 HTTP 80 端口给覆盖了</strong>, 这下就连接不上了嘛&hellip;</p>
+<p>说到底是自己太呆了</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="找不到远程问题">
+    <a href="#%e6%89%be%e4%b8%8d%e5%88%b0%e8%bf%9c%e7%a8%8b%e9%97%ae%e9%a2%98" class="header-anchor">#</a>
+    找不到远程问题
+</h4><p>然后解决找不到远程问题, 是要改配置文件</p>
+<p><a class="link" href="https://blog.51cto.com/u_15162069/2803660#:~:text=Ubuntu%E5%AE%89%E8%A3%85redis%2C%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5redis%201%20%E5%AE%89%E8%A3%85redis-server%20%E5%AE%89%E8%A3%85%E5%91%BD%E4%BB%A4%EF%BC%9Aapt-get%20install%20redis-server%202,%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%20%E6%89%BE%E5%88%B0redis.conf%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%20%E6%89%93%E5%BC%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%8C%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%20%E5%9C%A8vim%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E4%B8%8B%E9%94%AE%E5%85%A5%E2%80%9C%2Fprotected-mode%22%E5%9B%9E%E8%BD%A6%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2protected-mode%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%8C%E6%8C%89%E2%80%9Cn%22%E6%9F%A5%E6%89%BE%E4%B8%8B%E4%B8%80%E4%B8%AA%20%E6%90%9C%E7%B4%A2bind%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%8C%E6%89%BE%E5%88%B0%E5%A6%82%E5%9B%BE%E9%85%8D%E7%BD%AE%E9%A1%B9%EF%BC%8C%E5%9C%A8bind%E5%89%8D%E9%9D%A2%E5%8A%A0%E4%B8%8A%E2%80%9C%23%E2%80%9D%E5%B0%86%E5%BD%93%E5%89%8D%E8%A1%8C%E6%B3%A8%E9%87%8A%EF%BC%88%E6%88%96%E8%80%85%E6%94%B9%E4%B8%BA%E4%BD%A0%E7%9A%84%E4%B8%BB%E6%9C%BAip%EF%BC%89%20%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81%E2%80%94%E2%80%94%E6%90%9C%E7%B4%A2requirepass%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%8C%E6%89%BE%E5%88%B0%E5%A6%82%E4%B8%8B%E9%85%8D%E7%BD%AE%EF%BC%8C%E6%8C%89i%E8%BF%9B%E5%85%A5%E8%BE%93%E5%85%A5%E6%A8%A1%E5%BC%8F%EF%BC%8Crequirepass%E7%A9%BA%E6%A0%BC%E5%90%8E%E9%9D%A2%E5%B0%B1%E6%98%AF%E8%A6%81%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%AF%86%E7%A0%81%203%20%E6%9C%80%E5%90%8E%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8redis%E6%A1%8C%E9%9D%A2%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E8%BF%9E%E6%8E%A5%E4%BA%86"  target="_blank" rel="noopener"
+    >那么去改</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">whereis redis.conf<span class="err">
+</span></span></span></code></pre></div><p>在 vim 命令模式下键入“/protected-mode&quot;回车进行搜索 protected-mode 关键字，按“n&quot;查找下一个</p>
+<p>yes -&gt; no</p>
+<p>‍</p>
+<p>搜索 bind 关键字，找到如图配置项，在 bind 前面加上“#”将当前行注释（或者改为你的主机 ip）</p>
+<p>‍</p>
+<p>修改密码——搜索 requirepass 关键字，找到如下配置，按 i 进入输入模式，requirepass 空格后面就是要设置的密码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">redis-server /etc/redis/redis.conf<span class="err">
+</span></span></span></code></pre></div><p>然后重启服务即可</p>
+<p>‍</p>
+<h4 id="用户名被拒绝问题">
+    <a href="#%e7%94%a8%e6%88%b7%e5%90%8d%e8%a2%ab%e6%8b%92%e7%bb%9d%e9%97%ae%e9%a2%98" class="header-anchor">#</a>
+    用户名被拒绝问题
+</h4><p>公钥又不对了, 该死, 用自己的密码罢</p>
+<p>这个时候修改用户名, 不修改密码也能连上了</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="mysql-版本-8035-针对性处理">
+    <a href="#mysql-%e7%89%88%e6%9c%ac-8035-%e9%92%88%e5%af%b9%e6%80%a7%e5%a4%84%e7%90%86" class="header-anchor">#</a>
+    MYSQL 版本 8.0.35 针对性处理
+</h4><p>‍</p>
+<p>mysql-server 和 mysql-client 区别</p>
+<p>mysql-server 是 MySQL 核心程序将安装 MySQL 数据库服务器，用于生成管理多个数据库实例，持久保存数据并为其提供查询接口（SQL），供不同客户端调用。</p>
+<p>mysql-client 是操作数据库实例的工具，允许连接到 MySQL 服务器使用该查询接口。它将为您提供 MySQL 命令行程序。</p>
+<p>如果只需要连接到远程服务器并运行查询，只安装 mysql-client 就可以了。如果是服务器只提供连接服务的只需要安装 mysql-server</p>
+<p>‍</p>
+<p><a class="link" href="https://blog.csdn.net/hwx865/article/details/90287715?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170381942916800226521615%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=170381942916800226521615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-90287715-null-null.142%5ev99%5epc_search_result_base3&amp;utm_term=ubantu%E5%AE%89%E8%A3%85mysql&amp;spm=1018.2226.3001.4187"  target="_blank" rel="noopener"
+    >链接 1</a></p>
+<p><a class="link" href="https://blog.csdn.net/qq_62124267/article/details/132231187?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=ubantu%E5%AE%89%E8%A3%85mysql&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-132231187.nonecase&amp;spm=1018.2226.3001.4187"  target="_blank" rel="noopener"
+    >链接 12</a></p>
+<p><a class="link" href="https://blog.csdn.net/qq_37120477/article/details/130653390?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170381942916800226521615%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=170381942916800226521615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-7-130653390-null-null.142%5ev99%5epc_search_result_base3&amp;utm_term=ubantu%E5%AE%89%E8%A3%85mysql&amp;spm=1018.2226.3001.4187"  target="_blank" rel="noopener"
+    >链接 123</a></p>
+<p>‍</p>
+<p>自启动</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">service mysql enable<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<p>记录, 这边发现了问题: 只有在使用 root 用户登录的时候才能进入, 否则无法进入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">  mysql&gt; use mysql<span class="p">;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#开启远程连接</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>update user <span class="nb">set</span> <span class="nv">host</span><span class="o">=</span><span class="s1">&#39;%&#39;</span> where <span class="nv">user</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#修改了之后刷新以下权限</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>flush privileges<span class="p">;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#修改数据库密码.</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;%&#39;</span> identified with mysql_native_password BY <span class="s1">&#39;2333&#39;</span><span class="p">;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#修改了之后刷新以下权限</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>flush privileges<span class="p">;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#退出数据库</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>quit<span class="p">;</span><span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<p>正常使用 mysql -u root -p 然后输入密码已经可以正常进入 mysql.</p>
+<p>从 root 退出到 spadek 普通用户: 直接 exit</p>
+<p>确认可以, 就是说用默认用户连接进来已经可以了</p>
+<p>‍</p>
+<h4 id="连接不上数据库">
+    <a href="#%e8%bf%9e%e6%8e%a5%e4%b8%8d%e4%b8%8a%e6%95%b0%e6%8d%ae%e5%ba%93" class="header-anchor">#</a>
+    连接不上数据库?
+</h4><p>解决 Navicat 连接不上数据库的问题</p>
+<p>‍</p>
+<p>配置远程连接</p>
+<p>vi /etc/mysql/mysql.conf.d/mysqld.cnf 找到 bind-address,把 127.0.0.1 修改成 0.0.0.0, 把两个地址全部注释了也行</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="1230-新机子小水管拐棍三号-改---运转中">
+    <a href="#1230-%e6%96%b0%e6%9c%ba%e5%ad%90%e5%b0%8f%e6%b0%b4%e7%ae%a1%e6%8b%90%e6%a3%8d%e4%b8%89%e5%8f%b7-%e6%94%b9---%e8%bf%90%e8%bd%ac%e4%b8%ad" class="header-anchor">#</a>
+    12.30 新机子小水管拐棍三号-改 - 运转中
+</h3><blockquote>
+<p>使用 Mysql + Redis 手动配置, 因为没有 Docker, 内存没有爆炸.</p>
+<p>CPU 单核小水管, 很慢, 内存只剩下 0.09GB, 也就是 90MB 剩余了, 一旦处理大的环境就需要立刻转移到大架构, 大架构最长支撑 3 个月.</p>
+<p>综合来看, 这个体系能够撑 6 个月时间, 也就是到找实习的时候已经用上了</p>
+<p>重新启动不会把 IP 弄掉, 因此出问题了重启即可</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="连接参数">
+    <a href="#%e8%bf%9e%e6%8e%a5%e5%8f%82%e6%95%b0" class="header-anchor">#</a>
+    连接参数
+</h4><p>‍</p>
+<h5 id="redis-2">
+    <a href="#redis-2" class="header-anchor">#</a>
+    <strong>Redis</strong>
+</h5><p>空用户 2333</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">jdbc:redis://20.239.61.109:6379/12<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<h5 id="mysql-2">
+    <a href="#mysql-2" class="header-anchor">#</a>
+    <strong>Mysql</strong>
+</h5><p>root 2333</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">jdbc:mysql://20.239.61.109:3306/<span class="err">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="3-月复健">
+    <a href="#3-%e6%9c%88%e5%a4%8d%e5%81%a5" class="header-anchor">#</a>
+    3 月复健
+</h2><p>‍</p>
+<h3 id="326linuxvmware-教程配置">
+    <a href="#326linuxvmware-%e6%95%99%e7%a8%8b%e9%85%8d%e7%bd%ae" class="header-anchor">#</a>
+    3.26LinuxVMware 教程配置
+</h3><blockquote>
+<p>我不用本地虚拟机了, 因此不使用</p>
+</blockquote>
+<p>‍</p>
+<h4 id="安装-vmware">
+    <a href="#%e5%ae%89%e8%a3%85-vmware" class="header-anchor">#</a>
+    安装 VMware
+</h4><p>VMware 是业界最好用的虚拟机软件之一。</p>
+<p>windows 版本的<a class="link" href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html"  target="_blank" rel="noopener"
+    >网站</a></p>
+<p>‍</p>
+<p>特别注意，Windows10 以上版本操作系统需要下载安装 VMware Workstation Pro16 及以上版本，安装方式此处略。</p>
+<p>如果自己电脑上已经有了低版本的 VMware，则需要先卸载，再重新安装。卸载过程比较麻烦</p>
+<p>‍</p>
+<p>‍</p>
+<h5 id="卸载旧版-vmware可选">
+    <a href="#%e5%8d%b8%e8%bd%bd%e6%97%a7%e7%89%88-vmware%e5%8f%af%e9%80%89" class="header-anchor">#</a>
+    卸载旧版 VMware（可选）
+</h5><p>首先，在控制面板找到程序和功能选项，找到 VMware，进行卸载操作：</p>
+<p>‍</p>
+<p>卸载完成后，还需要看看 VMware 的安装目录是否有旧数据，一并清理掉。</p>
+<p>比如安装在<strong>C 盘的 Program Files(x86)</strong> ：</p>
+<p>接下来要清理注册表：</p>
+<p>首先，按住 Windows + R , 在弹出框中输入 &ldquo;regedit&rdquo; 调出注册表：</p>
+<p>进入注册表编辑器，如图：</p>
+<p>打开**<code>HKEY_CURRENT_USER</code><strong>​ 文件夹，找到</strong><code>Software</code>**​ 文件夹并打开</p>
+<p>找到“VMware.Inc”，右键删除：</p>
+<p>‍</p>
+<h4 id="安装-linux-发行版">
+    <a href="#%e5%ae%89%e8%a3%85-linux-%e5%8f%91%e8%a1%8c%e7%89%88" class="header-anchor">#</a>
+    安装 Linux 发行版
+</h4><p>Centos7 是比较常用的一个 Linux 发行版本</p>
+<p>老外的下载站 新 CentOS7iso 文件<a class="link" href="https://ftp.riken.jp/Linux/centos/7.9.2009/isos/x86_64/"  target="_blank" rel="noopener"
+    >网址</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">CentoS</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">Minimal</span><span class="o">-</span><span class="mf">2009.</span><span class="n">iso</span>
+</span></span></code></pre></div><blockquote>
+<p>我去, 我原来的要 4.1G! 这不狠狠下载!</p>
+</blockquote>
+<p>‍</p>
+<h4 id="组装">
+    <a href="#%e7%bb%84%e8%a3%85" class="header-anchor">#</a>
+    组装
+</h4><p>在网络页面做下面的几件事情：</p>
+<ol>
+<li>修改主机名为自己喜欢的主机名，不要出现中文和特殊字符，建议用 localhost</li>
+<li>点击应用</li>
+<li>将网络连接打开</li>
+<li>点击配置，设置详细网络信息</li>
+</ol>
+<p>接下来的配置要参考：</p>
+<p>点击配置按钮后，我们需要把网卡地址改为静态 IP，这样可以避免每次启动虚拟机 IP 都变化。所有配置照搬你自己截图的网络信息填写，不要照抄我的：</p>
+<p>上图中的四个信息参考之前的<strong>以太网(ens33)网卡</strong>的截图，不要照搬我的来写。</p>
+<p>‍</p>
+<h4 id="设置虚拟机快照">
+    <a href="#%e8%ae%be%e7%bd%ae%e8%99%9a%e6%8b%9f%e6%9c%ba%e5%bf%ab%e7%85%a7" class="header-anchor">#</a>
+    设置虚拟机快照
+</h4><p>在虚拟机安装完成后，最好立刻设置一个快照，这样一旦将来虚拟机出现问题，可以快速恢复。</p>
+<p>我们先停止虚拟机，点击 VMware 顶部菜单中的<code>暂停</code>​**<code>下拉选框</code>**​，选择<code>关闭客户机</code>​：</p>
+<p>‍</p>
+<p>‍</p>
+<h4 id="网络模式">
+    <a href="#%e7%bd%91%e7%bb%9c%e6%a8%a1%e5%bc%8f" class="header-anchor">#</a>
+    网络模式
+</h4><p>‍</p>
+<h5 id="桥接">
+    <a href="#%e6%a1%a5%e6%8e%a5" class="header-anchor">#</a>
+    桥接
+</h5><p>在网络网卡上安装了一个桥接协议，让这块网卡处于混杂模式，可以同时连接多个网络的做法。</p>
+<p>桥接下，类似于把物理主机虚拟为一个交换机，所有桥接设置的虚拟机连接到这个交换机的一个接口上，物理主机也同样放在这个交换机当中，所以所有桥接下网卡与网卡都是交换模式的，相互可以访问而不干扰。</p>
+<p>‍</p>
+<h5 id="host-only">
+    <a href="#host-only" class="header-anchor">#</a>
+    Host-only
+</h5><p>（仅与主机通信）<br>
+虚拟机使用 VMnet1 网卡与主机单独组网,主机对于虚拟机相当于路由器</p>
+<p>‍</p>
+<h5 id="nat">
+    <a href="#nat" class="header-anchor">#</a>
+    NAT
+</h5><p>虚拟机使用 VMnet8 网卡与主机单独组网,主机对于虚拟机相当于路由器，VMnet8 网卡通过 NAT 地址转换协议与物理机网卡通信</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="328-完全复健后云资源服务器等下一步计划">
+    <a href="#328-%e5%ae%8c%e5%85%a8%e5%a4%8d%e5%81%a5%e5%90%8e%e4%ba%91%e8%b5%84%e6%ba%90%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%ad%89%e4%b8%8b%e4%b8%80%e6%ad%a5%e8%ae%a1%e5%88%92" class="header-anchor">#</a>
+    3.28 完全复健后云资源(服务器等)下一步计划
+</h3><p>自己的服务器直接用 Docker 快速装配即可, 不用去鼓捣手动装了. 因此不能再用小水管 1 核 1GB 玩意了.</p>
+<p>首先升级当前微软配置, 等到三个月后配额用完了直接趁 618 购买国内服务器提供小水管服务. 而后静态页面等需求我不打算另外的公开博客, 因此对于 GFW 外的服务器暂时没有需求.</p>
+<p>OSS 也一样, 项目开写时直接购买</p>
+<p>‍</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2024-03-26 10:32 CST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="SpadeKTLSG/SpadeKTLSG.github.io"
+    data-repo-id="R_kgDOLz5uXQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOLz5uXc4Ce_BV"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="1"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('1');
+            } else {
+                setGiscusTheme('1');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+
+    <section class="copyright">
+        &copy;
+        
+        2024 SpadeK
+    </section>
+
+
+    
+    <section class="running-time">
+        本博客已稳定运行
+        <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        发表了10篇文章 ·
+        总计163.44k字
+    </section>
+
+
+    <section class="powerby">
+        
+            Powered by Blood, Sweat, and Tears
+        
+        <br/>使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script>
+    let s1 = '2024-4-27'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+    </body>
+</html>
