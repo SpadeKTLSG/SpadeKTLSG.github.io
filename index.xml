@@ -49,6 +49,1944 @@
 &lt;/div&gt;</description>
         </item>
         <item>
+        <title>博客支配作战 零号机(GithubPage&#43;Hugo&#43;Stack)</title>
+        <link>https://spadektlsg.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%AF%E9%85%8D%E4%BD%9C%E6%88%98-%E9%9B%B6%E5%8F%B7%E6%9C%BAgithubpage-hugo-stack/</link>
+        <pubDate>Sun, 28 Apr 2024 08:50:40 +0800</pubDate>
+        
+        <guid>https://spadektlsg.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%AF%E9%85%8D%E4%BD%9C%E6%88%98-%E9%9B%B6%E5%8F%B7%E6%9C%BAgithubpage-hugo-stack/</guid>
+        <description>&lt;img src="https://spadektlsg.github.io/life/002/hono.png" alt="Featured image of post 博客支配作战 零号机(GithubPage&#43;Hugo&#43;Stack)" /&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;本人第二代博客 零号机 搭建纪实 此文档已完结^（使用思域笔记完成）^&lt;/p&gt;
+&lt;p&gt;可作为搭建个人博客参考, 但不保证完全符合需求&lt;/p&gt;
+&lt;p&gt;搭建于 Apr. 2024 Hugo-ex版本 v0.125.3&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;header&#34;&gt;
+    &lt;a href=&#34;#header&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Header
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;第一代博客: CSDN (旧日文章已废弃)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第二代博客: Github 托管自动化双仓库部署, 无域名完全省心白嫖 GithubPage + Hugo + Stack&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;配置要求&#34;&gt;
+    &lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e8%a6%81%e6%b1%82&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    配置要求
+&lt;/h4&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;个人配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;个人PC全套开发环境IDEA(图形化Git工具) + Github(完整关联) + Google等平台账号 + 流畅代理机场 + 50M宽带网络 + 潮湿度高的脑子 + Github/Microsoft学生认证 + 0 Money&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最低配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;代理机场, 大概只有这个是刚需, 或者你有流畅访问Github的方法&lt;/p&gt;
+&lt;p&gt;(没有这个的, 在具体资源下不了的地方找对应镜像手动下载, 这里不提供)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;适合对象&#34;&gt;
+    &lt;a href=&#34;#%e9%80%82%e5%90%88%e5%af%b9%e8%b1%a1&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    适合对象
+&lt;/h4&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;你受够了XXDN的无限制广告战吗? 你讨厌Qzonx的糟糕审核吗? 你疲倦于自建服务器的繁琐吗? 你想要白嫖一个可以用来当哔哔空间的博客吗?&amp;hellip;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;很好, 你被选中了! 请继续往下看&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h1 id=&#34;基础篇&#34;&gt;
+    &lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e7%af%87&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    基础篇
+&lt;/h1&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;前期工作&#34;&gt;
+    &lt;a href=&#34;#%e5%89%8d%e6%9c%9f%e5%b7%a5%e4%bd%9c&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    前期工作
+&lt;/h2&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;目标&#34;&gt;
+    &lt;a href=&#34;#%e7%9b%ae%e6%a0%87&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    目标
+&lt;/h3&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;双库解耦&#34;&gt;
+    &lt;a href=&#34;#%e5%8f%8c%e5%ba%93%e8%a7%a3%e8%80%a6&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    双&lt;strong&gt;库解耦&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;一个用来管理整个Hugo生产仓库 - 私有工厂仓库(存放API信息等敏感内容), 一个用来管理Hugo生成内容(Page) - 公有GithubPage仓库&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;简化流程&#34;&gt;
+    &lt;a href=&#34;#%e7%ae%80%e5%8c%96%e6%b5%81%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    简化&lt;strong&gt;流程&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;Hugo的一次将推送触发开关, 让Github对生成仓库进行自动构建, 更新Page内容 (基础目标)&lt;/p&gt;
+&lt;p&gt;使用笔记软件的内嵌代码段进一步简化流程(进阶目标)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;基本架构&#34;&gt;
+    &lt;a href=&#34;#%e5%9f%ba%e6%9c%ac%e6%9e%b6%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    &lt;strong&gt;基本架构&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;Hugo + Stack theme (Win10)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;未来目标&#34;&gt;
+    &lt;a href=&#34;#%e6%9c%aa%e6%9d%a5%e7%9b%ae%e6%a0%87&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    &lt;strong&gt;未来目标&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;除需要具有基础功能(写文章)外, 可能需要配置阿里云OSS等图床应用, 目前暂时嵌入资源文件(我基本是纯文字, 没有图片的), 可能采用一些简单图床应用&lt;/p&gt;
+&lt;p&gt;(敬请期待)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;要点&#34;&gt;
+    &lt;a href=&#34;#%e8%a6%81%e7%82%b9&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    &lt;strong&gt;要点&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;自动化Hugo编译&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;指准备好md文件后, 需要将其移入对应位置后执行命令进行生产(命令行操作)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;自动化Page仓库操作&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要手动将生成的网页上传到对应仓库&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简单静态资源管理&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;暂时不碍事(个人), 但是未来一定需要, 可以暂时塞到资源文件夹里, 因为我的笔记一般没有插入图片, 有也是引用形式的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;低维护成本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;经济成本基本为0, 但是要注意心智成本以及本地结构成本, &amp;ldquo;心智能量币维护费&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;便携&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;存档Github仓库, 换电脑只需要下载仓库, 安装前置工具后即可使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;本地结构&#34;&gt;
+    &lt;a href=&#34;#%e6%9c%ac%e5%9c%b0%e7%bb%93%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    本地结构
+&lt;/h3&gt;&lt;p&gt;本人首先在专门划定的代码文件夹的Backup文件目录创建Blog子文件夹, 之后在对应子目录&lt;kbd&gt;Factory&lt;/kbd&gt;​进行Hugo主体的创建&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目录不能有中文&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;工具安装&#34;&gt;
+    &lt;a href=&#34;#%e5%b7%a5%e5%85%b7%e5%ae%89%e8%a3%85&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    工具安装
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;路径: Chocolatey -&amp;gt; Hugo -&amp;gt; Blog&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;chocolatey&#34;&gt;
+    &lt;a href=&#34;#chocolatey&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chocolatey
+&lt;/h3&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;Win10平台安装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;powershell&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NoProfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ExecutionPolicy&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unrestricted&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Command&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;iex ((new-object net.webclient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装完毕后&lt;strong&gt;开新实例&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;hugo&#34;&gt;
+    &lt;a href=&#34;#hugo&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Hugo
+&lt;/h3&gt;&lt;p&gt;需要Hugo-extended&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco install hugo-extended
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;验证&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;git&#34;&gt;
+    &lt;a href=&#34;#git&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Git
+&lt;/h3&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;安装初始化&#34;&gt;
+    &lt;a href=&#34;#%e5%ae%89%e8%a3%85%e5%88%9d%e5%a7%8b%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    安装初始化
+&lt;/h4&gt;&lt;p&gt;==这里不赘述==&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;公钥绑定&#34;&gt;
+    &lt;a href=&#34;#%e5%85%ac%e9%92%a5%e7%bb%91%e5%ae%9a&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    公钥绑定
+&lt;/h4&gt;&lt;p&gt;==这里不赘述==&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;IDEA这种IDE会帮助设置你的Git的user.name等属性, 平常用着用着就给你配好了, 很省事&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;验证配置&#34;&gt;
+    &lt;a href=&#34;#%e9%aa%8c%e8%af%81%e9%85%8d%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    验证配置
+&lt;/h4&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ssh一下github, 给你鉴权&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -T git@github.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;期望返回结果&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;successfully authenticated&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;查看git 配置&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;期望返回结果&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;user.name=SpadeKTLSG&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;mailto:user.email=spadekxcwxtlsg@gmail.com&#34; &gt;user.email=spadekxcwxtlsg@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;项目搭建&#34;&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e6%90%ad%e5%bb%ba&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    项目搭建
+&lt;/h2&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;blogfactory初始化&#34;&gt;
+    &lt;a href=&#34;#blogfactory%e5%88%9d%e5%a7%8b%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    BlogFactory初始化
+&lt;/h3&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;进入Bolg目录cmd, 创建BlogFactory私有仓库&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site BlogFactory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;这里控制台也有给一些参考路径&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Just a few more steps...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. Change the current directory to D:\CODE\Backup\Blog\BlogFactory.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. Create or install a theme:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   - Create a new theme with the command &amp;#34;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   - Install a theme from https://themes.gohugo.io/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. Edit hugo.toml, setting the &amp;#34;theme&amp;#34; property to the theme name.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4. Create new content with the command &amp;#34;hugo new content &amp;lt;SECTIONNAME&amp;gt;\&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5. Start the embedded web server with the command &amp;#34;hugo server --buildDrafts&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;See documentation at https://gohugo.io/.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;进入BlogFactory就能看到目录结构&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;基础结构&#34;&gt;
+    &lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e7%bb%93%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    基础结构
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;​&lt;code&gt;content&lt;/code&gt;​ 是博客读取的各类页面所在的目录，包括主页面（主页、关于、存档等这种大类）和博文&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;layouts&lt;/code&gt;​ 博客网站的布局文件&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;static&lt;/code&gt;​ 静态内容&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;themes&lt;/code&gt;​ 用于存放博客主题&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;config.toml&lt;/code&gt;​ 配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;初始化当前目录中的空 Git 存储库&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;安装我选择的Stack主题, 代理我要开TUN模式(Clash)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;格式, 需要存到目录中的themes文件夹&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule add &amp;lt;https&amp;gt; themes/&amp;lt;themename&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;启动 Hugo 服务器, 访问 http://localhost:1313/&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这里显示是空的页面, 因为没有引入theme&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;快速渲染模式，你在代码中进行的改动，只要一保存，就会直接刷新在站点上&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;之后, 在BolgFactory的hugo.toml中加入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;theme = &amp;#39;hugo-theme-stack&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;就能看到示例页面了, 但是这个配置文件东西还是太少了, 于是直接把&lt;code&gt;themes\hugo-theme-stack\exampleSite&lt;/code&gt;​ 文件夹里面的配置文件hugo.yaml拿过来放到根目录, 同时删掉根目录的hugo.toml&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;现在的&lt;code&gt;&amp;lt;blog&amp;gt;&lt;/code&gt;​文件夹里的默认配置文件是&lt;code&gt;hugo.toml&lt;/code&gt;​，而一般的&lt;code&gt;exampleSite&lt;/code&gt;​里的配置文件一般是&lt;code&gt;config.toml&lt;/code&gt;​和&lt;code&gt;config.yaml&lt;/code&gt;​，而一个网站只能有一个配置文件，且这三种文件名都是可以的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;配置项&#34;&gt;
+    &lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e9%a1%b9&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    配置项
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;基础配置选项, 可以先鼓捣一下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;​&lt;code&gt;baseurl&lt;/code&gt;​ 域名&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;paginate&lt;/code&gt;​ 主页一页显示几篇博文&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;title&lt;/code&gt;​ 博客的主名&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;languages&lt;/code&gt;​ 多语言设置，没错，Hugo 是原生支持多语言的。一般来说，保留中英双语已经很够。本文以中英双语为例讲解。&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;DefaultContentLanguage&lt;/code&gt;​ 博客的默认语言。若设置为中文（&lt;code&gt;zh-cn&lt;/code&gt;​），则所有被读取的 &lt;code&gt;index.md&lt;/code&gt;​ 都会被认为是中文环境下的内容，英文就会空缺。此时你需要额外创建同名的英文文件，比如 &lt;code&gt;index.en.md&lt;/code&gt;​，如此填补位置。&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;hasCJKLanguage&lt;/code&gt;​ 如果默认语言设置为中文，这里应改为 &lt;code&gt;true&lt;/code&gt;​&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;mainSections&lt;/code&gt;​ 原本是 &lt;code&gt;post&lt;/code&gt;​，对应着 &lt;code&gt;F:\Blog\content\post&lt;/code&gt;​ 目录。若这里改，文件夹名也要改，两者是连锁的，否则读不到其中的内容物。&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;since&lt;/code&gt;​ 开始写博客的年份&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;customText&lt;/code&gt;​ 底部的一句个性化说明&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;published&lt;/code&gt;​ 文章发布日期的格式，默认的格式并不方便, 设置成 &lt;code&gt;2006-01-02&lt;/code&gt;​&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;lastUpdated&lt;/code&gt;​ 同理可调整为 &lt;code&gt;2006-01-02 15:04 CST&lt;/code&gt;​。&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;emoji&lt;/code&gt;​ 头像右下角的状态表情，留空就不显示&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;subtitle&lt;/code&gt;​ 博客副标题&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;avatar&lt;/code&gt;​ 下属的几条，分别是，是否启用、是否在本地、存储路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;前期配置&#34;&gt;
+    &lt;a href=&#34;#%e5%89%8d%e6%9c%9f%e9%85%8d%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    前期配置
+&lt;/h4&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;hugo.yml配置一些基础名字&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;写作生成页面流程&#34;&gt;
+    &lt;a href=&#34;#%e5%86%99%e4%bd%9c%e7%94%9f%e6%88%90%e9%a1%b5%e9%9d%a2%e6%b5%81%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    写作生成页面流程
+&lt;/h4&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;写文, 别忘了末尾加上md, 不然就会报&lt;code&gt;不知道什么类型&lt;/code&gt;​的错&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;folder = post&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new [folder]/FILEname.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;默认是post中才会生效(见配置), 在[folder]对应目录下找到对应文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;设置文件有设置项可设置文章识别位置, 当然不建议改, 后面还有tag这类目录要存放&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;启动server观察情况, -D表示显示 draft 为 true 的草稿&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;观察到结果, 基础写作生成页面流程结束&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;blogproduct初始化&#34;&gt;
+    &lt;a href=&#34;#blogproduct%e5%88%9d%e5%a7%8b%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    BlogProduct初始化
+&lt;/h3&gt;&lt;p&gt;新建仓库对应GithubPage, 为了符合规范采用账号命名 + 公开&lt;/p&gt;
+&lt;p&gt;仓库名&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SpadeKTLSG.github.io
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;生成页面填充仓库&#34;&gt;
+    &lt;a href=&#34;#%e7%94%9f%e6%88%90%e9%a1%b5%e9%9d%a2%e5%a1%ab%e5%85%85%e4%bb%93%e5%ba%93&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    生成页面填充仓库
+&lt;/h4&gt;&lt;p&gt;将hugo生成的public/目录下所有文件，剪切到本地仓库进行提交&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;剪切而不是复制, 原因下面有&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;部署githubpage&#34;&gt;
+    &lt;a href=&#34;#%e9%83%a8%e7%bd%b2githubpage&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    部署GithubPage
+&lt;/h4&gt;&lt;p&gt;这个产品仓库(公有)和前面的工厂仓库(私有)都同步Github&lt;/p&gt;
+&lt;p&gt;命名注意同步可先选分支部署模式(不是Action, 而是手动部署)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;选择完提交完, 就能自动部署, 通过站点地址栏能访问, 那么一个基础实例就OK了&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;链接大概长 -&amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://spadektlsg.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;演示站点 (spadektlsg.github.io)&lt;/a&gt; 这样&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;自动化赋能&#34;&gt;
+    &lt;a href=&#34;#%e8%87%aa%e5%8a%a8%e5%8c%96%e8%b5%8b%e8%83%bd&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    自动化赋能
+&lt;/h2&gt;&lt;p&gt;这里主要参考双仓库模式&lt;a class=&#34;link&#34; href=&#34;https://www.goodfun.me/post/%E5%BB%BA%E7%AB%99%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AF%87-Hugo&amp;#43;Github-Pages&amp;#43;Github-Action%E5%8D%9A%E5%AE%A2%E6%96%B9%E6%A1%88%E4%B9%8B%E4%B8%89%E9%85%8D%E7%BD%AEGithub-Action%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;, 个人需求提升更多解耦和隐私&lt;/p&gt;
+&lt;p&gt;也可以选择单仓库双分支模式&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/497671233&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;, 那样只有单仓库更方便管理&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;github-token&#34;&gt;
+    &lt;a href=&#34;#github-token&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Github Token
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Token用来鉴权管理仓库&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;到Github开发者设置配置里设置个人令牌 Personal access tokens, 选择 Generate new token&lt;/p&gt;
+&lt;p&gt;Note中输入名称，在 Select scopes 选择 workflow&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;我的名称 - 永久 (秘钥名称随意)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;BlogFactoryProductAutoKey&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;选择作用域&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更新 GitHub 操作工作流程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;生成的token复制保存&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;XXXXXaXXsssXuXDnXXXX &amp;lt;-假的
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;回BlogFactory里面设置 -&amp;gt; Secrets -&amp;gt; Action -&amp;gt; repository secret &lt;code&gt;New repository secret&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;name部分输入秘钥名称==(将在yml中设置)==, Secret部分输入刚才的个人令牌&lt;/p&gt;
+&lt;p&gt;我直接用这个命名&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PERSONAL_TOKEN&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;引述&lt;a class=&#34;link&#34; href=&#34;https://www.goodfun.me/post/%E5%BB%BA%E7%AB%99%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AF%87-Hugo&amp;#43;Github-Pages&amp;#43;Github-Action%E5%8D%9A%E5%AE%A2%E6%96%B9%E6%A1%88%E4%B9%8B%E4%B8%89%E9%85%8D%E7%BD%AEGithub-Action%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;博主&lt;/a&gt;内容:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;​&lt;code&gt;name&lt;/code&gt;​​的值不能以&lt;code&gt;GITHUB_&lt;/code&gt;​​开头，否则创建会出错&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;blogfactory-github-action&#34;&gt;
+    &lt;a href=&#34;#blogfactory-github-action&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    BlogFactory Github Action
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;用来指定自动配置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;在hugo博客根目录下，创建放置Github Action配置文件的目录, 其中创建一个yml文件, 名称随意. 即为Github Action需要的工作流配置文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.github/workflows/main.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;引述&lt;a class=&#34;link&#34; href=&#34;https://www.goodfun.me/post/%E5%BB%BA%E7%AB%99%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AF%87-Hugo&amp;#43;Github-Pages&amp;#43;Github-Action%E5%8D%9A%E5%AE%A2%E6%96%B9%E6%A1%88%E4%B9%8B%E4%B8%89%E9%85%8D%E7%BD%AEGithub-Action%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;博主&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;需要根据自己的情况修改配置参数(原参数不赘述)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Action包含 4 个步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;拉取代码&lt;/li&gt;
+&lt;li&gt;准备 hugo 环境&lt;/li&gt;
+&lt;li&gt;使用 hugo 编译生成静态文件&lt;/li&gt;
+&lt;li&gt;把生成的静态文件发布到 Github Pages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;个人配置参考&#34;&gt;
+    &lt;a href=&#34;#%e4%b8%aa%e4%ba%ba%e9%85%8d%e7%bd%ae%e5%8f%82%e8%80%83&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    个人配置参考
+&lt;/h4&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;重点对象&lt;/p&gt;
+&lt;p&gt;name &amp;ndash;&amp;gt; BlogFactoryBuild 配置名随意&lt;/p&gt;
+&lt;p&gt;hugo v0.125.3 &amp;ndash;&amp;gt; 查看自己版本 &lt;code&gt;hugo version&lt;/code&gt;​ 获得&lt;/p&gt;
+&lt;p&gt;PERSONAL_TOKEN &amp;ndash;&amp;gt; ==上面的名称==, 格式还是这里的 &lt;code&gt;secrets. XXX&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;几个master分支名称看仔细了, 很可能和仓库的的main / master / XXX 分支名称不一样. 第一处是Factory仓库的监听分支, 第二处是目标Product发布分支&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;具体内容可参考Github Action系列文档(附录)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;BlogFactoryBuild&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;branches&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;build-deploy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-20.04&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Check out source&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Setup hugo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hugo-version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0.125.3&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;extended&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Build&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;hugo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Deploy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;personal_token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.PERSONAL_TOKEN}} &lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;external_repository&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;SpadeKTLSG.github.io &lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish_dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish_branch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;简单注释版&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;BlogFactoryBuild&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 配置名称&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 触发条件&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 推送事件触发&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;branches&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 需要在XXX分支&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Factory仓库的master分支&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 工作流&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;build-deploy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 工作流名称&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-20.04&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 运行环境(虚拟机)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 步骤&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 拉取代码&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Check out source&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 检出源码&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 使用&amp;#34;工具&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 安装hugo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Setup hugo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 配置参数&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hugo-version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0.125.3&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# hugo版本&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;extended&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 是否安装扩展版本, yes&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 构建&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Build&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;hugo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 执行hugo命令&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 部署&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Deploy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 配置参数&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;personal_token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.PERSONAL_TOKEN }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# GitHub Token&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;external_repository&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;SpadeKTLSG/SpadeKTLSG.github.io&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 部署到的仓库, 用户名/仓库名&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish_dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 部署目录&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish_branch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 部署分支&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;action-settings&#34;&gt;
+    &lt;a href=&#34;#action-settings&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Action Settings
+&lt;/h3&gt;&lt;p&gt;去GithubPage里面设置更新的方式, 需要改为Github Action&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;在Factory新写一篇文章, 提交更改push&lt;/p&gt;
+&lt;p&gt;等待奇迹发生&amp;hellip;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%93%8d&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    实操
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;一些命令与操作记录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;crud&#34;&gt;
+    &lt;a href=&#34;#crud&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    CRUD
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;由于有了附仓库操作, 完全不需要手动进行编译了, 好好好.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我为了本地预览, 没有忽略本地的public&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;写博客&#34;&gt;
+    &lt;a href=&#34;#%e5%86%99%e5%8d%9a%e5%ae%a2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    &lt;strong&gt;写博客&lt;/strong&gt;
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new post/NaMe
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;按照模板生成一个博客md文件&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;脚本&#34;&gt;
+    &lt;a href=&#34;#%e8%84%9a%e6%9c%ac&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    脚本(+)
+&lt;/h4&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/#%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;我简化了实现, 只要求输入文章, 其他不动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo [create one blog in post/XXX/Name]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set /p input= 请输入标题, 如果存放到对应文件夹下, 可输入&amp;#34;media/Name&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new post/%input%.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;脚本写类别&#34;&gt;
+    &lt;a href=&#34;#%e8%84%9a%e6%9c%ac%e5%86%99%e7%b1%bb%e5%88%ab&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    脚本写类别(+)
+&lt;/h4&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/#%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;脚本写标签&#34;&gt;
+    &lt;a href=&#34;#%e8%84%9a%e6%9c%ac%e5%86%99%e6%a0%87%e7%ad%be&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    脚本写标签(+)
+&lt;/h4&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/#%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;删博客&#34;&gt;
+    &lt;a href=&#34;#%e5%88%a0%e5%8d%9a%e5%ae%a2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    &lt;strong&gt;删博客&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;直接删, 不用管&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般是要去清理下public防止垃圾片段影响, 但是见下文脚本清理&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;改博客&#34;&gt;
+    &lt;a href=&#34;#%e6%94%b9%e5%8d%9a%e5%ae%a2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    &lt;strong&gt;改博客&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;VSCODE 或 笔记软件导入后修改导出覆盖, 见下文移花接木&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般是new post/完后复制黏贴到里面, 但是有时候文章很长就很麻烦, 于是移花接木操作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;手动编译预览&#34;&gt;
+    &lt;a href=&#34;#%e6%89%8b%e5%8a%a8%e7%bc%96%e8%af%91%e9%a2%84%e8%a7%88&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    手动&lt;strong&gt;编译预览(×)&lt;/strong&gt;
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;但是这&lt;em&gt;并不会&lt;/em&gt; 删除之前生成的文件, 因此如果进行了删除请清空一次目录再完整编译^（官网建议）^&lt;/p&gt;
+&lt;p&gt;预览(带草稿)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;脚本编译预览&#34;&gt;
+    &lt;a href=&#34;#%e8%84%9a%e6%9c%ac%e7%bc%96%e8%af%91%e9%a2%84%e8%a7%88&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    脚本编译预览(√)
+&lt;/h4&gt;&lt;p&gt;见下文脚本预览, 双击脚本即可查看&lt;/p&gt;
+&lt;p&gt;这里是完整版&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo [清理/public, 完整构建, 预览启动]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;del /s /q &amp;#34;.\public\*&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;for /d %%x in (.\public\*) do rd /s /q &amp;#34;%%x&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo [清理残余/public完毕]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;start  http://localhost:1313/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo [hugo 完整构建完毕]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo [hugo 预览启动]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;手动发布&#34;&gt;
+    &lt;a href=&#34;#%e6%89%8b%e5%8a%a8%e5%8f%91%e5%b8%83&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    手动&lt;strong&gt;发布(×)&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;public内文件复制到对应GithubPage仓库进行Commit + Push, 触发一次自动构建Page(可以查看进度)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;自动发布&#34;&gt;
+    &lt;a href=&#34;#%e8%87%aa%e5%8a%a8%e5%8f%91%e5%b8%83&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    自动发布(√)
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;Action联动双库&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用上述自动化流程后, 直接IDEA无脑全选提交并推送, 坐等发布即可&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;图片操作&#34;&gt;
+    &lt;a href=&#34;#%e5%9b%be%e7%89%87%e6%93%8d%e4%bd%9c&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    图片操作
+&lt;/h3&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;图片放入 &lt;code&gt;static&lt;/code&gt;​ 目录下&lt;/p&gt;
+&lt;p&gt;Markdown 文件中以 &lt;code&gt;/XXX.jpg&lt;/code&gt;​ 的路径引用&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hugo 会自动在图片路径前追加 &lt;code&gt;static&lt;/code&gt;​ 的路径&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为了区分开不同文章的用图，还可以在 &lt;code&gt;static&lt;/code&gt;​ 下新建子目录&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![XXX](/AAA/XXX.jpg)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;我也不经常插入图片, 如果有也是用图床比较好, 方便后续引用, 不然就和这个地方强绑定了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;图片在static/sys/Good.png, 引用方法是&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![testPic](/sys/Good.png)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;markdown操作&#34;&gt;
+    &lt;a href=&#34;#markdown%e6%93%8d%e4%bd%9c&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Markdown操作
+&lt;/h3&gt;&lt;p&gt;.md操作不赘述, 见个人其他文档&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;注意&#34;&gt;
+    &lt;a href=&#34;#%e6%b3%a8%e6%84%8f&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    注意
+&lt;/h2&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;生成md文章后不要动它们的基本层级(md文件的命名和位置), 不然会出乱子&lt;/li&gt;
+&lt;li&gt;‍&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h1 id=&#34;提高篇&#34;&gt;
+    &lt;a href=&#34;#%e6%8f%90%e9%ab%98%e7%af%87&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    提高篇
+&lt;/h1&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;页面美化&#34;&gt;
+    &lt;a href=&#34;#%e9%a1%b5%e9%9d%a2%e7%be%8e%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    页面美化
+&lt;/h2&gt;&lt;p&gt;官方手册指路&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://stack-docs.netlify.app/zh/configuration/#featuredimagefield&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;配置主题 | Hugo 主题 Stack (stack-docs.netlify.app)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;标签&#34;&gt;
+    &lt;a href=&#34;#%e6%a0%87%e7%ad%be&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    标签
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;暂时没需要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;代码高亮&#34;&gt;
+    &lt;a href=&#34;#%e4%bb%a3%e7%a0%81%e9%ab%98%e4%ba%ae&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    代码高亮
+&lt;/h3&gt;&lt;p&gt;配置文件直接加, 高亮主题可去 &lt;a class=&#34;link&#34; href=&#34;https://swapoff.org/chroma/playground/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chroma Playground&lt;/a&gt; 找&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 代码高亮
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;highlight:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  style: github
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;字数统计&#34;&gt;
+    &lt;a href=&#34;#%e5%ad%97%e6%95%b0%e7%bb%9f%e8%ae%a1&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    字数统计
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;暂时不需要, 简单黏贴了一点代码凑合着用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;稳定运行字段&#34;&gt;
+    &lt;a href=&#34;#%e7%a8%b3%e5%ae%9a%e8%bf%90%e8%a1%8c%e5%ad%97%e6%ae%b5&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    稳定运行字段
+&lt;/h3&gt;&lt;p&gt;见博主&lt;a class=&#34;link&#34; href=&#34;https://thirdshire.com/hugo-stack-renovation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;返回顶部&#34;&gt;
+    &lt;a href=&#34;#%e8%bf%94%e5%9b%9e%e9%a1%b6%e9%83%a8&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    返回顶部
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;未来&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;系统原理&#34;&gt;
+    &lt;a href=&#34;#%e7%b3%bb%e7%bb%9f%e5%8e%9f%e7%90%86&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    系统原理
+&lt;/h2&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;模板&#34;&gt;
+    &lt;a href=&#34;#%e6%a8%a1%e6%9d%bf&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    模板
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/#%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;引用&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用 hugo 来new而不能手动创建一个 &lt;code&gt;.md&lt;/code&gt;​ 文件, 这是因为使用 hugo 创建会自动使用已填入 &lt;code&gt;Front Matter&lt;/code&gt;​的模板&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;Front Matter&lt;/code&gt;​ 用于标识文章的标题、时间等信息，hugo 就是据此来生成静态页面。关于属性的含义和用法可以参考 &lt;a class=&#34;link&#34; href=&#34;https://www.gohugo.org/doc/content/front-matter/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo 中文文档&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;模板可以在 &lt;code&gt;\archetypes\default.md&lt;/code&gt;​ 下找到&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34; # 标题，创建时自动填充
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;description: # 文章简介
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: {{ .Date }} # 日期，创建时自动填充，格式同2023-01-15T12:00:00+08:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;image: # 文章的封面，留空就是没有，填文章所在位置的相对地址，通常放在同目录下，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;math: # 是否启用KaTex，填true启用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;license: # 文章尾部显示的协议，false为隐藏，其他作为内容，留空就是使用config.yaml里默认的
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hidden: false # 是否隐藏，一般用不到
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;comments: true # 因为bug所以这个属性只要存在，不管是true还是false都会导致回复无法显示，需要删掉
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;draft: true # 是否为草稿，建议改为false或者删掉这个属性以防止忘记修改
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;default&lt;/p&gt;
+&lt;p&gt;我将draft改为false, 加一个image就可以了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+++
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title = &amp;#39;{{ replace .File.ContentBaseName &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date = {{ .Date }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;image = &amp;#39;/sys/defaultPage.png&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;draft = false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+++
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如上, 这样也能使文章能带有图片头(放在static内分好目录, 按目录层级引用)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;categories + tags&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有问题, 暂时不需要, 不做了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;域名装配&#34;&gt;
+    &lt;a href=&#34;#%e5%9f%9f%e5%90%8d%e8%a3%85%e9%85%8d&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    域名装配
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;我暂时不想用其他域名, 虽然访问速度在身边人里基本是0, 但是这样也隔离掉一些别有用心的家伙. 就用Github也不用上防护措施了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;但是我确实在之前的日子里想要使用一下不需要付费的白嫖域名试试, 因为大多数是1年期限, 所有当时不想用. 现在正是用兵之时. 于是就开始鼓捣了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;失败github认证踩坑记录&#34;&gt;
+    &lt;a href=&#34;#%e5%a4%b1%e8%b4%a5github%e8%ae%a4%e8%af%81%e8%b8%a9%e5%9d%91%e8%ae%b0%e5%bd%95&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    失败Github认证踩坑记录
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;题外话&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;Github认证 - 域名资源类列表&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Name.com:一年任意域名免费,SSL证书和隐私保护.&lt;/p&gt;
+&lt;p&gt;Namecheap:一年.me域名免费,SSL证书.&lt;/p&gt;
+&lt;p&gt;.TECH:一年.tech域名免费.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;freenom&#34;&gt;
+    &lt;a href=&#34;#freenom&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    freenom
+&lt;/h4&gt;&lt;p&gt;免费域名一直没有我的, 因此放弃. 其他两家注册太麻烦了, 于是直接用namecheap&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;namecom&#34;&gt;
+    &lt;a href=&#34;#namecom&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Name.com
+&lt;/h4&gt;&lt;p&gt;我试试填中国的地址行不行. 前面都好, 要付款时候自己银行卡遇到问题了, 因为自己只有一个可怜的农行储蓄卡, Google说不支持, 于是网站认证, 结果卡住了. 于是找找GooglePay能不能给我走点后门&amp;hellip;也不行只让美丽国人和汉斯用, 那我只能试试找其他人借一张没用的银行卡了, 尝试把谷歌支付搞定&lt;/p&gt;
+&lt;p&gt;借了父亲的银联银行卡也不行, 原来绑卡需要的条件太苛刻了, 散了散了&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;namecheap&#34;&gt;
+    &lt;a href=&#34;#namecheap&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Namecheap
+&lt;/h4&gt;&lt;p&gt;又是烦人的这个东西: 大学不得到认可&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;==我即使是死了，钉在棺材里了，也要在墓里，用这腐朽的声带喊出&amp;ndash;==&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;                                                      XX带砖怎么了你?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;我记得去年11月也是这样: 就算连接了github, 它也是无法连接到我的主账号邮箱, 明明都是一样的! 太凎了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It looks like your email is not associated with an eligible university&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;tech&#34;&gt;
+    &lt;a href=&#34;#tech&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    .TECH
+&lt;/h4&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;全程不到3分钟, 直接到手, 不需要支付, 认证非常快&lt;/p&gt;
+&lt;p&gt;拿到手了, 控制台很简陋, 可以配置DNS什么的. 按下不表&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;spadektlsg.tech
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;那么关于域名的探索就暂时存档到这里, 没有白嫖的不要了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;被前面的域名拷打了之后, 立刻就到手的这玩意让我大为惊喜, 但后来发现要到了还不如不要, 浪费时间在那个就是一个草台玩意的控制面板&amp;hellip;各种连接CloudFlare失败&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;域名配置&#34;&gt;
+    &lt;a href=&#34;#%e5%9f%9f%e5%90%8d%e9%85%8d%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    域名配置
+&lt;/h3&gt;&lt;p&gt;未来, 并且是遥远的未来&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主要是图省事罢&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;功能模块&#34;&gt;
+    &lt;a href=&#34;#%e5%8a%9f%e8%83%bd%e6%a8%a1%e5%9d%97&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    功能模块
+&lt;/h2&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;评论&#34;&gt;
+    &lt;a href=&#34;#%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    评论
+&lt;/h3&gt;&lt;p&gt;选择Giscus, 这个在Stack支持列表里面有&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://giscus.app/zh-CN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt; - 即时生成对应配置&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.goodfun.me/post/%E5%BB%BA%E7%AB%99%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AF%87-Hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8giscus%E4%BD%9C%E4%B8%BA%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;引用&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由 &lt;code&gt;GitHub Discussions&lt;/code&gt;​ 驱动的评论系统，与&lt;code&gt;GitHub Pages&lt;/code&gt;​有非常好的天然联结&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开源&lt;/li&gt;
+&lt;li&gt;无跟踪，无广告，永久免费&lt;/li&gt;
+&lt;li&gt;无需数据库。全部数据均储存在 &lt;code&gt;GitHub Discussions&lt;/code&gt;​ 中&lt;/li&gt;
+&lt;li&gt;支持自定义主题&lt;/li&gt;
+&lt;li&gt;支持多种语言&lt;/li&gt;
+&lt;li&gt;高度可配置&lt;/li&gt;
+&lt;li&gt;自动从 &lt;code&gt;GitHub&lt;/code&gt;​ 拉取新评论与编辑&lt;/li&gt;
+&lt;li&gt;可自建服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;配置项目里可以看到基础的结构&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  comments:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    enabled: true # Enable comments globally
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    provider: giscus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    giscus:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      repo:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      repoID:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      category:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      categoryID:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      mapping:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      lightTheme:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      darkTheme:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      reactionsEnabled: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      emitMetadata: 0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;官方文档&#34;&gt;
+    &lt;a href=&#34;#%e5%ae%98%e6%96%b9%e6%96%87%e6%a1%a3&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    官方文档
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;运作&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;giscus 加载时，会使用 &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions#search&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Discussions 搜索 API&lt;/a&gt; 根据选定的映射方式（如 URL、&lt;code&gt;pathname&lt;/code&gt;​、&lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt;​ 等）来查找与当前页面关联的 discussion。如果找不到匹配的 discussion，giscus bot 就会在第一次有人留下评论或回应时自动创建一个 discussion。&lt;/p&gt;
+&lt;p&gt;访客如果想要评论，必须按照 GitHub OAuth 流程授权 &lt;a class=&#34;link&#34; href=&#34;https://github.com/apps/giscus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;giscus app&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/developers/apps/identifying-and-authorizing-users-for-github-apps&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;代表他发布&lt;/a&gt;，或者可以直接在 GitHub Discussion 里评论。你可以在 GitHub 上管理评论。&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;选择 giscus 连接到的仓库。请确保：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;该仓库是&lt;/strong&gt;​**&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/setting-repository-visibility#making-a-repository-public&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;公开的&lt;/a&gt;**，否则访客将无法查看 discussion。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apps/giscus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;giscus&lt;/a&gt;&lt;/strong&gt; &lt;strong&gt;app 已安装&lt;/strong&gt;，否则访客将无法评论和回应。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discussions&lt;/strong&gt; 功能已&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/enabling-or-disabling-github-discussions-for-a-repository&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在你的仓库中启用&lt;/a&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;流程&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%81%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    流程
+&lt;/h4&gt;&lt;p&gt;按照官方配置, 先开启discuss(设置面板往下拉), 再安装giscus(直接链接跳转), 显示&lt;kbd&gt;成功！该仓库满足所有条件 &lt;/kbd&gt;​则说明完成&lt;/p&gt;
+&lt;p&gt;复制下方的片段, 稍加修改复制入配置文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;repo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;SpadeKTLSG/SpadeKTLSG.github.io&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;repo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;XXX&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Announcements&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;XXX&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mapping&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pathname&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strict&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reactions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;enabled&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;emit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;top&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;theme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;light&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loading&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;lazy&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;crossorigin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;anonymous&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;我的测试完成的结果&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  comments:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    enabled: true # Enable comments globally
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    provider: giscus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    giscus:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      repo: SpadeKTLSG/SpadeKTLSG.github.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      repoID: R_kgDOLz5uXQ
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      category: Announcements
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      categoryID: DIC_kwDOLz5uXc4Ce_BV
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      mapping: pathname
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      lightTheme: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      darkTheme: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      reactionsEnabled: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      emitMetadata: 0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;搜索&#34;&gt;
+    &lt;a href=&#34;#%e6%90%9c%e7%b4%a2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    搜索
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;文章很少, 不搞了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;选用&lt;a class=&#34;link&#34; href=&#34;https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github Gist for Fuse.js integration&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只需要增加一些文件和修改config.toml中的output格式&lt;/p&gt;
+&lt;p&gt;具体参考引用: &lt;a class=&#34;link&#34; href=&#34;https://www.goodfun.me/post/%E5%BB%BA%E7%AB%99%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AF%87-Hugo%E5%8D%9A%E5%AE%A2%E5%AE%9E%E7%8E%B0%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;博主Link&lt;/a&gt;, 这里只记录我的操作流程&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;添加文件&#34;&gt;
+    &lt;a href=&#34;#%e6%b7%bb%e5%8a%a0%e6%96%87%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    添加文件
+&lt;/h4&gt;&lt;p&gt;在hugo项目根目录添加4个文件：&lt;code&gt;content/search.md&lt;/code&gt;​,&lt;code&gt;layouts/_default/search.html&lt;/code&gt;​, &lt;code&gt;static/js/search.js&lt;/code&gt;​,&lt;code&gt;layouts/_default/index.json&lt;/code&gt;​&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这种带有目录层级的文件搭建, 可以选用命令行, 不用的话可以用IDE实现, 例如IDEA/VSCODE这类都可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;修改配置文件&#34;&gt;
+    &lt;a href=&#34;#%e4%bf%ae%e6%94%b9%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    修改配置文件
+&lt;/h4&gt;&lt;p&gt;我的是从主题配置文件里抓下来的hugo.yaml, 因此格式不太一样, 需要自行转换 - &lt;a class=&#34;link&#34; href=&#34;https://transform.tools/yaml-to-toml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YAML to TOML (transform.tools)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;添加以下内容&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;已经存在 &lt;code&gt;[outputs]&lt;/code&gt;​这项，就在&lt;code&gt;home&lt;/code&gt;​中增加&lt;code&gt;&amp;quot;JSON&amp;quot;&lt;/code&gt;​格式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;outputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;home&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;HTML&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;RSS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;JSON&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;outputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;home&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;HTML&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;RSS&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;余下见博主文章&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;访问统计&#34;&gt;
+    &lt;a href=&#34;#%e8%ae%bf%e9%97%ae%e7%bb%9f%e8%ae%a1&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    访问统计
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;没什么人看, 不搞&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;链接&#34;&gt;
+    &lt;a href=&#34;#%e9%93%be%e6%8e%a5&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    链接
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;社交链接, 友链等&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在配置文件里找到&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;menu:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  social:
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.freecodecamp.org/chinese/news/mailto-link-how-to-make-an-html-email-link-example-code/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mailto链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;资源管理&#34;&gt;
+    &lt;a href=&#34;#%e8%b5%84%e6%ba%90%e7%ae%a1%e7%90%86&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    资源管理
+&lt;/h2&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;图标&#34;&gt;
+    &lt;a href=&#34;#%e5%9b%be%e6%a0%87&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    图标
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ibrights.github.io/post/blog20210527/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考Link&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;网上下载中意的图标后放到图标文件夹, 例如&lt;a class=&#34;link&#34; href=&#34;https://www.iconfont.cn/collections/index?spm=a313x.home_index.i1.1.58a33a81dgJYRy&amp;amp;sortType=like&amp;amp;page=2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;素材库&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后放到assets/icon就可以用了&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;上游下游&#34;&gt;
+    &lt;a href=&#34;#%e4%b8%8a%e6%b8%b8%e4%b8%8b%e6%b8%b8&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    上游下游
+&lt;/h2&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;笔记软件&#34;&gt;
+    &lt;a href=&#34;#%e7%ac%94%e8%ae%b0%e8%bd%af%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    笔记软件
+&lt;/h3&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;笔记软件自动化&#34;&gt;
+    &lt;a href=&#34;#%e7%ac%94%e8%ae%b0%e8%bd%af%e4%bb%b6%e8%87%aa%e5%8a%a8%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    笔记软件自动化
+&lt;/h4&gt;&lt;p&gt;具体参考其他博主的实例, 笔记软件可进一步简化从笔记软件写完文章之后到将md文档放入到hugo -&amp;gt; post/里面的效率, 实现自动化&lt;/p&gt;
+&lt;p&gt;(内嵌js等内容)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我暂时不需要, 因为我都是统一导出md操作, 并且希望留下中间产物发布其他地方的, 大部分文章也暂时不打算在博客发. 于是这个操作就有点不实用了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;博客管理客户端&#34;&gt;
+    &lt;a href=&#34;#%e5%8d%9a%e5%ae%a2%e7%ae%a1%e7%90%86%e5%ae%a2%e6%88%b7%e7%ab%af&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    博客管理客户端
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;指类似Github Desktop这种简化封装的博客应用, 适合摆烂&amp;hellip; 我暂时不用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://open.gridea.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gridea | 一个静态博客写作客户端&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;就好像面试官问你: 你平常操作Git, 是图形化界面多一点还是命令行多一点? 你肯定得回答: 我用命令行, 并且很熟练 (然后被拷打致死, 乐)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;流量&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%81%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    流量
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;写博客是拿来干什么的? 拿来给人看! 嗨, 还真就这么一回事, 写完的文章确实就放那太不好了. 可是确实没人看啊 ;(&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;我选择暂时无线电静默, 先把复活赛打赢了再说&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关于我的&amp;quot;复活赛&amp;quot;是什么, 如果你好奇, 请继续寻找线索&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h1 id=&#34;附录&#34;&gt;
+    &lt;a href=&#34;#%e9%99%84%e5%bd%95&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    附录
+&lt;/h1&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;二回熟&#34;&gt;
+    &lt;a href=&#34;#%e4%ba%8c%e5%9b%9e%e7%86%9f&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    二回熟
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;我拿到了一台新电脑&amp;hellip;工作环境和旧电脑完完全全相同(本人见另一篇博客 - PC主力机选择)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;chocolatey重来&#34;&gt;
+    &lt;a href=&#34;#chocolatey%e9%87%8d%e6%9d%a5&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chocolatey重来!
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;powershell&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NoProfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ExecutionPolicy&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unrestricted&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Command&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;iex ((new-object net.webclient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装完毕后&lt;strong&gt;开新实例&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;hugo重来&#34;&gt;
+    &lt;a href=&#34;#hugo%e9%87%8d%e6%9d%a5&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Hugo重来!
+&lt;/h3&gt;&lt;p&gt;需要Hugo-extended&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco install hugo-extended
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;factory-pull-local&#34;&gt;
+    &lt;a href=&#34;#factory-pull-local&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Factory pull local
+&lt;/h3&gt;&lt;p&gt;IDEA图形化界面, 直接拉到二仙桥&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;之后就是和上面一样操作了. 爽!&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;踩坑&#34;&gt;
+    &lt;a href=&#34;#%e8%b8%a9%e5%9d%91&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    踩坑
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;本人悲惨踩坑记录, 包括初号机内容(未公开 但是零号机文档已经包含其全部内容)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;注意自动化脚本分支名称&#34;&gt;
+    &lt;a href=&#34;#%e6%b3%a8%e6%84%8f%e8%87%aa%e5%8a%a8%e5%8c%96%e8%84%9a%e6%9c%ac%e5%88%86%e6%94%af%e5%90%8d%e7%a7%b0&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    注意自动化脚本分支名称
+&lt;/h3&gt;&lt;p&gt;由于前一天的失败经历, 前面基础搭建流程还算顺利, 但是在自动化编辑文档时候看花了眼, 忘记自己的主分支都是master, 博主所用的是main, 花了1个小时调试才找到这个问题(平时都把main和master混用的后果, 被拷打了)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;注意gitignore&#34;&gt;
+    &lt;a href=&#34;#%e6%b3%a8%e6%84%8fgitignore&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    注意gitignore
+&lt;/h3&gt;&lt;p&gt;不要自作聪明把本地编译出来的public文件添加到忽略列表里, 否则自动生成的GithubPage啥都没有, 只有搞笑的XML页面&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;收手吧阿伟&#34;&gt;
+    &lt;a href=&#34;#%e6%94%b6%e6%89%8b%e5%90%a7%e9%98%bf%e4%bc%9f&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    收手吧阿伟
+&lt;/h3&gt;&lt;p&gt;博客美化什么是次要的, 内容才是第一的, 搭建到提高篇前面我花了8h(从0开始, 算上之前的失败经历), 也许是太慢了. (因为找域名花了很久)&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;设置文件配置&#34;&gt;
+    &lt;a href=&#34;#%e8%ae%be%e7%bd%ae%e6%96%87%e4%bb%b6%e9%85%8d%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    设置文件配置
+&lt;/h3&gt;&lt;p&gt;几个关键点小心再小心, 需要改的地方都指出来了&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;删除文件后需要刷新一次&#34;&gt;
+    &lt;a href=&#34;#%e5%88%a0%e9%99%a4%e6%96%87%e4%bb%b6%e5%90%8e%e9%9c%80%e8%a6%81%e5%88%b7%e6%96%b0%e4%b8%80%e6%ac%a1&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    删除文件后需要刷新一次
+&lt;/h3&gt;&lt;p&gt;额外执行一次&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;再上传&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;toml---yml-转化&#34;&gt;
+    &lt;a href=&#34;#toml---yml-%e8%bd%ac%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Toml &amp;lt;-&amp;gt; Yml 转化
+&lt;/h3&gt;&lt;p&gt;本人后端牛马, 这个用的挺少, 不懂手撕, 于是常备转换器&amp;hellip; 不然报错多的头皮发麻&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;系统cmd控制台需要开全局代理--tun模式才能稳定下载&#34;&gt;
+    &lt;a href=&#34;#%e7%b3%bb%e7%bb%9fcmd%e6%8e%a7%e5%88%b6%e5%8f%b0%e9%9c%80%e8%a6%81%e5%bc%80%e5%85%a8%e5%b1%80%e4%bb%a3%e7%90%86--tun%e6%a8%a1%e5%bc%8f%e6%89%8d%e8%83%bd%e7%a8%b3%e5%ae%9a%e4%b8%8b%e8%bd%bd&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    系统CMD控制台需要开全局代理 + TUN模式才能稳定下载
+&lt;/h3&gt;&lt;p&gt;反正我开全局还不够, 系统代理这里好像没有用, 要开TUN&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当时8KB/s 一边哭一边下, 一边哭一边下, 就是不肯退&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;记得修改魔改配置之前提交&#34;&gt;
+    &lt;a href=&#34;#%e8%ae%b0%e5%be%97%e4%bf%ae%e6%94%b9%e9%ad%94%e6%94%b9%e9%85%8d%e7%bd%ae%e4%b9%8b%e5%89%8d%e6%8f%90%e4%ba%a4&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    记得修改(魔改)配置之前提交
+&lt;/h3&gt;&lt;p&gt;照着博主的内容魔改html前端的东西, 后端牛马可谓是对牛弹琴了, 改完了也不知道哪里错了, 这个时候才想起来忘记commit了, 或者是删除中间文件了, 就很难受&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;暂时实现不了的别硬实现摆-下次再来&#34;&gt;
+    &lt;a href=&#34;#%e6%9a%82%e6%97%b6%e5%ae%9e%e7%8e%b0%e4%b8%8d%e4%ba%86%e7%9a%84%e5%88%ab%e7%a1%ac%e5%ae%9e%e7%8e%b0%e6%91%86-%e4%b8%8b%e6%ac%a1%e5%86%8d%e6%9d%a5&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    暂时实现不了的别硬实现(摆), 下次再来
+&lt;/h3&gt;&lt;p&gt;Tag和Categories实现失败, 不搞了, 反而在搞的时候触发了其他地方代码, 导致错误混杂无法定位了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;真丢人哇, 下次一定 : (&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;成果&#34;&gt;
+    &lt;a href=&#34;#%e6%88%90%e6%9e%9c&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    成果
+&lt;/h2&gt;&lt;p&gt;引述&lt;a class=&#34;link&#34; href=&#34;https://www.goodfun.me/post/%E5%BB%BA%E7%AB%99%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AF%87-Hugo&amp;#43;Github-Pages&amp;#43;Github-Action%E5%8D%9A%E5%AE%A2%E6%96%B9%E6%A1%88%E4%B9%8B%E4%B8%89%E9%85%8D%E7%BD%AEGithub-Action%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;博主&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GitHub Action，按工作流的配置自动生成静态页面文件，并推送到GitHub Pages仓库。而 GitHub Pages 仓库更新后，又会自动触发官方页面部署 CI，实现网站的自动发布&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就是自动化操作&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;流程综合&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%81%e7%a8%8b%e7%bb%bc%e5%90%88&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    流程综合
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;哪怕用Github完成Action部署, 但还真是, 体力活. 于是想法子把流程简化下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这部分基础篇提高篇通用, 于是移到附录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;移花接木式导入文章&#34;&gt;
+    &lt;a href=&#34;#%e7%a7%bb%e8%8a%b1%e6%8e%a5%e6%9c%a8%e5%bc%8f%e5%af%bc%e5%85%a5%e6%96%87%e7%ab%a0&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    移花接木式导入文章
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;个人情况, 默认文章很大不方便在笔记软件或IDEA中展示&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过思源(我的笔记软件)写了一篇文章, 准备好了选择导出为md. 导出成功后鼠标移动到通知上在文件夹打开&lt;/p&gt;
+&lt;p&gt;复制其名称&lt;/p&gt;
+&lt;p&gt;之后打开IDEA, 在IDEA内置cmd中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new post/名称
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;留在IDEA中找到对应文件, 复制其预生成内容&lt;/p&gt;
+&lt;p&gt;双击导出的md文件(默认用VSCODE打开), 预生成内容黏贴到导出的md的头部&lt;/p&gt;
+&lt;p&gt;完成嵌入的自己文档直接拖拽到IDEA里面覆盖&lt;/p&gt;
+&lt;p&gt;IDEA commit &amp;amp; push, 提交并推送&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;(差不多20s)&lt;/p&gt;
+&lt;p&gt;喝口水, 打开页面, 砰!好了&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;脚本打包预览实现&#34;&gt;
+    &lt;a href=&#34;#%e8%84%9a%e6%9c%ac%e6%89%93%e5%8c%85%e9%a2%84%e8%a7%88%e5%ae%9e%e7%8e%b0&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    &lt;strong&gt;脚本打包预览实现&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;如果要预览一下, 控制台还是很繁琐的, 于是借鉴了&lt;a class=&#34;link&#34; href=&#34;https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/#%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;博主&lt;/a&gt;的批处理脚本程序&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;根目录创建preview.bat&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo 【preview ur blog】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;start  http://localhost:1313/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;同样我进行了优化, 创建了previewBest.bat, 用来一并查看草稿, 还创建了一键清理public + hugo + hugo server预览的流程&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;但他们可能在IDEA等IDE中无法正常运行, 例如其没有提供bat支持, Intellij IDEA我装了插件Batch Scripts Support, 再加上Idea我配置的启动快捷键, Alt + V直接运行脚本, 自动清理public, 重新打包预览避免残留文件问题. 同时将浏览器类型留空, 即替换为默认浏览器&lt;/p&gt;
+&lt;p&gt;于是我的最终配置 cleanBuildViewAll.bat 诞生!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo 【del all temp res in /public then preview ur blog with drafts show】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;del /s /q &amp;#34;.\public\*&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;for /d %%x in (.\public\*) do rd /s /q &amp;#34;%%x&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;start  http://localhost:1313/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;美化后&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo [清理/public, 完整构建, 预览启动]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;del /s /q &amp;#34;.\public\*&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;for /d %%x in (.\public\*) do rd /s /q &amp;#34;%%x&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo [清理残余/public完毕]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;start  http://localhost:1313/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo [hugo 完整构建完毕]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo [hugo 预览启动]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h4 id=&#34;普通加强式导入文章&#34;&gt;
+    &lt;a href=&#34;#%e6%99%ae%e9%80%9a%e5%8a%a0%e5%bc%ba%e5%bc%8f%e5%af%bc%e5%85%a5%e6%96%87%e7%ab%a0&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    普通加强式导入文章
+&lt;/h4&gt;&lt;p&gt;由上面所有基础篇高级篇内容整合, 现在写文到发布经历过程:&lt;/p&gt;
+&lt;p&gt;(假设需要的文章已经导出为md躺着了)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开IDEA, 定位项目 (单击Win, 单击IDEA, 单击最近项目) * 3&lt;/li&gt;
+&lt;li&gt;脚本右键(双击运行) &lt;strong&gt;写文&lt;/strong&gt;, 输入标题目录 (平均敲键盘10下) * 12&lt;/li&gt;
+&lt;li&gt;复制写完文章的md内容到生成的文章, * 4&lt;/li&gt;
+&lt;li&gt;检查丢失的本地资源文件手动嵌入 ==(!)== (体力活, 还好我从不在笔记里插入本地图片, 都是超链接) *  N&lt;/li&gt;
+&lt;li&gt;觉得差不多了, 脚本右键(双击运行) &lt;strong&gt;运行&lt;/strong&gt;, 查看 (自动打开页面, 浏览点击几次鼠标即可) * 2&lt;/li&gt;
+&lt;li&gt;关闭浏览器, IDEA图形化提交点几下提交并推送 (单击 &amp;ldquo;提交&amp;rdquo;, 单击 &amp;ldquo;全选&amp;rdquo;, 单击&amp;quot;提交并推送&amp;quot;, 单击&amp;quot;确定&amp;quot;) * 4&lt;/li&gt;
+&lt;li&gt;20s - 30s后打开页面, 看一眼跑路 *1&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;共计单击键盘鼠标 25 + N 次&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h5 id=&#34;所以&#34;&gt;
+    &lt;a href=&#34;#%e6%89%80%e4%bb%a5&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    所以&amp;hellip;?
+&lt;/h5&gt;&lt;blockquote&gt;
+&lt;p&gt;太不直观了&amp;hellip;得想想办法变换一下这个概念&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;等价交换^（偷换概念）^:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;让手机开始计时, 连续单击某经常坏的蓝牙静音鼠标左键达到28次停止, 平均时间约为5.3s&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开赛博朋克2077, 植入螳螂刀 + Hunter式飞扑击杀一只杂兵需要&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;W + shift冲刺 + ctrl突进 + space * 2 + 空中俯冲突进 + 左键蓄力放松螳螂刀坠击 + F斩杀 = 8次点击
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;也就是等于4个杂兵的生命&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;于是经过优化的发送博客的时间成本就 == 5.3s的连续单击 == 4个杂兵, hmmm可以接受, 可以接受&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以上纯为扯淡, 总之我都是存着一段时间后再一起发, 那个时间段价值不高, 因此我不怎么在乎10s - 60s的差别, 能发就好, 能发就好(摆)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;工作环境&#34;&gt;
+    &lt;a href=&#34;#%e5%b7%a5%e4%bd%9c%e7%8e%af%e5%a2%83&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    工作环境
+&lt;/h3&gt;&lt;p&gt;本地只需要下载一个BlogFactory仓库, 无需使用BlogProduct仓库(自动配置)&lt;/p&gt;
+&lt;p&gt;说走就走, 仓库根目录留下这篇文档, 啥时候忘了就拿出来查查&amp;hellip;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&#34;学到了什么&#34;&gt;
+    &lt;a href=&#34;#%e5%ad%a6%e5%88%b0%e4%ba%86%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    学到了什么
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;个人感受&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;激动之情溢于言表, 让我冷静几天再来&amp;hellip;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;引用&#34;&gt;
+    &lt;a href=&#34;#%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    引用
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;所有借鉴内容, 部分在正文有明确提及, 统一表示感谢!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;基础篇&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hugo.opendocs.io/getting-started/quick-start/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;快速入门 | Hugo官方文档 (opendocs.io)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zexwoo.blog/posts/tutorials/build-hugo-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何在 Windows 系统从零开始构建一个和我一样的 Hugo 博客 (zexwoo.blog)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7222602874630750265&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;无需付费 GitHub Pages，轻松搭建个人博客 - 掘金 (juejin.cn)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7299346813257007138&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用Github和Cloudflare自建博客 - 掘金 (juejin.cn)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://answers.fuyeor.com/zh-hans/question/8462&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;怎么利用 GitHub 绑定域名来做一个网站？ « 复网问答 (fuyeor.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://xiaoma.cool/2022/10/26/GitHub%E5%AD%A6%E7%94%9F%E5%8C%85%E7%99%BD%E5%AB%96Jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%AD%89%E6%9D%83%E7%9B%8A/#4-GitHub-Pro%E7%99%BD%E5%AB%96NameCheap%E5%9F%9F%E5%90%8D&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub学生包白嫖Jetbrains全家桶等权益(福利) - 糖果梦博客 (xiaoma.cool)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://education.github.com/pack/offers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Student Developer Pack - GitHub Education&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/497671233&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo 博客写作最佳实践 - 知乎 (zhihu.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.goodfun.me/post/%E5%BB%BA%E7%AB%99%E7%AC%AC%E4%B9%9D%E7%AF%87-Hugo&amp;#43;Github-Pages&amp;#43;Github-Action%E5%8D%9A%E5%AE%A2%E6%96%B9%E6%A1%88%E4%B9%8B%E4%B8%80%E4%BD%BF%E7%94%A8Hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;建站第九篇 Hugo+Github Pages+Github Action博客方案之一——使用Hugo搭建个人博客 | DD299的博客 | DD299 Blog (goodfun.me)&lt;/a&gt; (三部曲) + 合集 &lt;a class=&#34;link&#34; href=&#34;https://www.goodfun.me/tags/Hugo/page/2/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo | DD299的博客 | DD299 Blog (goodfun.me)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/105021100&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用 Hugo + Github 搭建个人博客 - 知乎 (zhihu.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/644838582&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;从零开始的 Hugo 博客搭建 - 知乎 (zhihu.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/649542248&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在github.io用hugo部署个人博客，2023新教程 - 知乎 (zhihu.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/364366127&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Actions入门教程-自动部署静态博客 - 知乎 (zhihu.com)&lt;/a&gt; 可以看看Github Action&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;提高篇&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.goodfun.me/post/%E5%BB%BA%E7%AB%99%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AF%87-Hugo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8giscus%E4%BD%9C%E4%B8%BA%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;建站第十二篇 Hugo博客使用giscus作为评论系统 | DD299的博客 | DD299 Blog (goodfun.me)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhajiman.github.io/post/rebuild_blog/#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用 Hugo 重新搭建博客 - 炸鸡人博客 (zhajiman.github.io)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CaiJimmy/hugo-theme-stack: Card-style Hugo theme designed for bloggers (github.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://stack-docs.netlify.app/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;介绍 | Hugo 主题 Stack (stack-docs.netlify.app)&lt;/a&gt; hugo 主题 stack 手册&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/#%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;建站技术 | 使用 Hugo+Stack 简单搭建一个博客 (reincarnatey.net)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://thirdshire.com/hugo-stack-renovation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo Stack主题装修笔记 (thirdshire.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://oxidane-uni.github.io/p/%E4%BD%BF%E7%94%A8-hugo-%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E9%87%8D%E5%BB%BA%E4%B8%8E-stack-%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用 Hugo 对博客的重建与 Stack 主题优化记录 (oxidane-uni.github.io)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://orianna-zzo.github.io/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B04-hugo%E4%B8%AD%E5%A2%9E%E5%8A%A0tags%E7%AD%89%E5%88%86%E7%B1%BB/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog养成记(4) Hugo中增加tags等分类 | ZHENG Zi&#39;ou (orianna-zzo.github.io)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;日志&#34;&gt;
+    &lt;a href=&#34;#%e6%97%a5%e5%bf%97&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    日志
+&lt;/h2&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;2024-04-25&lt;/p&gt;
+&lt;p&gt;从2023.4月宣布要有一个个人博客彻底抛弃Qzone后的一年余, 正式对宿敌发起的总攻! ==我这一年沉淀的功力, 挡得住吗?==&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;两个小时后, 被GIthub学生认证给的几个免费域名拷打, 不是这个问题就是那个问题; 又一小时后, 文档借鉴错了, 脑子红温了不懂怎么写文章, 还配置错了, 把随便一个自动化配置加进来, 真就一团乱麻, 感到羞愧万分迅速删库跑路了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;2024-04-26&lt;/p&gt;
+&lt;p&gt;竟然被挡住了, 乐&lt;/p&gt;
+&lt;p&gt;但是我可是不屈不挠的呢, 喝!&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;2024-04-27&lt;/p&gt;
+&lt;p&gt;第二天早上醒来后深刻的反省了, 一日干完&amp;hellip;?&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;2024-04-28&lt;/p&gt;
+&lt;p&gt;怎么今天还在干这个啊, 自己的屎山清理了吗? 作业写了吗? 有没有认真工作?&lt;/p&gt;
+&lt;p&gt;不干了, 导出然后发博客收摊&amp;hellip;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;战役总览&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2023.Apr  宣布, 我想要一个博客&lt;/li&gt;
+&lt;li&gt;2024-3-18 开始博客支配事态&lt;/li&gt;
+&lt;li&gt;2024-04-27 15:54:24 制作完基础篇草稿&lt;/li&gt;
+&lt;li&gt;2024-04-27 18:00:00 制作完提高篇草稿&lt;/li&gt;
+&lt;li&gt;2024-04-27 21:57:10 完结&lt;/li&gt;
+&lt;li&gt;2024-04-28 润色, 发布, 存档&lt;/li&gt;
+&lt;li&gt;2024-04-28 20:18:55 导入其他文章&lt;/li&gt;
+&lt;li&gt;2024-04-29 删库跑路予定&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>2024.4PC主力机选择</title>
         <link>https://spadektlsg.github.io/p/2024.4pc%E4%B8%BB%E5%8A%9B%E6%9C%BA%E9%80%89%E6%8B%A9/</link>
         <pubDate>Thu, 18 Apr 2024 10:43:45 +0800</pubDate>
