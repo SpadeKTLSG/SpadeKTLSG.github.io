@@ -8571,13 +8571,13 @@ So I push the delete button to sentence its death&amp;hellip;&lt;/p&gt;
     &lt;a href=&#34;#redis-2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     &lt;strong&gt;Redis&lt;/strong&gt;
 &lt;/h5&gt;&lt;p&gt;空用户 2333&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-dockerfile&#34; data-lang=&#34;dockerfile&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jdbc:redis://20.239.61.109:6379/12&lt;span class=&#34;err&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-dockerfile&#34; data-lang=&#34;dockerfile&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jdbc:redis://XXX:6379/12&lt;span class=&#34;err&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
 &lt;h5 id=&#34;mysql-2&#34;&gt;
     &lt;a href=&#34;#mysql-2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     &lt;strong&gt;Mysql&lt;/strong&gt;
 &lt;/h5&gt;&lt;p&gt;root 2333&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-dockerfile&#34; data-lang=&#34;dockerfile&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jdbc:mysql://20.239.61.109:3306/&lt;span class=&#34;err&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-dockerfile&#34; data-lang=&#34;dockerfile&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jdbc:mysql://XXX:3306/&lt;span class=&#34;err&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
@@ -8677,6 +8677,7 @@ So I push the delete button to sentence its death&amp;hellip;&lt;/p&gt;
 &lt;p&gt;首先升级当前微软配置, 等到三个月后配额用完了直接趁 618 购买国内服务器提供小水管服务. 而后静态页面等需求我不打算另外的公开博客, 因此对于 GFW 外的服务器暂时没有需求.&lt;/p&gt;
 &lt;p&gt;OSS 也一样, 项目开写时直接购买&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;May. 6th, 2024, hide secret key pairs&lt;/p&gt;
 </description>
         </item>
         <item>
