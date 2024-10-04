@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="&ndash;从端点科技内部框架Trantor过渡回Spring的记录 \u200d 记录开发框架 &ldquo;川坨&rdquo; 以及对未来Spring开">
+<title>出川坨记 I</title>
+
+<link rel='canonical' href='https://spadektlsg.github.io/p/%E5%87%BA%E5%B7%9D%E5%9D%A8%E8%AE%B0-i/'>
+
+<link rel="stylesheet" href="/scss/style.min.67e1d55df895e92f972a3c6377b28d4465c25830c4976c898200217da8ea97f2.css"><meta property='og:title' content="出川坨记 I">
+<meta property='og:description' content="&ndash;从端点科技内部框架Trantor过渡回Spring的记录 \u200d 记录开发框架 &ldquo;川坨&rdquo; 以及对未来Spring开">
+<meta property='og:url' content='https://spadektlsg.github.io/p/%E5%87%BA%E5%B7%9D%E5%9D%A8%E8%AE%B0-i/'>
+<meta property='og:site_name' content='玄桃K的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-10-04T09:50:00&#43;08:00'/><meta property='article:modified_time' content='2024-10-04T09:50:00&#43;08:00'/><meta property='og:image' content='https://spadektlsg.github.io/work/004S/1.jpg' />
+<meta name="twitter:title" content="出川坨记 I">
+<meta name="twitter:description" content="&ndash;从端点科技内部框架Trantor过渡回Spring的记录 \u200d 记录开发框架 &ldquo;川坨&rdquo; 以及对未来Spring开"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://spadektlsg.github.io/work/004S/1.jpg' />
+    <link rel="shortcut icon" href="/sys/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="756"
+                            height="749" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😋</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">玄桃K的博客</a></h1>
+            <h2 class="site-description">还在打复活赛</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/SpadeKTLSG/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291872628" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M153.770667 517.558857l200.387047-197.241905L302.86019 268.190476 48.761905 518.290286l254.439619 243.614476 50.590476-52.833524-200.021333-191.512381zM658.285714 320.316952L709.583238 268.190476l254.098286 250.09981L709.241905 761.904762l-50.590476-52.833524 200.021333-191.512381L658.285714 320.316952z m-112.981333-86.186666L393.99619 785.554286l70.534096 19.358476 151.30819-551.399619-70.534095-19.358476z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:spadekxcwxtlsg@gmail.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291517604" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M926.47619 355.644952V780.190476a73.142857 73.142857 0 0 1-73.142857 73.142857H170.666667a73.142857 73.142857 0 0 1-73.142857-73.142857V355.644952l73.142857 62.000762V780.190476h682.666666V417.645714l73.142857-62.000762zM853.333333 170.666667a74.044952 74.044952 0 0 1 26.087619 4.778666 72.704 72.704 0 0 1 30.622477 22.186667 73.508571 73.508571 0 0 1 10.678857 17.67619c3.169524 7.509333 5.12 15.652571 5.607619 24.210286L926.47619 243.809524v24.380952L559.469714 581.241905a73.142857 73.142857 0 0 1-91.306666 2.901333l-3.632762-2.925714L97.52381 268.190476v-24.380952a72.899048 72.899048 0 0 1 40.155428-65.292191A72.97219 72.97219 0 0 1 170.666667 170.666667h682.666666z m-10.971428 73.142857H181.638095L512 525.58019 842.361905 243.809524z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/363101711'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291537293" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7801" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M772.437333 97.52381l51.712 51.712-126.342095 126.342095H828.952381a73.142857 73.142857 0 0 1 73.142857 73.142857v487.619048a73.142857 73.142857 0 0 1-73.142857 73.142857H195.047619a73.142857 73.142857 0 0 1-73.142857-73.142857v-487.619048a73.142857 73.142857 0 0 1 73.142857-73.142857h131.120762L199.850667 149.23581 251.562667 97.52381l178.054095 178.054095h164.742095L772.437333 97.52381zM828.952381 348.720762H195.047619v487.619048h633.904762v-487.619048z m-280.380952 73.142857v341.333333h-73.142858v-341.333333h73.142858z m-134.095239 73.142857v195.047619h-73.142857v-195.047619h73.142857z m268.190477 24.380953v146.285714h-73.142857v-146.285714h73.142857z" p-id="7802"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#序">序</a></li>
+        <li><a href="#后端">后端</a>
+          <ol>
+            <li><a href="#entity">Entity</a></li>
+            <li><a href="#daomapper层">DAO(Mapper)层</a></li>
+            <li><a href="#service层">Service层</a></li>
+            <li><a href="#controller层">Controller层</a></li>
+          </ol>
+        </li>
+        <li><a href="#前端">前端</a>
+          <ol>
+            <li><a href="#xml自动化协议生成">XML自动化协议生成</a></li>
+            <li><a href="#页面">页面</a></li>
+          </ol>
+        </li>
+        <li><a href="#结">结</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%87%BA%E5%B7%9D%E5%9D%A8%E8%AE%B0-i/">
+                
+                    <img src="/work/004S/1.jpg" loading="lazy" alt="Featured image of post 出川坨记 I" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+
+
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%87%BA%E5%B7%9D%E5%9D%A8%E8%AE%B0-i/">出川坨记 I</a>
+        </h2>
+
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2024-10-04</time>
+        </div>
+        
+
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 5 分钟
+            </time>
+        </div>
+        
+    </footer>
+    
+
+    
+
+    
+    
+
+
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>&ndash;从端点科技内部框架Trantor过渡回Spring的记录</p>
+<p>‍</p>
+<blockquote>
+<p>记录开发框架 &ldquo;川坨&rdquo; 以及对未来Spring开发影响笔记</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<h2 id="序">
+    <a href="#%e5%ba%8f" class="header-anchor">#</a>
+    序
+</h2><p>既然现在在公司用过了川坨, 看到了Trantor的特性, 如何将其运用到之后的开发中去呢?</p>
+<p>下面分多区域介绍从Trantor回到Spring过程中的想法, 上半是Trantor部分, 下半是对Spring个人开发的借鉴</p>
+<p>肯定有一些地方是&quot;硬&quot;不互通的, 那部分只能抛下了</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="后端">
+    <a href="#%e5%90%8e%e7%ab%af" class="header-anchor">#</a>
+    后端
+</h2><blockquote>
+<p>在老川坨的范畴中, 后端内容Trantor之外就是Spring, 只要Trantor没覆写的地方Spring都可用</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="entity">
+    <a href="#entity" class="header-anchor">#</a>
+    Entity
+</h3><p>这部分其实差别不大, 一些繁文缛节</p>
+<hr>
+<p>一些开发思想是不错的, 比如</p>
+<ul>
+<li>逻辑无法实现就加字段 (加非持久化字段, 也就是不和数据库关联的字段)</li>
+<li>非持久化字段转移到DTO, VO里面, 这部分字段直接在后端返回前端时候计算得出, 不要落库提升大量SQL的性能</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<h3 id="daomapper层">
+    <a href="#daomapper%e5%b1%82" class="header-anchor">#</a>
+    DAO(Mapper)层
+</h3><blockquote>
+<p>说习惯了, DAO(Mapper)层 就是写SQL那个层</p>
+</blockquote>
+<p>TSQL实际上就移到了Service里面, 和我写EduExch时候在MP的操作很像 [当然, 后续项目做大了我还是会把SQL拆到DAO层里面的)</p>
+<p>数据库操作的那些拼接SQL的操作, 从之前的QW这种转移到了拆分的形式, 我觉得这种代码风格是不错的(或者说是, 可以接受的), 感觉上类似MP, 实际上应该是JOOQ的语法(虽然之前没用过)</p>
+<p>整体写法在臃肿和单薄之间落子, 并有多套实现 (DSL, TSQL, 直接SQL), 全部用TSQL仿照MP那种去拼LambdaQueryMapper还是很快上手的, 拼SQL更不在话下</p>
+<p>那么相较于Spring Boot + MP(我的开发环境) 来说, 去掉了mapper区域合并到DAO包(mapper包), 同样有类似的复用方式(直接用类为单位组合为 @Repository + SQL入参 进行调用复用) , 等于省去了可能的mapper使用, 同时在完成基础CRUD的任务目标下基本没有差别</p>
+<p>但是一些复杂SQL的处理有bug, 从稳定性角度来说还需要提升 (例如级联和LeftJoin等不能同时存在这样的东西太难受了, 不如不用)</p>
+<hr>
+<p>我还是选MP那一套作为自己的持久层框架, 那么TSQL这些就完全派不上用场&hellip;但是把它当做JOOQ的话, 对于扩大自己的见识面是很有帮助的</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="service层">
+    <a href="#service%e5%b1%82" class="header-anchor">#</a>
+    Service层
+</h3><p>这部分没什么好说的, 完全就是Spring那套, 加一些繁文缛节</p>
+<hr>
+<p>这里框架与代码风格本身以及在具体业务点中学到的东西并不算在这个&quot;出川坨记&quot;的话题中, 可见另一篇&lt;临川浮梦&gt;</p>
+<p>但是Flow + Func两级的Service操作可以借鉴下, 比如一整个大的下单流程可以拆成多个小Service套在大Service里面. 个人之前的Service写的很死板, 就是几个实体类几个Service来按照MP那一套走. 自己可以定义一两个大的Service.</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="controller层">
+    <a href="#controller%e5%b1%82" class="header-anchor">#</a>
+    Controller层
+</h3><p>这部分就完全被所写的&quot;前端&quot;XML + TS给取代掉了, 不过个人日常编程中Controller基本就走一个流程, 里面的内容大部分就是一行两行Service层的方法调用.</p>
+<p>那么Trantor这里用Flow + Func 两级(Flow可以理解为很多个Func)来替换了这个部分. 虽然个人因为之前TS/JS技艺不精所以不喜欢在川坨的&quot;Controller&quot;, 也就是TS里面去处理前端页面传递进来的参数和环境, 但是不得不说TS在这个位置能干很多事情. (大佬们的实现真是眼花缭乱, 直接后端骑脸前端独当一面)</p>
+<p>调用方法, 传递参数, 批量设置入参Field, 这些功能都能在Controller进行.</p>
+<hr>
+<p>遵照前后端分离模式 + SpringMVC + SB的话, 这部分就完全派不上用场了</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="前端">
+    <a href="#%e5%89%8d%e7%ab%af" class="header-anchor">#</a>
+    前端
+</h2><blockquote>
+<p>其实算是&quot;前后端结合&quot;的前端, 实际上由低代码中台负责处理</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<h3 id="xml自动化协议生成">
+    <a href="#xml%e8%87%aa%e5%8a%a8%e5%8c%96%e5%8d%8f%e8%ae%ae%e7%94%9f%e6%88%90" class="header-anchor">#</a>
+    XML自动化协议生成
+</h3><p>我们说写前端其实不是写前端, 只是在XML传控制数据, 前端接收后解析, 解析完毕了根据拿到的索引去查找对应的元素并在对应位置出现而已.</p>
+<p>因此并不是前端, 只能说是一个低代码中台做的事情. 并且这个前端还包含TS的处理, 实际上是写一个脚本, 类似这个感觉. 只是做一些数据展示的处理, 并且封装搜集数据并调后端接口.</p>
+<p>真正的前端是有的, 但是&quot;门槛&quot;很高. 看来是处理一些客制化定制的东西, 类似于直接开发Vue的小组, 把这些组件和关联关系对应起来.</p>
+<p>其实这整个实现的逻辑和前后端不分离时候使用的模板引擎很像, 例如freemarker, 就是这样用插值表达式直接在后端写的</p>
+<hr>
+<p>是的, XML很无趣: Trantor开发不需要写前端? nono, 我们不过是一次把前端都写完了, 然后后端通过XML把窟窿填补罢了, 就和平常的Controller没有什么意思上的变化, 返回一些结构化数据. 前端接受后解析对应资源, 一个萝卜一个坑的把对应位置的组件放进去, 再把数据拿进去放着就完了.</p>
+<p>至于TS, 不过是把一些逻辑给了前端, 让他work well 罢啦</p>
+<p>(毫无疑问, 后面要学还是学Vue3那一套转全栈, 这部分太局限了)</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="页面">
+    <a href="#%e9%a1%b5%e9%9d%a2" class="header-anchor">#</a>
+    页面
+</h3><p>页面框架很丑陋, 就是给企业员工做的, 要不得好看, 甚至列表框总是看不完整. 很多交互很狗屎, 并且做的这么丑这么糙了竟然我这种老爷机还跑不起来?! 说明性能狗烂的, 交互响应很烂, 没有异步这些, 都是一个样. 并且页面标签很狗, 拉不完整.</p>
+<p>但是也有好的点, 比如说, 确实做到了快速开发, 并且和Trantor这个生态是有保障的. 确实能做到模型直接展示到页面里面去, 前端不需要就可以基本开发. 很好</p>
+<hr>
+<p>(毫无疑问, 没有复用的可能)</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="结">
+    <a href="#%e7%bb%93" class="header-anchor">#</a>
+    结
+</h2><p>本身封装的水平大概中上吧, 能体现阿里平台开发的水平 : 能够完全造出这一套确实挺厉害, 并且没有看到很多JOOQ那些生接口(不是直接调用后台接口, 有针对Trantor的模型字段进行处理的操作)</p>
+<p>‍</p>
+<p>内部封装的框架, 从观察研究的角度十分吸引人. 虽然可能我的理解只有1/10不到, 但是确实看到了很多东西, 有了许多新的灵感</p>
+<p>当然, 从转到Spring的复用角度来说, 结果是差强人意的.</p>
+<p>‍</p>
+<p>不管怎样, 川坨工程师的皮肤可以卸下了, 背起行囊上路</p>
+<p>‍</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="SpadeKTLSG/SpadeKTLSG.github.io"
+    data-repo-id="R_kgDOLz5uXQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOLz5uXc4Ce_BV"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="1"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('1');
+            } else {
+                setGiscusTheme('1');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+
+    <section class="copyright">
+        &copy;
+        
+        2024 SpadeK
+    </section>
+
+
+    
+    <section class="running-time">
+        本博客已稳定运行
+        <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        发表了29篇文章 ·
+        总计298.07k字
+    </section>
+
+
+    <section class="powerby">
+        
+            Powered by Blood, Sweat, and Tears
+        
+        <br/>使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script>
+    let s1 = '2024-4-27'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+    </body>
+</html>

@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\u200d 观察走廊拐角垃圾桶和花盆引发的思考 - 智能 HashMap 狂想曲 \u200d 上班时候的小脑洞 \u200d # 灵感 某公司在一个大平层, 走道靠近墙角处一定有摆放垃圾桶或者花盆这样的">
+<title>拐角垃圾桶花盆 智能HashMap狂想曲</title>
+
+<link rel='canonical' href='https://spadektlsg.github.io/p/%E6%8B%90%E8%A7%92%E5%9E%83%E5%9C%BE%E6%A1%B6%E8%8A%B1%E7%9B%86-%E6%99%BA%E8%83%BDhashmap%E7%8B%82%E6%83%B3%E6%9B%B2/'>
+
+<link rel="stylesheet" href="/scss/style.min.67e1d55df895e92f972a3c6377b28d4465c25830c4976c898200217da8ea97f2.css"><meta property='og:title' content="拐角垃圾桶花盆 智能HashMap狂想曲">
+<meta property='og:description' content="\u200d 观察走廊拐角垃圾桶和花盆引发的思考 - 智能 HashMap 狂想曲 \u200d 上班时候的小脑洞 \u200d # 灵感 某公司在一个大平层, 走道靠近墙角处一定有摆放垃圾桶或者花盆这样的">
+<meta property='og:url' content='https://spadektlsg.github.io/p/%E6%8B%90%E8%A7%92%E5%9E%83%E5%9C%BE%E6%A1%B6%E8%8A%B1%E7%9B%86-%E6%99%BA%E8%83%BDhashmap%E7%8B%82%E6%83%B3%E6%9B%B2/'>
+<meta property='og:site_name' content='玄桃K的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-08-04T09:29:25&#43;08:00'/><meta property='article:modified_time' content='2024-08-04T09:29:25&#43;08:00'/><meta property='og:image' content='https://spadektlsg.github.io/work/002/1.jpg' />
+<meta name="twitter:title" content="拐角垃圾桶花盆 智能HashMap狂想曲">
+<meta name="twitter:description" content="\u200d 观察走廊拐角垃圾桶和花盆引发的思考 - 智能 HashMap 狂想曲 \u200d 上班时候的小脑洞 \u200d # 灵感 某公司在一个大平层, 走道靠近墙角处一定有摆放垃圾桶或者花盆这样的"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://spadektlsg.github.io/work/002/1.jpg' />
+    <link rel="shortcut icon" href="/sys/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="756"
+                            height="749" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😋</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">玄桃K的博客</a></h1>
+            <h2 class="site-description">还在打复活赛</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/SpadeKTLSG/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291872628" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M153.770667 517.558857l200.387047-197.241905L302.86019 268.190476 48.761905 518.290286l254.439619 243.614476 50.590476-52.833524-200.021333-191.512381zM658.285714 320.316952L709.583238 268.190476l254.098286 250.09981L709.241905 761.904762l-50.590476-52.833524 200.021333-191.512381L658.285714 320.316952z m-112.981333-86.186666L393.99619 785.554286l70.534096 19.358476 151.30819-551.399619-70.534095-19.358476z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:spadekxcwxtlsg@gmail.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291517604" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M926.47619 355.644952V780.190476a73.142857 73.142857 0 0 1-73.142857 73.142857H170.666667a73.142857 73.142857 0 0 1-73.142857-73.142857V355.644952l73.142857 62.000762V780.190476h682.666666V417.645714l73.142857-62.000762zM853.333333 170.666667a74.044952 74.044952 0 0 1 26.087619 4.778666 72.704 72.704 0 0 1 30.622477 22.186667 73.508571 73.508571 0 0 1 10.678857 17.67619c3.169524 7.509333 5.12 15.652571 5.607619 24.210286L926.47619 243.809524v24.380952L559.469714 581.241905a73.142857 73.142857 0 0 1-91.306666 2.901333l-3.632762-2.925714L97.52381 268.190476v-24.380952a72.899048 72.899048 0 0 1 40.155428-65.292191A72.97219 72.97219 0 0 1 170.666667 170.666667h682.666666z m-10.971428 73.142857H181.638095L512 525.58019 842.361905 243.809524z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/363101711'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291537293" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7801" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M772.437333 97.52381l51.712 51.712-126.342095 126.342095H828.952381a73.142857 73.142857 0 0 1 73.142857 73.142857v487.619048a73.142857 73.142857 0 0 1-73.142857 73.142857H195.047619a73.142857 73.142857 0 0 1-73.142857-73.142857v-487.619048a73.142857 73.142857 0 0 1 73.142857-73.142857h131.120762L199.850667 149.23581 251.562667 97.52381l178.054095 178.054095h164.742095L772.437333 97.52381zM828.952381 348.720762H195.047619v487.619048h633.904762v-487.619048z m-280.380952 73.142857v341.333333h-73.142858v-341.333333h73.142858z m-134.095239 73.142857v195.047619h-73.142857v-195.047619h73.142857z m268.190477 24.380953v146.285714h-73.142857v-146.285714h73.142857z" p-id="7802"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#灵感">灵感</a></li>
+        <li><a href="#场景">场景</a></li>
+        <li><a href="#版本">版本</a>
+          <ol>
+            <li><a href="#v1-sublist--hashcode-歪把映射">V1 <strong>subList + HashCode 歪把映射</strong></a></li>
+            <li><a href="#v2-sublist--hashcode-歪把映射--多级垃圾分类--自动垃圾桶生成">V2 <strong>subList + HashCode 歪把映射</strong> + <strong>多级垃圾分类 + 自动垃圾桶生成</strong></a></li>
+            <li><a href="#v3-区间记录-sublista--hashcode-镜面映射--无级权重值-sublistb--插件式--优先队列--重映射--多线程优化--缓存优化"><strong>V3 区间记录 subListA +</strong> <strong>HashCode 镜面映射 + 无级权重值 subListB</strong> <strong>+ 插件式 + 优先队列 + 重映射 + 多线程优化 + 缓存优化</strong></a></li>
+            <li><a href="#v4-吃了饭再想-累了">V4 吃了饭再想, 累了</a></li>
+          </ol>
+        </li>
+        <li><a href="#设计">设计</a></li>
+        <li><a href="#实现">实现</a></li>
+        <li><a href="#结尾">结尾</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E6%8B%90%E8%A7%92%E5%9E%83%E5%9C%BE%E6%A1%B6%E8%8A%B1%E7%9B%86-%E6%99%BA%E8%83%BDhashmap%E7%8B%82%E6%83%B3%E6%9B%B2/">
+                
+                    <img src="/work/002/1.jpg" loading="lazy" alt="Featured image of post 拐角垃圾桶花盆 智能HashMap狂想曲" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+
+
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%8B%90%E8%A7%92%E5%9E%83%E5%9C%BE%E6%A1%B6%E8%8A%B1%E7%9B%86-%E6%99%BA%E8%83%BDhashmap%E7%8B%82%E6%83%B3%E6%9B%B2/">拐角垃圾桶花盆 智能HashMap狂想曲</a>
+        </h2>
+
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2024-08-04</time>
+        </div>
+        
+
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 5 分钟
+            </time>
+        </div>
+        
+    </footer>
+    
+
+    
+
+    
+    
+
+
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>‍</p>
+<p>观察走廊拐角垃圾桶和花盆引发的思考 - 智能 HashMap 狂想曲</p>
+<p>‍
+上班时候的小脑洞
+‍</p>
+<h2 id="灵感">
+    <a href="#%e7%81%b5%e6%84%9f" class="header-anchor">#</a>
+    灵感
+</h2><p>某公司在一个大平层, 走道靠近墙角处一定有摆放垃圾桶或者花盆这样的阻碍物, 经过休息时间的实地模拟发现: 这可以降低相向而行的两人在视线盲区发生转角碰撞的概率</p>
+<p>‍</p>
+<p>&ldquo;也许可以类似这样设计 HashMap 中哈希冲突的预防方案? 设置一个导流的标志位? 根据当前 HashMap 的部分区块的拥挤程度进行灵活的判断?&rdquo;</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="场景">
+    <a href="#%e5%9c%ba%e6%99%af" class="header-anchor">#</a>
+    场景
+</h2><p>那么, 来假设这样的画面: 将一个初始化的全空的 HashMap 平均划分为 8 个区间(设计划分密度为 2<sup>3</sup>, 可以说设置密度参数为 3) ;当然 HashMap 是会扩容的, 因此这个区间的端点也要每次获得 length 然后计算出来更新</p>
+<p>‍</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hashMap :    0 |________|________|________|________|________|________|________|________| N
+</span></span></code></pre></div><p>在这个情境下, &ldquo;转角碰撞&rdquo; 意味着: 两个实体在致盲效果影响下进入了不好的位置. 也就是可以解释为发生了哈希碰撞 (不知道那里有人, 还是冲过去了, 撞了)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                |________|________|________|________|________|________|________|________|
+</span></span><span class="line"><span class="cl">                 |
+</span></span><span class="line"><span class="cl">                 玄
+</span></span><span class="line"><span class="cl">                 |
+</span></span><span class="line"><span class="cl">                 桃
+</span></span></code></pre></div><p>如图是一般情况(JDK1.8/plus, 前 8(默认)是 Key 蜈蚣链表), 在这时候可以做些小动作了, 在区间摆放&quot;垃圾桶&quot;或者&quot;花盆&quot;?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">               [X]      [X]
+</span></span><span class="line"><span class="cl">                |________|________|________|________|________|________|________|________|
+</span></span><span class="line"><span class="cl">                 |
+</span></span><span class="line"><span class="cl">                 玄
+</span></span><span class="line"><span class="cl">                 |
+</span></span><span class="line"><span class="cl">                 桃
+</span></span></code></pre></div><p>这里的意思就是&quot;看到花盆或者垃圾桶, 人会下意识绕开&quot;, 假设这个区间已经被打上了&quot;有冲撞&quot;的标记, 那么下次再进来被放进这个区间的概率就会小了.</p>
+<p>但是怎么做呢?</p>
+<p>我想了几个点子, 抛砖引玉</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="版本">
+    <a href="#%e7%89%88%e6%9c%ac" class="header-anchor">#</a>
+    版本
+</h2><p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="v1-sublist--hashcode-歪把映射">
+    <a href="#v1-sublist--hashcode-%e6%ad%aa%e6%8a%8a%e6%98%a0%e5%b0%84" class="header-anchor">#</a>
+    V1 <strong>subList + HashCode 歪把映射</strong>
+</h3><blockquote>
+<p>简单想到的是维护一个记录垃圾桶和区间 sub-List, 当生成了 hashCode 的时候额外加一些逻辑: &ldquo;当我要去的区间已经被摆放了垃圾桶, 我就取一个更新的(加上参数的)哈希码 (当然, 从底层来说哈希码是固定死的, 意味着需要额外封一层), 再判断几次(这个参数可以调)&rdquo;</p>
+</blockquote>
+<p>当然如果要更加智能的话就要用其他东西来换了, 性能什么的, 再维护一个 subHashMap 也是一样的道理.</p>
+<p>‍</p>
+<p>可是这个是一个静态的情况, 如何动态的修改这个垃圾桶的摆放呢? 需要加东西了.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">               [X]      [X]      [X]      [X]
+</span></span><span class="line"><span class="cl">                |________|________|________|________|________|________|________|________|
+</span></span><span class="line"><span class="cl">                 |                    |
+</span></span><span class="line"><span class="cl">                 玄                   小
+</span></span><span class="line"><span class="cl">                 |                    |
+</span></span><span class="line"><span class="cl">                 桃                   丑
+</span></span></code></pre></div><p>例如同时在多个地方发生了哈希碰撞, 单一层级的垃圾桶显然就不行了, 只能在那里把垃圾桶和花盆倒的到处都是?</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="v2-sublist--hashcode-歪把映射--多级垃圾分类--自动垃圾桶生成">
+    <a href="#v2-sublist--hashcode-%e6%ad%aa%e6%8a%8a%e6%98%a0%e5%b0%84--%e5%a4%9a%e7%ba%a7%e5%9e%83%e5%9c%be%e5%88%86%e7%b1%bb--%e8%87%aa%e5%8a%a8%e5%9e%83%e5%9c%be%e6%a1%b6%e7%94%9f%e6%88%90" class="header-anchor">#</a>
+    V2 <strong>subList + HashCode 歪把映射</strong> + <strong>多级垃圾分类 + 自动垃圾桶生成</strong>
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">               [X]      [X]      [X]      [X]
+</span></span><span class="line"><span class="cl">               [X]      [X]      [X]      [X]      [X]
+</span></span><span class="line"><span class="cl">                |________|________|________|________|________|________|________|________|
+</span></span><span class="line"><span class="cl">                 |                    |           |
+</span></span><span class="line"><span class="cl">                 玄                   小           一
+</span></span><span class="line"><span class="cl">                 |                    |           |
+</span></span><span class="line"><span class="cl">                 桃                   丑           心
+</span></span><span class="line"><span class="cl">                 |                    |
+</span></span><span class="line"><span class="cl">                 K                    先
+</span></span></code></pre></div><p>每次发生冲突了, 就在这个区间旁边叠加一层垃圾桶, 优先把新的 Key 放到垃圾桶数量少的区间去.</p>
+<p>‍</p>
+<p>可是要是删除了这些产生冲突的对象了之后, 要不要连带把放置的垃圾桶丢出去呢? 如果要, 那怎么做? 扫描一遍? nonono 还是用第二个 subList 存放哈希冲突产生的位置吧, 让其周围的层数减一即可</p>
+<p>(这个可以当成是一个特性, 没有作删除的时候就不需要这个插件)</p>
+<p>‍</p>
+<hr>
+<p>如此看来似乎可行, 但是为什么要这么做呢? 希望尽可能减少哈希冲突的可能性.</p>
+<p>从性能上来看, 加装这么一整套逻辑(自己手写 hashMap)肯定在修改这个 HashMap 的时候带来性能上的压力, 需要维护一个 subList, 还要在插入和删除前后都进行维护. 显然, 客户需要的是&quot;少冲突的高性能查询式 HashMap&quot;, 这个能否满足需求呢?</p>
+<blockquote>
+<p>应该拿一个空白对照, 1K 条, 10K 条 等情况进行插入 HashMap 操作, 最后看看 HashMap 的冲突概率是多少(不知道怎么方便看这个), 多次测量取平均值. 理论上讲肯定加了智能组件的 HashMap 一定比原生的更加平均一些, 碰撞少些.</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="v3-区间记录-sublista--hashcode-镜面映射--无级权重值-sublistb--插件式--优先队列--重映射--多线程优化--缓存优化">
+    <a href="#v3-%e5%8c%ba%e9%97%b4%e8%ae%b0%e5%bd%95-sublista--hashcode-%e9%95%9c%e9%9d%a2%e6%98%a0%e5%b0%84--%e6%97%a0%e7%ba%a7%e6%9d%83%e9%87%8d%e5%80%bc-sublistb--%e6%8f%92%e4%bb%b6%e5%bc%8f--%e4%bc%98%e5%85%88%e9%98%9f%e5%88%97--%e9%87%8d%e6%98%a0%e5%b0%84--%e5%a4%9a%e7%ba%bf%e7%a8%8b%e4%bc%98%e5%8c%96--%e7%bc%93%e5%ad%98%e4%bc%98%e5%8c%96" class="header-anchor">#</a>
+    <strong>V3 区间记录 subListA +</strong> <strong>HashCode 镜面映射 + 无级权重值 subListB</strong> <strong>+ 插件式 + 优先队列 + 重映射 + 多线程优化 + 缓存优化</strong>
+</h3><p>‍</p>
+<p>还是不够抽象!还是没有跳出花盆-垃圾桶的实质!</p>
+<p>我觉得这是一种惩罚机制, 循规蹈矩有奖励, 逾规越矩有惩罚. 那既然都上了一个 subList 了, 不如直接把一整个区间记录下来, 同时记录对应的权重, 其他的思路和上面相同</p>
+<hr>
+<p>(当然说是插件, 事实上为了方便写的时候直接自己手写新的好了, 感觉不要去调教已经有的代码比较好罢)</p>
+<p>‍</p>
+<ul>
+<li>
+<p><strong>初始化 - 启动初始化插件</strong> 区间数量-&gt;<strong>subList * 2</strong>, 还要初始化各个参数等元件</p>
+</li>
+<li>
+<p><strong>插入 Map - 启动 Add 插件</strong></p>
+<ol>
+<li>
+<p>正常按照 JDK Map 计算 HashCode</p>
+</li>
+<li>
+<p>提前拿到要插入的位置, 查表找到对应的区间</p>
+</li>
+<li>
+<p>查表看看&quot;适合不适合&quot;插入 (需要排序)</p>
+<p>可以使用<strong>优先队列</strong>维护, 每次修改区间的权重的时候按照升序排列, 找到一定阈值就不找了, 认为该次插入非法]</p>
+<ul>
+<li>
+<p><strong>适合</strong>, 插入</p>
+</li>
+<li>
+<p><strong>不适合</strong>, 更换 HashCode 再尝试 X 次插入 (X 参数也需要设置), 否则摆烂就地掩埋</p>
+<ul>
+<li>直接随机加上 33% * 区间个数 的区间长度, 到达一个任意区间的&quot;同样&quot;位置</li>
+<li>加上 区间长度 L&rsquo; * N 切换到最适合插入的区间(需要上述优先队列)的&quot;同样&quot;位置. (可选)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>插入的时候, 还要判断是不是发生冲突了, 如果发生需要大量惩罚! 没冲突只给少量惩罚 (大概的区分应该是 k 级别的). 判断就用对应位置指针移动次数来判断(造轮子)</p>
+</li>
+<li>
+<p>如果触发扩容 (size != size_before), 需要更新 subListA 区间范围</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>开始查询 Map - 启动 Select 插件</strong></p>
+<ol>
+<li>
+<p>正常按照 JDK Map 计算 HashCode</p>
+</li>
+<li>
+<p>继续查找 &ldquo;对应位置&rdquo;</p>
+<ul>
+<li>
+<p>找到</p>
+</li>
+<li>
+<p>找不到, 按照上面的歪把子方案(重映射方案)发起 <strong>多线程</strong>查找 同一位置在不同区间 的所有替身位置, 找到返回对象</p>
+<ul>
+<li><strong>缓存优化</strong>: 不简单直接返回对象, 而是包装好 真实的 KV 到一个歪把子查询缓存, 其大小和更新周期可以自定义, 初步可委托 Redis 实现</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>开始修改 Map - 启动 Update 插件</strong></p>
+<ol>
+<li>找到 | 调用 Select 插件</li>
+<li>修改</li>
+<li>退出</li>
+</ol>
+</li>
+<li>
+<p><strong>开始删除 Map - 启动 Delete 插件</strong></p>
+<ol>
+<li>
+<p>找到 | 调用 Select 插件</p>
+</li>
+<li>
+<p>修改, 更新记录值</p>
+<ul>
+<li>如果是一个产生 &ldquo;垃圾桶&rdquo; (惩罚值)的对象, 减少大量惩罚 (通过指针移动的次数判断是不是进入冲突区域了)</li>
+<li>如果只是基础对象, 减少少量惩罚</li>
+</ul>
+</li>
+<li>
+<p>退出</p>
+</li>
+</ol>
+</li>
+<li>
+<p>余下使用基础实现</p>
+</li>
+</ul>
+<p>‍</p>
+<blockquote>
+<p>Java 没有指针特性, 上面提的指针移动这个概念是 &ldquo;找到对应 K 之后往下搜寻想要的 V 的过程&rdquo;</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<h3 id="v4-吃了饭再想-累了">
+    <a href="#v4-%e5%90%83%e4%ba%86%e9%a5%ad%e5%86%8d%e6%83%b3-%e7%b4%af%e4%ba%86" class="header-anchor">#</a>
+    V4 吃了饭再想, 累了
+</h3><hr>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="设计">
+    <a href="#%e8%ae%be%e8%ae%a1" class="header-anchor">#</a>
+    设计
+</h2><blockquote>
+<p>详细的设计</p>
+</blockquote>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="实现">
+    <a href="#%e5%ae%9e%e7%8e%b0" class="header-anchor">#</a>
+    实现
+</h2><blockquote>
+<p>代码实现</p>
+</blockquote>
+<p>Github</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="结尾">
+    <a href="#%e7%bb%93%e5%b0%be" class="header-anchor">#</a>
+    结尾
+</h2><p>‍</p>
+<p>之前没有接触过相关知识点, 可以说靠自己取得的这个尤里卡, 当然肯定是有大佬想过了</p>
+<p>没测试过, 没写, 还在构思阶段. 有无大手子给点建议</p>
+<p>此文档持续更新</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<p>2024-07-19</p>
+<p>在搬砖的玄桃 K</p>
+<p>‍</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="SpadeKTLSG/SpadeKTLSG.github.io"
+    data-repo-id="R_kgDOLz5uXQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOLz5uXc4Ce_BV"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="1"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('1');
+            } else {
+                setGiscusTheme('1');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+
+    <section class="copyright">
+        &copy;
+        
+        2024 SpadeK
+    </section>
+
+
+    
+    <section class="running-time">
+        本博客已稳定运行
+        <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        发表了29篇文章 ·
+        总计298.07k字
+    </section>
+
+
+    <section class="powerby">
+        
+            Powered by Blood, Sweat, and Tears
+        
+        <br/>使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script>
+    let s1 = '2024-4-27'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+    </body>
+</html>

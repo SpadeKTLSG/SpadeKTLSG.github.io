@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="公司实习的做 demo 笔记 7.23 - 7.25 \\ 7.26 - 7.31 Trantor 练习记录 \u200d 视图配到开发项目的同一位置去执行构建 \u200d \u200d # 记录 \u200d \u200d # Mission 7.25 \u200d 一阶段 W3 任务建模 模型 + 关系 分析制作 内置">
+<title>Trantor Demo LDBMS4Trantor</title>
+
+<link rel='canonical' href='https://spadektlsg.github.io/p/trantor-demo-ldbms4trantor/'>
+
+<link rel="stylesheet" href="/scss/style.min.67e1d55df895e92f972a3c6377b28d4465c25830c4976c898200217da8ea97f2.css"><meta property='og:title' content="Trantor Demo LDBMS4Trantor">
+<meta property='og:description' content="公司实习的做 demo 笔记 7.23 - 7.25 \\ 7.26 - 7.31 Trantor 练习记录 \u200d 视图配到开发项目的同一位置去执行构建 \u200d \u200d # 记录 \u200d \u200d # Mission 7.25 \u200d 一阶段 W3 任务建模 模型 + 关系 分析制作 内置">
+<meta property='og:url' content='https://spadektlsg.github.io/p/trantor-demo-ldbms4trantor/'>
+<meta property='og:site_name' content='玄桃K的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-08-14T09:44:33&#43;08:00'/><meta property='article:modified_time' content='2024-09-25T09:44:33&#43;08:00'/><meta property='og:image' content='https://spadektlsg.github.io/work/003/1.jpg' />
+<meta name="twitter:title" content="Trantor Demo LDBMS4Trantor">
+<meta name="twitter:description" content="公司实习的做 demo 笔记 7.23 - 7.25 \\ 7.26 - 7.31 Trantor 练习记录 \u200d 视图配到开发项目的同一位置去执行构建 \u200d \u200d # 记录 \u200d \u200d # Mission 7.25 \u200d 一阶段 W3 任务建模 模型 + 关系 分析制作 内置"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://spadektlsg.github.io/work/003/1.jpg' />
+    <link rel="shortcut icon" href="/sys/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="756"
+                            height="749" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😋</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">玄桃K的博客</a></h1>
+            <h2 class="site-description">还在打复活赛</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/SpadeKTLSG/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291872628" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M153.770667 517.558857l200.387047-197.241905L302.86019 268.190476 48.761905 518.290286l254.439619 243.614476 50.590476-52.833524-200.021333-191.512381zM658.285714 320.316952L709.583238 268.190476l254.098286 250.09981L709.241905 761.904762l-50.590476-52.833524 200.021333-191.512381L658.285714 320.316952z m-112.981333-86.186666L393.99619 785.554286l70.534096 19.358476 151.30819-551.399619-70.534095-19.358476z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:spadekxcwxtlsg@gmail.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291517604" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M926.47619 355.644952V780.190476a73.142857 73.142857 0 0 1-73.142857 73.142857H170.666667a73.142857 73.142857 0 0 1-73.142857-73.142857V355.644952l73.142857 62.000762V780.190476h682.666666V417.645714l73.142857-62.000762zM853.333333 170.666667a74.044952 74.044952 0 0 1 26.087619 4.778666 72.704 72.704 0 0 1 30.622477 22.186667 73.508571 73.508571 0 0 1 10.678857 17.67619c3.169524 7.509333 5.12 15.652571 5.607619 24.210286L926.47619 243.809524v24.380952L559.469714 581.241905a73.142857 73.142857 0 0 1-91.306666 2.901333l-3.632762-2.925714L97.52381 268.190476v-24.380952a72.899048 72.899048 0 0 1 40.155428-65.292191A72.97219 72.97219 0 0 1 170.666667 170.666667h682.666666z m-10.971428 73.142857H181.638095L512 525.58019 842.361905 243.809524z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/363101711'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291537293" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7801" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M772.437333 97.52381l51.712 51.712-126.342095 126.342095H828.952381a73.142857 73.142857 0 0 1 73.142857 73.142857v487.619048a73.142857 73.142857 0 0 1-73.142857 73.142857H195.047619a73.142857 73.142857 0 0 1-73.142857-73.142857v-487.619048a73.142857 73.142857 0 0 1 73.142857-73.142857h131.120762L199.850667 149.23581 251.562667 97.52381l178.054095 178.054095h164.742095L772.437333 97.52381zM828.952381 348.720762H195.047619v487.619048h633.904762v-487.619048z m-280.380952 73.142857v341.333333h-73.142858v-341.333333h73.142858z m-134.095239 73.142857v195.047619h-73.142857v-195.047619h73.142857z m268.190477 24.380953v146.285714h-73.142857v-146.285714h73.142857z" p-id="7802"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#记录">记录</a>
+          <ol>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#qa">QA</a></li>
+            <li><a href="#修复的发布流程--六步走"><strong><del>修复的发布流程 :</del></strong> <del>六步走</del></a></li>
+          </ol>
+        </li>
+        <li><a href="#视图-demo">视图 Demo</a>
+          <ol>
+            <li><a href="#bo-视图任务"><strong>BO 视图任务</strong></a></li>
+            <li><a href="#结构写法"><strong>结构写法</strong></a></li>
+          </ol>
+        </li>
+        <li><a href="#模型-demo">模型 Demo</a>
+          <ol>
+            <li><a href="#图书-book">图书 Book</a></li>
+            <li><a href="#读者-reader">读者 Reader</a></li>
+            <li><a href="#借阅-borrow-">借阅 Borrow [|]</a></li>
+            <li><a href="#书架-shelf">书架 Shelf</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#代码">代码</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/trantor-demo-ldbms4trantor/">
+                
+                    <img src="/work/003/1.jpg" loading="lazy" alt="Featured image of post Trantor Demo LDBMS4Trantor" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+
+
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/trantor-demo-ldbms4trantor/">Trantor Demo LDBMS4Trantor</a>
+        </h2>
+
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2024-08-14</time>
+        </div>
+        
+
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 3 分钟
+            </time>
+        </div>
+        
+    </footer>
+    
+
+    
+
+    
+    
+
+
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>公司实习的做 demo 笔记</p>
+<blockquote>
+<p>7.23 - 7.25 \ 7.26 - 7.31 Trantor 练习记录</p>
+</blockquote>
+<p>‍</p>
+<p>视图配到开发项目的同一位置去执行构建</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="记录">
+    <a href="#%e8%ae%b0%e5%bd%95" class="header-anchor">#</a>
+    记录
+</h2><p>‍</p>
+<p>‍</p>
+<h3 id="mission">
+    <a href="#mission" class="header-anchor">#</a>
+    Mission
+</h3><p>7.25</p>
+<p>‍</p>
+<p>一阶段 W3</p>
+<ul>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 任务建模</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 模型 + 关系 分析制作</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 内置元件生成</li>
+<li><input checked="" disabled="" type="checkbox"> 提交控制台</li>
+</ul>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 视图 CRUD 制作</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 前端页面跳转逻辑</li>
+<li><input checked="" disabled="" type="checkbox"> 前端提交表单操作</li>
+<li><input checked="" disabled="" type="checkbox"> 后端 &ldquo;Controller&rdquo; 逻辑方法</li>
+</ul>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 提交 MT 审阅</p>
+</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<p>二阶段 W4</p>
+<ul>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 返工 Trantor 文档学习 - 前端页面和数据源</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 等待控制台恢复(阻塞)</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 上传资源后研判目前 Demo 完成情况</li>
+<li><input checked="" disabled="" type="checkbox"> 前后联调并探索任务目标 和 之前疑问</li>
+</ul>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 完成后测试测试用数据库完整联调前后端</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 余下事项</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 补充余下页面与逻辑</li>
+<li><input checked="" disabled="" type="checkbox"> 探索数据源</li>
+<li><input checked="" disabled="" type="checkbox"> 探索分页</li>
+<li><input checked="" disabled="" type="checkbox"> 探索联表操作</li>
+</ul>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 发布并查看 debug 页面</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 宣布 Demo 完毕</p>
+</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<h3 id="qa">
+    <a href="#qa" class="header-anchor">#</a>
+    QA
+</h3><p>‍</p>
+<p>Q</p>
+<ol>
+<li>
+<p>前端有了, Controller 有了, Mapper(DAO 层)也有了. 但是 Service 层很难让人感知到: 那么一些通用的方法在哪里写呢? 逻辑流?</p>
+<p>我看到有用到 &ldquo;Repo&rdquo; 标记的类(上面有<code>@Repository</code>​ 注解), 并且被其他 Func 调用, 这个应该就是了吧</p>
+</li>
+<li>
+<p>前端调用后端发起请求, 后端接收的过程还是有些模糊. 可能是个人 TS 技术栈薄弱导致的</p>
+</li>
+<li>
+<p>什么时候使用 qModel, 什么时候使用 Model 感觉有些乱</p>
+</li>
+<li>
+<p>由于没有立刻能看到的页面效果, 也不能在本地跑起来调试, 感觉很不直观.</p>
+</li>
+<li>
+<p>没有测试数据库, 没法存数据</p>
+</li>
+</ol>
+<p>‍</p>
+<p>A</p>
+<ol>
+<li>可以写 Spring 那一套的 C/S/M , 已经确认拆分</li>
+<li>见数据源选择-文档, 自己没咋看前端的问题</li>
+<li>这个确实文档里面建议还是不要用太多, 但是大伙还是用 QModel 比较好, 还是用 QModel, 能够自动封装前端页面数据 DTO 到后端数据源. 唯一的区别就是这, 能否自动封装, 不需要手动封.</li>
+<li>等待页面修复</li>
+<li>数据库后续拿一个测试的</li>
+</ol>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="修复的发布流程--六步走">
+    <a href="#%e4%bf%ae%e5%a4%8d%e7%9a%84%e5%8f%91%e5%b8%83%e6%b5%81%e7%a8%8b--%e5%85%ad%e6%ad%a5%e8%b5%b0" class="header-anchor">#</a>
+    <strong><del>修复的发布流程 :</del></strong> <del>六步走</del>
+</h3><ol>
+<li>本地写完代码, 打开控制台</li>
+<li>cd 到 srm-trade-api</li>
+<li>在 api 模块 (*), [生成对应临时文件]</li>
+<li>cd 到 srm-implement-api</li>
+<li>在 implement 模块 (*)</li>
+<li>浏览器查看控制台生成内容</li>
+</ol>
+<p>‍</p>
+<p>(*) == 用控制台执行 mvn 脚本片段, 耗时约等于 1 分钟</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">mvn</span><span class="w"> </span><span class="n">clean</span><span class="w"> </span><span class="n">deploy</span><span class="w"> </span><span class="o">-</span><span class="n">U</span><span class="w"> </span><span class="o">-</span><span class="n">Ddependency</span><span class="o">-</span><span class="n">check</span><span class="p">.</span><span class="na">skip</span><span class="o">=</span><span class="kc">true</span><span class="w"> </span><span class="o">-</span><span class="n">DretireJsAnalyzerEnabled</span><span class="o">=</span><span class="kc">false</span><span class="w"> </span><span class="o">-</span><span class="n">Dtrantor</span><span class="p">.</span><span class="na">deploy</span><span class="w"> </span><span class="o">-</span><span class="n">Dtrantor</span><span class="p">.</span><span class="na">flowParser</span><span class="p">.</span><span class="na">skip</span><span class="w"> </span><span class="o">-</span><span class="n">Dmaven</span><span class="p">.</span><span class="na">test</span><span class="p">.</span><span class="na">skip</span><span class="w"> </span><span class="o">-</span><span class="n">Dtrantor</span><span class="p">.</span><span class="na">deploy</span><span class="p">.</span><span class="na">url</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="c1">//dev-metastore-management.scm-nonprd.jinkosolar.com/terminus/srm</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>新</p>
+<p>uat 环境的元数据上报命令</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">mvn</span><span class="w"> </span><span class="n">clean</span><span class="w"> </span><span class="n">deploy</span><span class="w"> </span><span class="o">-</span><span class="n">U</span><span class="w"> </span><span class="o">-</span><span class="n">Ddependency</span><span class="o">-</span><span class="n">check</span><span class="p">.</span><span class="na">skip</span><span class="o">=</span><span class="kc">true</span><span class="w"> </span><span class="o">-</span><span class="n">DretireJsAnalyzerEnabled</span><span class="o">=</span><span class="kc">false</span><span class="w"> </span><span class="o">-</span><span class="n">Dtrantor</span><span class="p">.</span><span class="na">deploy</span><span class="w"> </span><span class="o">-</span><span class="n">Dtrantor</span><span class="p">.</span><span class="na">flowParser</span><span class="p">.</span><span class="na">skip</span><span class="w"> </span><span class="o">-</span><span class="n">Dmaven</span><span class="p">.</span><span class="na">test</span><span class="p">.</span><span class="na">skip</span><span class="w"> </span><span class="o">-</span><span class="n">Dtrantor</span><span class="p">.</span><span class="na">deploy</span><span class="p">.</span><span class="na">url</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="c1">//staging-metastore-management.scm.jinkosolar.com/terminus/srm</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p><a class="link" href="http://staging-trantor-console-scm.scm.jinkosolar.com/view/meta_store_management_PreInstallModulePlan_PublishDetail?_keep=_m%2C_tenant%2C_tabId%2C_project&amp;_m=t-resources-publish%3A%3At-resources-publish_resource-publish&amp;_project=2&amp;_tabId=meta_store_management_PreInstallModulePlan_toListResourcePublish&amp;_tenant=1&amp;action=meta_store_management_PreInstallModulePlan_toPublishDetail&amp;modelKey=meta_store_management_PreInstallModulePlan&amp;record=%7B%22id%22%3A116313%7D"  target="_blank" rel="noopener"
+    >交付控制台 -UAT</a></p>
+<p>‍</p>
+<ul>
+<li>如果遇到报错, 可以切换到 Maven 菜单的控制台执行操作(去掉开头的 mvn 后选择上下文执行), 可以看到完整的异常堆栈进行 bug 定位</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<h2 id="视图-demo">
+    <a href="#%e8%a7%86%e5%9b%be-demo" class="header-anchor">#</a>
+    视图 Demo
+</h2><p>‍</p>
+<p>‍</p>
+<h3 id="bo-视图任务">
+    <a href="#bo-%e8%a7%86%e5%9b%be%e4%bb%bb%e5%8a%a1" class="header-anchor">#</a>
+    <strong>BO 视图任务</strong>
+</h3><p>基本采用 trade 模块的标准路线, 去除部分逻辑. TS 代码先打 T&rsquo;O&rsquo;D&rsquo;O</p>
+<ul>
+<li>展示 主页面</li>
+<li>新增 增</li>
+<li>删除 删</li>
+<li>编辑 改</li>
+<li>详情 查</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<h3 id="结构写法">
+    <a href="#%e7%bb%93%e6%9e%84%e5%86%99%e6%b3%95" class="header-anchor">#</a>
+    <strong>结构写法</strong>
+</h3><p>‍</p>
+<p>针对性.xml 编写方法</p>
+<p>‍</p>
+<ul>
+<li>
+<p>主界面 List 形式</p>
+<pre><code>一个大`Table`​ { `Fields`​ | `Field`​ + `Search`​ + `RecordActions`​ + `Actions`​ }
+</code></pre>
+<p>‍</p>
+</li>
+<li>
+<p>详情 Detail 形式</p>
+<pre><code>一个大`Detail`​ { `Fields`​ | `GroupField`​ | `Field`​ + `Actions`​ }
+</code></pre>
+<p>‍</p>
+</li>
+<li>
+<p>新增 Form 形式</p>
+<pre><code>一个大`Form`​ { `Fields`​ | `GroupField`​ | `Field`​ + `Actions`​ }
+
+`Action`​ 中编辑逻辑
+</code></pre>
+<p>‍</p>
+</li>
+<li>
+<p>删除 Form 形式</p>
+<p>‍</p>
+</li>
+<li>
+<p>编辑 Form 形式</p>
+<pre><code>一个大`Form`​ { `Fields`​ | `GroupField`​ | `Field`​ + `Actions`​ }
+
+`Action`​ 中编辑逻辑
+</code></pre>
+</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="模型-demo">
+    <a href="#%e6%a8%a1%e5%9e%8b-demo" class="header-anchor">#</a>
+    模型 Demo
+</h2><blockquote>
+<p>后续更新</p>
+</blockquote>
+<p>直接使用图书馆管理系统的关系进行模拟, 逐渐加码</p>
+<p>来自本人(@SpadeKTLSG)利用若依框架制作的的开源项目: LDBMS - <a class="link" href="https://github.com/SpadeKTLSG/LibraryDBMS"  target="_blank" rel="noopener"
+    >Link</a></p>
+<p>统一定义在 ldbms 子包内</p>
+<blockquote>
+<p>一对一(后续), 一对多, 多对多关系验证</p>
+</blockquote>
+<p>‍</p>
+<h3 id="图书-book">
+    <a href="#%e5%9b%be%e4%b9%a6-book" class="header-anchor">#</a>
+    图书 Book
+</h3><p>‍</p>
+<p>关系</p>
+<ul>
+<li>与书架 多对一</li>
+<li>与借阅 一对一</li>
+</ul>
+<p>‍</p>
+<p>基础字段</p>
+<ul>
+<li>id</li>
+<li>name 名称</li>
+<li>type 类型</li>
+<li>author 作者</li>
+<li>price 价格</li>
+<li>publish 出版商</li>
+<li>summary 概要</li>
+</ul>
+<p>‍</p>
+<p>动态字段</p>
+<ul>
+<li>storage_num 存在馆内数量</li>
+<li>total_num 总计数量</li>
+</ul>
+<p>‍</p>
+<p>链接字段</p>
+<ul>
+<li>shelf_id 书架 id</li>
+<li>borrow_id 借阅 id</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<h3 id="读者-reader">
+    <a href="#%e8%af%bb%e8%80%85-reader" class="header-anchor">#</a>
+    读者 Reader
+</h3><p>‍</p>
+<p>关系</p>
+<ul>
+<li>与借阅 一对多</li>
+</ul>
+<p>‍</p>
+<p>基础字段</p>
+<ul>
+<li>id</li>
+<li>name 姓名</li>
+<li>sex 性别</li>
+</ul>
+<p>‍</p>
+<p>动态字段</p>
+<ul>
+<li>borrowing_num 借到的书数量</li>
+<li>borrowed_num 总计借到的数量</li>
+</ul>
+<p>‍</p>
+<p>链接字段</p>
+<ul>
+<li>borrow_id 借阅 id</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<h3 id="借阅-borrow-">
+    <a href="#%e5%80%9f%e9%98%85-borrow-" class="header-anchor">#</a>
+    借阅 Borrow [|]
+</h3><blockquote>
+<p>中间表</p>
+</blockquote>
+<p>‍</p>
+<p>关系</p>
+<ul>
+<li>与读者 多对一</li>
+<li>与书本 一对一</li>
+</ul>
+<p>‍</p>
+<p>基础字段</p>
+<ul>
+<li>id</li>
+<li>name 名称(填充)</li>
+</ul>
+<p>‍</p>
+<p>链接字段</p>
+<ul>
+<li>book_id 书本 id</li>
+<li>reader_id 读者 id</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="书架-shelf">
+    <a href="#%e4%b9%a6%e6%9e%b6-shelf" class="header-anchor">#</a>
+    书架 Shelf
+</h3><p>‍</p>
+<p>关系</p>
+<ul>
+<li>与书籍 一对多</li>
+</ul>
+<p>‍</p>
+<p>基础字段</p>
+<ul>
+<li>id</li>
+<li>name 名称</li>
+</ul>
+<p>‍</p>
+<p>动态字段</p>
+<ul>
+<li>storage 存储书籍数量</li>
+<li>‍</li>
+</ul>
+<p>‍</p>
+<p>链接字段</p>
+<ul>
+<li>book_id 书本 id</li>
+</ul>
+<h1 id="代码">
+    <a href="#%e4%bb%a3%e7%a0%81" class="header-anchor">#</a>
+    代码
+</h1><blockquote>
+<p>咳咳咳, 这个大概是不能碰的滑梯</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2024-09-25 09:44 CST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="SpadeKTLSG/SpadeKTLSG.github.io"
+    data-repo-id="R_kgDOLz5uXQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOLz5uXc4Ce_BV"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="1"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('1');
+            } else {
+                setGiscusTheme('1');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+
+    <section class="copyright">
+        &copy;
+        
+        2024 SpadeK
+    </section>
+
+
+    
+    <section class="running-time">
+        本博客已稳定运行
+        <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        发表了29篇文章 ·
+        总计298.07k字
+    </section>
+
+
+    <section class="powerby">
+        
+            Powered by Blood, Sweat, and Tears
+        
+        <br/>使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script>
+    let s1 = '2024-4-27'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+    </body>
+</html>

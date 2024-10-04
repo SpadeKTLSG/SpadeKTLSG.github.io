@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2024-07-18 by SpadeKTLSG [仅内部使用] \u200d 公司内部框架 demo 本地搭建失败记录 \u200d # 1 配置 Java 参考文档 已经通过应用形式安装了 Java, 但是在终端没有显示, 说明没有配环境变量 \u200d 使用">
+<title>本地Trantor Demo搭建失败记录</title>
+
+<link rel='canonical' href='https://spadektlsg.github.io/p/%E6%9C%AC%E5%9C%B0trantor-demo%E6%90%AD%E5%BB%BA%E5%A4%B1%E8%B4%A5%E8%AE%B0%E5%BD%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.67e1d55df895e92f972a3c6377b28d4465c25830c4976c898200217da8ea97f2.css"><meta property='og:title' content="本地Trantor Demo搭建失败记录">
+<meta property='og:description' content="2024-07-18 by SpadeKTLSG [仅内部使用] \u200d 公司内部框架 demo 本地搭建失败记录 \u200d # 1 配置 Java 参考文档 已经通过应用形式安装了 Java, 但是在终端没有显示, 说明没有配环境变量 \u200d 使用">
+<meta property='og:url' content='https://spadektlsg.github.io/p/%E6%9C%AC%E5%9C%B0trantor-demo%E6%90%AD%E5%BB%BA%E5%A4%B1%E8%B4%A5%E8%AE%B0%E5%BD%95/'>
+<meta property='og:site_name' content='玄桃K的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-07-12T09:45:39&#43;08:00'/><meta property='article:modified_time' content='2024-09-17T09:45:39&#43;08:00'/><meta property='og:image' content='https://spadektlsg.github.io/work/001/1.jpg' />
+<meta name="twitter:title" content="本地Trantor Demo搭建失败记录">
+<meta name="twitter:description" content="2024-07-18 by SpadeKTLSG [仅内部使用] \u200d 公司内部框架 demo 本地搭建失败记录 \u200d # 1 配置 Java 参考文档 已经通过应用形式安装了 Java, 但是在终端没有显示, 说明没有配环境变量 \u200d 使用"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://spadektlsg.github.io/work/001/1.jpg' />
+    <link rel="shortcut icon" href="/sys/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="756"
+                            height="749" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😋</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">玄桃K的博客</a></h1>
+            <h2 class="site-description">还在打复活赛</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/SpadeKTLSG/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291872628" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M153.770667 517.558857l200.387047-197.241905L302.86019 268.190476 48.761905 518.290286l254.439619 243.614476 50.590476-52.833524-200.021333-191.512381zM658.285714 320.316952L709.583238 268.190476l254.098286 250.09981L709.241905 761.904762l-50.590476-52.833524 200.021333-191.512381L658.285714 320.316952z m-112.981333-86.186666L393.99619 785.554286l70.534096 19.358476 151.30819-551.399619-70.534095-19.358476z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:spadekxcwxtlsg@gmail.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291517604" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7497" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M926.47619 355.644952V780.190476a73.142857 73.142857 0 0 1-73.142857 73.142857H170.666667a73.142857 73.142857 0 0 1-73.142857-73.142857V355.644952l73.142857 62.000762V780.190476h682.666666V417.645714l73.142857-62.000762zM853.333333 170.666667a74.044952 74.044952 0 0 1 26.087619 4.778666 72.704 72.704 0 0 1 30.622477 22.186667 73.508571 73.508571 0 0 1 10.678857 17.67619c3.169524 7.509333 5.12 15.652571 5.607619 24.210286L926.47619 243.809524v24.380952L559.469714 581.241905a73.142857 73.142857 0 0 1-91.306666 2.901333l-3.632762-2.925714L97.52381 268.190476v-24.380952a72.899048 72.899048 0 0 1 40.155428-65.292191A72.97219 72.97219 0 0 1 170.666667 170.666667h682.666666z m-10.971428 73.142857H181.638095L512 525.58019 842.361905 243.809524z" p-id="7498"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/363101711'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714291537293" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7801" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M772.437333 97.52381l51.712 51.712-126.342095 126.342095H828.952381a73.142857 73.142857 0 0 1 73.142857 73.142857v487.619048a73.142857 73.142857 0 0 1-73.142857 73.142857H195.047619a73.142857 73.142857 0 0 1-73.142857-73.142857v-487.619048a73.142857 73.142857 0 0 1 73.142857-73.142857h131.120762L199.850667 149.23581 251.562667 97.52381l178.054095 178.054095h164.742095L772.437333 97.52381zM828.952381 348.720762H195.047619v487.619048h633.904762v-487.619048z m-280.380952 73.142857v341.333333h-73.142858v-341.333333h73.142858z m-134.095239 73.142857v195.047619h-73.142857v-195.047619h73.142857z m268.190477 24.380953v146.285714h-73.142857v-146.285714h73.142857z" p-id="7802"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#1-配置-java">1 配置 Java</a></li>
+        <li><a href="#2-安装-homebrew">2 安装 HomeBrew</a></li>
+        <li><a href="#3-安装-docker-坑点">3 安装 docker [坑点]</a>
+          <ol>
+            <li><a href="#卸载-docker">卸载 Docker</a></li>
+            <li><a href="#非正常安装-docker">非正常安装 Docker</a></li>
+            <li><a href="#周边">周边</a></li>
+          </ol>
+        </li>
+        <li><a href="#4-安装-trantor-套件">4 安装 Trantor 套件</a>
+          <ol>
+            <li><a href="#更新系统命令行工具">更新系统命令行工具</a></li>
+            <li><a href="#成果">成果</a></li>
+            <li><a href="#维护方法">维护方法</a>
+              <ol>
+                <li><a href="#升级">升级</a></li>
+                <li><a href="#卸载">卸载</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li><a href="#5-启动-trantor-报错">5 启动 Trantor [报错]</a></li>
+        <li><a href="#问题分析">问题分析</a></li>
+        <li><a href="#后续">后续</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E6%9C%AC%E5%9C%B0trantor-demo%E6%90%AD%E5%BB%BA%E5%A4%B1%E8%B4%A5%E8%AE%B0%E5%BD%95/">
+                
+                    <img src="/work/001/1.jpg" loading="lazy" alt="Featured image of post 本地Trantor Demo搭建失败记录" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+
+
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%9C%AC%E5%9C%B0trantor-demo%E6%90%AD%E5%BB%BA%E5%A4%B1%E8%B4%A5%E8%AE%B0%E5%BD%95/">本地Trantor Demo搭建失败记录</a>
+        </h2>
+
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2024-07-12</time>
+        </div>
+        
+
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 5 分钟
+            </time>
+        </div>
+        
+    </footer>
+    
+
+    
+
+    
+    
+
+
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>2024-07-18 by SpadeKTLSG [仅内部使用]</p>
+<p>‍ 公司内部框架 demo 本地搭建失败记录</p>
+<p>‍</p>
+<h2 id="1-配置-java">
+    <a href="#1-%e9%85%8d%e7%bd%ae-java" class="header-anchor">#</a>
+    1 配置 Java
+</h2><p><a class="link" href="https://trantor-docs.app.terminus.io/v1.x/doc/trantor-tools/cli/index"  target="_blank" rel="noopener"
+    >参考文档</a></p>
+<p>已经通过应用形式安装了 Java, 但是在终端没有显示, 说明没有配环境变量</p>
+<p>‍</p>
+<p><strong>使用的 Java 位置</strong></p>
+<p>‍</p>
+<p>通过以下命令查看 JDK 安装路径</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ /usr/libexec/java_home -V
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Java</span><span class="o">/</span><span class="n">JavaVirtualMachines</span><span class="o">/</span><span class="n">jdk1</span><span class="p">.</span><span class="na">8</span><span class="p">.</span><span class="na">0_291</span><span class="p">.</span><span class="na">jdk</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Home</span><span class="o">/</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">JAVA_HOME</span><span class="o">=/</span><span class="n">Library</span><span class="o">/</span><span class="n">Java</span><span class="o">/</span><span class="n">JavaVirtualMachines</span><span class="o">/</span><span class="n">jdk1</span><span class="p">.</span><span class="na">8</span><span class="p">.</span><span class="na">0_291</span><span class="p">.</span><span class="na">jdk</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Home</span><span class="o">/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">PATH</span><span class="o">=</span><span class="n">$JAVA_HOME</span><span class="o">/</span><span class="n">bin</span><span class="p">:</span><span class="n">$PATH</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">CLASSPATH</span><span class="o">=</span><span class="p">.:</span><span class="n">$JAVA_HOME</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dt</span><span class="p">.</span><span class="na">jar</span><span class="p">:</span><span class="n">$JAVA_HOME</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">tools</span><span class="p">.</span><span class="na">jar</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">JAVA_HOME</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">PATH</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">export</span><span class="w"> </span><span class="n">CLASSPATH</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>编辑.bash_profile 配置文件。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim ~/.bash_profile
+</span></span></code></pre></div><p>‍</p>
+<p>验证</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">echo</span><span class="w"> </span><span class="n">$JAVA_HOME</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h2 id="2-安装-homebrew">
+    <a href="#2-%e5%ae%89%e8%a3%85-homebrew" class="header-anchor">#</a>
+    2 安装 HomeBrew
+</h2><ul>
+<li>安装工具</li>
+</ul>
+<p>MAC 需要使用下载器 HomeBrew, 类似所谓的 yum / apt-get in Linux(ubantu)</p>
+<p>‍</p>
+<p>报错记录: 去/usr/local/ 清理之前留下来的目录, 有可能因为权限原因导致无法安装, 需要手动赋予权限或者 sudo su root 小连招</p>
+<p>‍</p>
+<p>最后还是用了安装包(也可以镜像), 否则太慢了</p>
+<p><a class="link" href="https://github.com/Homebrew/brew/releases/tag/4.3.9"  target="_blank" rel="noopener"
+    >Release 4.3.9 · Homebrew/brew (github.com)</a></p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="3-安装-docker-坑点">
+    <a href="#3-%e5%ae%89%e8%a3%85-docker-%e5%9d%91%e7%82%b9" class="header-anchor">#</a>
+    3 安装 docker [坑点]
+</h2><p>‍</p>
+<p>使用已经准备好的安装包(当时没有 VPN 连接 Github, 因此使用手机下载), 其带有控制面板</p>
+<blockquote>
+<p>使用 Github 登录一直失败, 说明系统代理仍然设置有误, 问题归因我本人占 30%, MAC 系统占 15%, 代理软件占 35%, Docker 占 20%</p>
+</blockquote>
+<p>调整 docker 宿主机的资源大小仅能保障 docker 有 4G 2C 的资源, 因为我滴电脑又耗电又卡, 现在已经是极限了</p>
+<p>‍</p>
+<p>‍</p>
+<p>版本 - 当前版本</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">spadek</span><span class="nd">@spadekdeMacBook</span><span class="o">-</span><span class="n">Pro</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="o">--</span><span class="n">version</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Docker</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">26</span><span class="p">.</span><span class="na">1</span><span class="p">.</span><span class="na">4</span><span class="p">,</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">5650f9b</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">spadek</span><span class="nd">@spadekdeMacBook</span><span class="o">-</span><span class="n">Pro</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="w"> </span><span class="o">--</span><span class="n">version</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Docker</span><span class="w"> </span><span class="n">Compose</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">27</span><span class="p">.</span><span class="na">1</span><span class="o">-</span><span class="n">desktop</span><span class="p">.</span><span class="na">1</span><span class="w">
+</span></span></span></code></pre></div><blockquote>
+<p>这里可以看到, 我下的最新的 Docker Version 是 26.1.4, Compose V 2.27.1, 都是高版本的, 和 21 年文档撰写时候已经差了很多个版本了</p>
+</blockquote>
+<p>‍</p>
+<hr>
+<p>之后在启动 trantor 时候遇到了报错. (见倒数第二个标题)</p>
+<p>‍</p>
+<blockquote>
+<p>当时为什么不试试 Docker 旧版本呢? 因为根本找不到资源, 电脑新装的我以为不让装 VPN, 好几次了 VPN 也装不上, 没反应, 自己的资源仓库也找不到&hellip; 所以只能暂时这样了</p>
+</blockquote>
+<p>‍</p>
+<h3 id="卸载-docker">
+    <a href="#%e5%8d%b8%e8%bd%bd-docker" class="header-anchor">#</a>
+    卸载 Docker
+</h3><blockquote>
+<p>打算重新安装 Docker, 全部采用 21 年的版本, 从阿里云的镜像下了一个古早的 21 年版本, 应该是可以解决这个问题了. 就是反复安装 Docker 不知道会不会有问题, 会导致注册表出问题这样的(这类虚拟资源相关的软件一般都非常和系统强绑定, 很难简单的删除干净, 例如 Win 版的虚拟机, VMware 就是这样的, 很难完全卸载干净) 为了避免出现其他问题影响, 我另外学习了查找参与目录的方法, 已经定位到了</p>
+<p>自带的卸载还算人性化, 至少人家给你下载按钮了对不对&hellip; 但是效果一言难尽, 还剩下了一些中间组件和 tmp 文件没有被清理, 不得不去系统里面按照教程一个一个删了.</p>
+</blockquote>
+<blockquote>
+<p>需要从 Applications Scripts 文件夹、Caches 文件夹、Containers 文件夹等中手动删除这些 Docker 剩余文件</p>
+</blockquote>
+<hr>
+<p>之前的链接大部分都过期了, 现在还有一个方法, 就是手动降低 Docker 的内核, 或许能行, 能够规避对 Trantor 应用的大写屏蔽问题. 但是看他们的介绍说还是太难了, 很多坑点, 再看看安装包吧.</p>
+<p>因为这个 Trantor 看来是和 Docker 绑定了, 感觉找不到替代品, 也不能手动部署, 只能按照这个来, 确实太难办了, 找不到好的安装包是个很大的问题</p>
+<p>就算使用 brew 看起来也是很难顶的方法, 需要走这样的一个流程:</p>
+<p><a class="link" href="https://www.jianshu.com/p/78a0ed238e14"  target="_blank" rel="noopener"
+    >工具 - brew install 安装指定版本软件（protobuf 为例） - 简书 (jianshu.com)</a></p>
+<p>因此只能试试到时候手动降级了, 这已经是我第三次下载安装 Docker 了(之前为什么没有卸载的记录? 是因为之前都是重装系统, 所以不用考虑这个问题)</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="非正常安装-docker">
+    <a href="#%e9%9d%9e%e6%ad%a3%e5%b8%b8%e5%ae%89%e8%a3%85-docker" class="header-anchor">#</a>
+    非正常安装 Docker
+</h3><p>先装一个 wget, 然后曲线下载 yum 进行内核降级</p>
+<blockquote>
+<p>试一下行不行, 如果不行就反馈一下, 换一种 demo 形式好了</p>
+</blockquote>
+<p>‍</p>
+<blockquote>
+<p>这个 homebrew 的下载速度也是太捉急了, 明明开了全局代理还是没代上的感觉. 而且也是一环扣一环, 因为是全新机子, 没什么依赖包, 50kb/s 感觉要下一整天了啊.</p>
+</blockquote>
+<p>‍</p>
+<p>效益太低了, 我发现很可能最后会在版本仓库里找不到对应的版本号, 因此可以宣布失败了. 网络连通性也不好保障, 很可能下一小时能下, 但是中途没有断点续传(尝试过了, 没有下载缓存和续传)</p>
+<p>因此收效太低了, 看看还有没有替代的 Demo, 反正 Demo 项目等都是一个过程, 最终的目的就是了解项目和架构, 不需要拘泥于形式</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="周边">
+    <a href="#%e5%91%a8%e8%be%b9" class="header-anchor">#</a>
+    周边
+</h3><p>Docker 停服后镜像使用:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;registry-mirrors&#34;</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="s">&#34;https://ustc-edu-cn.mirror.aliyuncs.com/&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="s">&#34;https://ccr.ccs.tencentyun.com/&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="s">&#34;https://docker.m.daocloud.io/&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>重启 docker <code>sudo service docker restart</code>​</p>
+<p>‍</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="4-安装-trantor-套件">
+    <a href="#4-%e5%ae%89%e8%a3%85-trantor-%e5%a5%97%e4%bb%b6" class="header-anchor">#</a>
+    4 安装 Trantor 套件
+</h2><p>安装 Trantor CLI （依次执行）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew tap TerminusHQ/trantor
+</span></span><span class="line"><span class="cl">brew install trantor
+</span></span></code></pre></div><p>‍</p>
+<p>‍</p>
+<h3 id="更新系统命令行工具">
+    <a href="#%e6%9b%b4%e6%96%b0%e7%b3%bb%e7%bb%9f%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%b7%a5%e5%85%b7" class="header-anchor">#</a>
+    更新系统命令行工具
+</h3><p>报错</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nl">Error</span><span class="p">:</span><span class="w"> </span><span class="n">Your</span><span class="w"> </span><span class="n">Command</span><span class="w"> </span><span class="n">Line</span><span class="w"> </span><span class="n">Tools</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">outdated</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Update</span><span class="w"> </span><span class="n">them</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">Software</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">System</span><span class="w"> </span><span class="n">Settings</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">If</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">doesn</span><span class="err">&#39;</span><span class="n">t</span><span class="w"> </span><span class="n">show</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">updates</span><span class="p">,</span><span class="w"> </span><span class="n">run</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">sudo</span><span class="w"> </span><span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">rf</span><span class="w"> </span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Developer</span><span class="o">/</span><span class="n">CommandLineTools</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">sudo</span><span class="w"> </span><span class="n">xcode</span><span class="o">-</span><span class="n">select</span><span class="w"> </span><span class="o">--</span><span class="n">install</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Alternatively</span><span class="p">,</span><span class="w"> </span><span class="n">manually</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">them</span><span class="w"> </span><span class="n">from</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">https</span><span class="p">:</span><span class="c1">//developer.apple.com/download/all/.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">You</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Command</span><span class="w"> </span><span class="n">Line</span><span class="w"> </span><span class="n">Tools</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Xcode</span><span class="w"> </span><span class="n">15</span><span class="p">.</span><span class="na">4</span><span class="p">.</span><span class="w">
+</span></span></span></code></pre></div><p>参考:</p>
+<p><a class="link" href="https://coady.tech/macos-command-line-tools-outdated/"  target="_blank" rel="noopener"
+    >Homebrew: Your Command Line Tools are too outdated - CoadyTech</a></p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="成果">
+    <a href="#%e6%88%90%e6%9e%9c" class="header-anchor">#</a>
+    成果
+</h3><p>在 Terminal 中运行 CLI , 看是否正常</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> trantor --version
+</span></span></code></pre></div><p>效果, 2022 的版本</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Cli</span><span class="w"> </span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="n">1</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">2</span><span class="p">.</span><span class="na">RELEASE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="n">Build</span><span class="w"> </span><span class="n">Time</span><span class="p">:</span><span class="w"> </span><span class="n">2022</span><span class="o">-</span><span class="n">08</span><span class="o">-</span><span class="n">04</span><span class="w"> </span><span class="n">09</span><span class="p">:</span><span class="n">57</span><span class="p">:</span><span class="n">59</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>配置 Host, mac 下暂时不会添加 host, 需自行添加</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">127.0.0.1 trantor.terminus.io
+</span></span></code></pre></div><p>已配置</p>
+<p>‍</p>
+<p>‍</p>
+<h3 id="维护方法">
+    <a href="#%e7%bb%b4%e6%8a%a4%e6%96%b9%e6%b3%95" class="header-anchor">#</a>
+    维护方法
+</h3><p>‍</p>
+<h4 id="升级">
+    <a href="#%e5%8d%87%e7%ba%a7" class="header-anchor">#</a>
+    升级
+</h4><p>MacOS 下执行:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew upgrade trantor
+</span></span></code></pre></div><p>‍</p>
+<h4 id="卸载">
+    <a href="#%e5%8d%b8%e8%bd%bd" class="header-anchor">#</a>
+    卸载
+</h4><p>MacOS 下执行:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew untap TerminusHQ/trantor
+</span></span><span class="line"><span class="cl">brew uninstall trantor
+</span></span></code></pre></div><p>‍</p>
+<h2 id="5-启动-trantor-报错">
+    <a href="#5-%e5%90%af%e5%8a%a8-trantor-%e6%8a%a5%e9%94%99" class="header-anchor">#</a>
+    5 启动 Trantor [报错]
+</h2><p>1.0 后，所有命令加上 platform</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">trantor</span><span class="w"> </span><span class="n">platform</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">1</span><span class="p">.</span><span class="na">0</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>找一个好版本</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">11</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">13</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">14</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">17</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">17</span><span class="p">.</span><span class="na">112</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">18</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">20</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">21</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">22</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="p">.</span><span class="na">9</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">1</span><span class="p">.</span><span class="na">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">1</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">24</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">1</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">7</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">1</span><span class="p">.</span><span class="na">0</span><span class="p">.</span><span class="na">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">1</span><span class="p">.</span><span class="na">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">standalone</span><span class="w">
+</span></span></span></code></pre></div><p>‍</p>
+<p>报错是这样的, 要求工件(对象)的名称必须是合法的(没有大写等奇怪东西)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">invalid</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="s">&#34;0.18&#34;</span><span class="p">:</span><span class="w"> </span><span class="n">must</span><span class="w"> </span><span class="n">consist</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">lowercase</span><span class="w"> </span><span class="n">alphanumeric</span><span class="w"> </span><span class="n">characters</span><span class="p">,</span><span class="w"> </span><span class="n">hyphens</span><span class="p">,</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">underscores</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">well</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">number</span><span class="w">
+</span></span></span></code></pre></div><p>之后就是 Docker Compose 一直停止响应, 只差一步了, 没想到结果还是全部木大.</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="问题分析">
+    <a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">#</a>
+    问题分析
+</h2><p>‍</p>
+<p>整体评价: 下载安装运行环境十分煎熬, 需要解决各种报错, 还要应付各种各样的网络环境问题</p>
+<p>‍</p>
+<p>尝试一下更换版本进行拉取, 文档太不给力了, 我不得不手动进入端点的 DevApp 空间进行翻阅: <a class="link" href="https://erda.cloud/terminus/dop/projects/190"  target="_blank" rel="noopener"
+    >主页 · Erda</a>, 这个页面响应能力很拉胯. 应该就是<a class="link" href="https://erda.cloud/terminus/dop/projects/190/apps/3946/repo"  target="_blank" rel="noopener"
+    >这个仓库</a>吧</p>
+<p>还有这样的报错: 远程仓库不存在了已经, 在 Erda 的 DevOps 平台中么有相关的资源, 因此无法拉取镜像</p>
+<p>找到了合适的版本后又出问题, 因为没有权限访问的原因, 拉不下代码, 开了 VPN 也不太行, 可能要重启试一试吧. 重启后能有权限了, 但是升级版的 docker 有一个毛病, 不接受数字或者大写字母开头的项目命名, 因此公司的文档可以说是过时了, 我开始找办法关闭这个<code>docker-compose</code>​ 的特性, 或者重装一个低版本 Docker 来解决问题</p>
+<p>‍</p>
+<p>已知的阻塞问题就是名称非法, 在这个 issue 中提到了, 是 Docker Compose 的更新导致的</p>
+<p><a class="link" href="https://github.com/docker/compose/issues/9741"  target="_blank" rel="noopener"
+    >docker compose restricts project name, where the spec does not · Issue #9741 · docker/compose (github.com)</a></p>
+<p>‍</p>
+<p>对应的相关版本页面: <a class="link" href="https://github.com/docker/compose/releases/tag/v2.5.1"  target="_blank" rel="noopener"
+    >Release v2.5.1 · docker/compose (github.com)</a></p>
+<p>暂时找不到对应早于这个版本的 Docker Desktop, 并且暂时没有能力通过其他手段进行 Docker 降级, 因此卡柱了.</p>
+<p>‍</p>
+<p>(流程在上面安装 docker 那里)</p>
+<p>‍</p>
+<h2 id="后续">
+    <a href="#%e5%90%8e%e7%bb%ad" class="header-anchor">#</a>
+    后续
+</h2><p>‍</p>
+<p>优先看看有没有可以替代 Demo 的思维路径来熟悉项目, 并先反馈了文档存在的问题 (coming)</p>
+<p>‍</p>
+<p>有了一个灵感, 可以从当前的 Erda 页面下载最新的 Docker 配置, 但是我认为这样的可靠性仍然太低了, 毕竟是脱离文档的手动操作, 只能存档备用了</p>
+<blockquote>
+<p>不到万不得已我不会尝试这种方法</p>
+</blockquote>
+<ul>
+<li>可能的手册 <a class="link" href="https://www.cnblogs.com/dirgo/p/18112035"  target="_blank" rel="noopener"
+    >[转]docker compose 配置文件 .yml 全面指南 - dirgo - 博客园 (cnblogs.com)</a></li>
+<li>资源地址(需要 VPN 权限) <a class="link" href="https://erda.cloud/terminus/dop/projects/190/apps/7773/repo/tree/1.3/docker-compose.yml"  target="_blank" rel="noopener"
+    >应用 · Erda</a></li>
+</ul>
+<p>‍</p>
+<p>这个事态关闭于以下情况:</p>
+<ol>
+<li>其他方式逐渐熟悉了 Trantor</li>
+<li>找到了合适的安装包镜像, 做 demo</li>
+<li>&hellip;</li>
+</ol>
+<p>‍</p>
+<hr>
+<p>2024-09-17 Trantor 入门毕业, 事态关闭</p>
+<p>‍</p>
+<blockquote>
+<p>真是太坎坷了</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2024-09-17 09:45 CST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="SpadeKTLSG/SpadeKTLSG.github.io"
+    data-repo-id="R_kgDOLz5uXQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOLz5uXc4Ce_BV"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="1"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('1');
+            } else {
+                setGiscusTheme('1');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+
+    <section class="copyright">
+        &copy;
+        
+        2024 SpadeK
+    </section>
+
+
+    
+    <section class="running-time">
+        本博客已稳定运行
+        <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        发表了29篇文章 ·
+        总计298.07k字
+    </section>
+
+
+    <section class="powerby">
+        
+            Powered by Blood, Sweat, and Tears
+        
+        <br/>使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script>
+    let s1 = '2024-4-27'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+    </body>
+</html>
