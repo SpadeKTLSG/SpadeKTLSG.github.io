@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="# 证明 一共是两个仓库, 这个本来是私密的后台, 但是为了证明我是真的自制了CIDI流水线, 所以就公开了. 参考搭建可以看我的这篇博客click here 独">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="# 证明 一共是两个仓库, 这个本来是私密的后台, 但是为了证明我是真的自制了CIDI流水线, 所以就公开了. Github 参考搭建可以看我的这篇博客click here">
 <title>博客CIDI流水线证明</title>
 
 <link rel='canonical' href='https://spadektlsg.github.io/p/%E5%8D%9A%E5%AE%A2cidi%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AF%81%E6%98%8E/'>
 
 <link rel="stylesheet" href="/scss/style.min.67e1d55df895e92f972a3c6377b28d4465c25830c4976c898200217da8ea97f2.css"><meta property='og:title' content="博客CIDI流水线证明">
-<meta property='og:description' content="# 证明 一共是两个仓库, 这个本来是私密的后台, 但是为了证明我是真的自制了CIDI流水线, 所以就公开了. 参考搭建可以看我的这篇博客click here 独">
+<meta property='og:description' content="# 证明 一共是两个仓库, 这个本来是私密的后台, 但是为了证明我是真的自制了CIDI流水线, 所以就公开了. Github 参考搭建可以看我的这篇博客click here">
 <meta property='og:url' content='https://spadektlsg.github.io/p/%E5%8D%9A%E5%AE%A2cidi%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AF%81%E6%98%8E/'>
 <meta property='og:site_name' content='玄桃K的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-10-08T11:02:08&#43;08:00'/><meta property='article:modified_time' content='2024-10-08T11:02:08&#43;08:00'/><meta property='og:image' content='https://spadektlsg.github.io/sys/defaultPage.png' />
 <meta name="twitter:title" content="博客CIDI流水线证明">
-<meta name="twitter:description" content="# 证明 一共是两个仓库, 这个本来是私密的后台, 但是为了证明我是真的自制了CIDI流水线, 所以就公开了. 参考搭建可以看我的这篇博客click here 独"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="# 证明 一共是两个仓库, 这个本来是私密的后台, 但是为了证明我是真的自制了CIDI流水线, 所以就公开了. Github 参考搭建可以看我的这篇博客click here"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://spadektlsg.github.io/sys/defaultPage.png' />
     <link rel="shortcut icon" href="/sys/favicon.png" />
 
@@ -269,7 +269,9 @@
     <h2 id="证明">
     <a href="#%e8%af%81%e6%98%8e" class="header-anchor">#</a>
     证明
-</h2><p>一共是两个仓库, 这个本来是私密的后台, 但是为了证明我是真的自制了CIDI流水线, 所以就公开了.</p>
+</h2><p>一共是两个仓库, 这个本来是私密的后台, 但是为了证明我是真的自制了CIDI流水线, 所以就公开了.
+<a class="link" href="https://github.com/SpadeKTLSG/BlogFactory"  target="_blank" rel="noopener"
+    >Github</a></p>
 <p>参考搭建可以看我的这篇博客<a class="link" href="https://spadektlsg.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%AF%E9%85%8D%E4%BD%9C%E6%88%98-%E9%9B%B6%E5%8F%B7%E6%9C%BAgithubpage-hugo-stack/"  target="_blank" rel="noopener"
     >click here</a></p>
 <p>独立脚本开发: 根目录</p>
@@ -277,8 +279,77 @@
 <li>cleanBuildViewAll.bat</li>
 <li>newPostBlog.bat</li>
 </ul>
-<p>Github Actions: .github/workflows
-See .github/workflows/main.yml</p>
+<p>Github Actions: .github/workflows</p>
+<p>See .github/workflows/main.yml</p>
+<hr>
+<p>哦不, 公开秘钥导致被阿里云俯冲轰炸了, 等我组织度恢复再公开仓库吧</p>
+<p>下面是可以被搬过来的展示的信息</p>
+<p>newPostBlog.bat</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl">    <span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> [create one blog in post/XXX/Name]
+</span></span><span class="line"><span class="cl">    <span class="k">set</span> <span class="k">/p</span> <span class="nv">input</span><span class="p">=</span> 请输入标题, 如果存放到对应文件夹下, 可输入<span class="s2">&#34;media/Name&#34;</span>,无需md后缀:
+</span></span><span class="line"><span class="cl">    hugo new post/<span class="nv">%input%</span>.md
+</span></span><span class="line"><span class="cl">    <span class="k">pause</span>
+</span></span></code></pre></div><p>cleanBuildViewAll.bat</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl">    <span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> [清理/public, 完整构建, 预览启动]
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">del</span> /s /q <span class="s2">&#34;.\public\*&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> /d <span class="se">%%</span>x <span class="k">in</span> <span class="p">(</span>.\public\*<span class="p">)</span> <span class="k">do</span> <span class="k">rd</span> /s /q <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">x&#34;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> [清理残余/public完毕]
+</span></span><span class="line"><span class="cl">    <span class="k">start</span>  http://localhost:1313/
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    hugo server -D
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> [hugo 预览启动]
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">pause</span>
+</span></span></code></pre></div><p>.github/workflows/main.yml</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">BlogFactoryBuild</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">branches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span>- <span class="l">master</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">build-deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-20.04</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="c"># 拉取代码</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Check out source</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="c"># 安装hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.125.3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="c"># 构建</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="c"># 部署</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">personal_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.PERSONAL_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">external_repository</span><span class="p">:</span><span class="w"> </span><span class="l">SpadeKTLSG/SpadeKTLSG.github.io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l">master</span><span class="w">
+</span></span></span></code></pre></div><p>新Win10机拉取代码后只需要用choco安装hugo-extended即可执行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">choco install hugo-extended
+</span></span></code></pre></div><p>验证</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo version
+</span></span></code></pre></div><p>写文章首先执行脚本 newPostBlog.bat导入文章母体, 然后补全其内容(可以直接用IDEA + Copilot写, 也可以用思源笔记这样的笔记软件写), 之后再执行 cleanBuildViewAll.bat 渲染查看, 无脑点击提交推送即可 (只要点3下运行按钮, 够贴心了)</p>
 
 </section>
 
@@ -447,7 +518,7 @@ See .github/workflows/main.yml</p>
         
         
         发表了31篇文章 ·
-        总计298.27k字
+        总计298.68k字
     </section>
 
 
